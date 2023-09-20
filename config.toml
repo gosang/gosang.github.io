@@ -1,4 +1,4 @@
-baseURL = 'https://gosang.github.io/'
+baseURL = "https://gosang.github.io/"
 languageCode = "en-us"
 theme = "poison"
 paginate = 10
