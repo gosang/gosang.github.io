@@ -27,9 +27,9 @@ In this post, we will show how we can create a personal blog for free using the 
 
 Before we get started, make sure you have the following:
 
-- **GitHub Account**: If you don't have one, sign up at [GitHub](https://github.com/).
-- **Git Installed**: Download and install Git from [here](https://git-scm.com/downloads).
-- **Hugo Installed**: Download and install Hugo from [here](https://gohugo.io/installation/).
+- **GitHub Account**: If you don't have one, sign up a [GitHub](https://github.com/) account.
+- **Git Installed**: Download and install [Git](https://git-scm.com/downloads).
+- **Hugo Installed**: Download and install [Hugo](https://gohugo.io/installation/).
 - **Text Editor**: You can use any text editor, but Visual Studio Code is an excellent choice.
 
 ### Step 1: Create a GitHub Repository
