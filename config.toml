@@ -7,7 +7,7 @@ pluralizelisttitles = false   # removes the automatically appended "s" on sideba
 [params]
   brand = "Go Sang"                     # name of your site - appears in the sidebar
   description = "Learning about technology."
-  dark_mode = true                      # optional - defaults to false
+  dark_mode = false                      # optional - defaults to false
   # favicon = "favicon.png"             # path to favicon (defaults to favicon.png)
 
   # MENU PLACEHOLDER
