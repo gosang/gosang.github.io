@@ -78,7 +78,7 @@ title = "My Tech Blog"
 theme = "<theme-name>"
 ```
 
-Visit https://gohugo.io/ for quickstart guide and full documentation.
+See [here](https://gohugo.io/) for quickstart guide and full documentation.
 
 ### Step 4: Create Your First Blog Post
 
