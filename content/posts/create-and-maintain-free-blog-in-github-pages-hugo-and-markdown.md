@@ -6,7 +6,7 @@ draft = false
 
 ## Context
 
-As a Software Engineer, Programmer or Developer, sharing your knowledge and experiences with the tech community is a valuable way to give back and establish your expertise. Maintaining a blog is a great way to achieve this, and it can also serve as a reference point for your personal growth and a platform to demonstrate your skills. In this guide, we'll walk you through creating and maintaining a tech blog using GitHub Pages, Hugo, and Markdown. We'll explore the rationale behind these choices and provide you with step-by-step instructions for setting up your blog.
+As a software engineer, programmer or developer, sharing your knowledge and experiences with the tech community is a valuable way to give back and establish your expertise. Maintaining a blog is a great way to achieve this, and it can also serve as a reference point for your personal growth and a platform to demonstrate your skills. In this guide, we'll walk you through creating and maintaining a tech blog using GitHub Pages, Hugo, and Markdown. We'll explore the rationale behind these choices and provide you with step-by-step instructions for setting up your blog.
 
 Why GitHub Pages, Hugo, and Markdown?
 
