@@ -4,7 +4,7 @@ date = 2023-10-16T18:39:44+01:00
 draft = true
 +++
 
-In the world of academia, research papers and blogs e.g. a more formal blogs are essential for sharing knowledge and findings with the broader community. LaTeX, a typesetting system, is the go-to choice for crafting beautifully formatted documents, but creating and managing LaTeX documents efficiently can be a challenge. Visual Studio Code, a powerful and extensible code editor, can simplify this process. In this blog, we'll explore why Visual Studio Code is an excellent choice for creating and publishing research papers, academic journal articles, or technical blogs using LaTeX. We'll also provide code snippets and guidance for a seamless workflow.
+In the world of academia, research papers and blogs e.g. a more formal blogs that contain mathematical notations are essential for sharing knowledge and findings with the broader community. LaTeX, a typesetting system, is the go-to choice for crafting beautifully formatted documents, but creating and managing LaTeX documents efficiently can be a challenge. Visual Studio Code, a powerful and extensible code editor, can simplify this process. In this blog, we'll explore why Visual Studio Code is an excellent choice for creating and publishing research papers, academic journal articles, or technical blogs using LaTeX. We'll also provide code snippets and guidance for a seamless workflow.
 
 ## The Need for LaTeX in Academic Writing
 

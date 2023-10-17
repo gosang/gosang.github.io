@@ -72,7 +72,7 @@ git submodule add <theme-repository-url> themes/<theme-name>
 3. Configure the theme in your site's **config.toml **file. This file may be initially empty, so you can create it and add the following:
 
 ```
-baseURL = "https://username.github.io/my-tech-blog/"
+baseURL = "https://[username].github.io/my-tech-blog/"
 languageCode = "en-us"
 title = "My Tech Blog"
 theme = "<theme-name>"
@@ -116,7 +116,7 @@ git commit -m "Initial commit"
 git push origin gh-pages
 ```
 
-3. Your blog will be available at https://username.github.io/my-tech-blog/.
+3. Your blog will be available at https://[username].github.io/my-tech-blog/.
 
 ### Step 7: Automate Deployment with GitHub Actions
 
