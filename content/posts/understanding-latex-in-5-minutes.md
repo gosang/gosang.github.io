@@ -1,7 +1,7 @@
 +++
 title = 'Understanding Latex in 5 Minutes'
 date = 2023-10-17T17:23:20+01:00
-draft = true
+draft = false
 +++
 
 LaTeX is a powerful typesetting system commonly used for creating documents with complex formatting, such as research papers, theses, articles, and CVs. In LaTeX, you work with a set of notations and commands to define the structure and formatting of your document. Let's explore some essential LaTeX notations and provide examples to help you get started.
