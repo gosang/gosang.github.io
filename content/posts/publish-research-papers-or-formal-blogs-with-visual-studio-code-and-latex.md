@@ -12,10 +12,10 @@ Before diving into the details of using Visual Studio Code for LaTeX, let's unde
 
 LaTeX is favored for various reasons:
 
-- High-Quality Typesetting: LaTeX produces professional-looking documents with precise control over fonts, formatting, and layout.
-- Mathematical Typesetting: It excels at rendering mathematical equations and symbols, making it a top choice for scientific papers.
-- Cross-Referencing and Citations: LaTeX automates citation management and cross-referencing within your document.
-- Version Control: It integrates seamlessly with version control systems like Git, ensuring efficient collaboration and document history tracking.
+- **High-Quality Typesetting**: LaTeX produces professional-looking documents with precise control over fonts, formatting, and layout.
+- **Mathematical Typesetting**: It excels at rendering mathematical equations and symbols, making it a top choice for scientific papers.
+- **Cross-Referencing and Citations**: LaTeX automates citation management and cross-referencing within your document.
+- **Version Control**: It integrates seamlessly with version control systems like Git, ensuring efficient collaboration and document history tracking.
 
 If you are not familiar with LaTex, please do check out my post [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
 
