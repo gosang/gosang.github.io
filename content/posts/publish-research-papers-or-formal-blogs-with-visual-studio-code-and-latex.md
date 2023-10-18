@@ -1,10 +1,10 @@
 +++
 title = 'Publish Research Papers or Formal Blogs With Visual Studio Code and Latex'
-date = 2023-10-16T18:39:44+01:00
-draft = true
+date = 2023-10-18T12:14:44+01:00
+draft = false
 +++
 
-In the world of academia, research papers and blogs e.g. a more formal blogs that contain mathematical notations are essential for sharing knowledge and findings with the broader community. LaTeX, a typesetting system, is the go-to choice for crafting beautifully formatted documents, but creating and managing LaTeX documents efficiently can be a challenge. Visual Studio Code, a powerful and extensible code editor, can simplify this process. In this blog, we'll explore why Visual Studio Code is an excellent choice for creating and publishing research papers, academic journal articles, or technical blogs using LaTeX. We'll also provide code snippets and guidance for a seamless workflow.
+In the world of academia, research papers and blogs e.g. a more formal blogs that contain mathematical notations, etc., are essential for sharing knowledge and findings with the broader community. LaTeX, a typesetting system, is the go-to choice for crafting beautifully formatted documents, but creating and managing LaTeX documents efficiently can be a challenge. Visual Studio Code, a powerful and extensible code editor, can simplify this process. In this blog, we'll explore why Visual Studio Code is an excellent choice for creating and publishing research papers, academic journal articles, or technical blogs using LaTeX. We'll also provide code snippets and guidance for a seamless workflow.
 
 ## The Need for LaTeX in Academic Writing
 
@@ -17,7 +17,7 @@ LaTeX is favored for various reasons:
 - Cross-Referencing and Citations: LaTeX automates citation management and cross-referencing within your document.
 - Version Control: It integrates seamlessly with version control systems like Git, ensuring efficient collaboration and document history tracking.
 
-If you are not familiar with LaTex, please check out my post [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
+If you are not familiar with LaTex, please do check out my post [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
 
 ## Why Visual Studio Code?
 
