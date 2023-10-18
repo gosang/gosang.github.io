@@ -31,19 +31,21 @@ Now, let's go through the process of creating and publishing a research paper or
 
 ## Steps for Creating and Publishing
 
-1. Install Visual Studio Code and LaTeX
-   If you haven't already, download and install Visual Studio Code from the official website. Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution to consider.
+### 1. Install Visual Studio Code and LaTeX
 
-2. Install the LaTeX-Workshop Extension
-   Inside VS Code, go to the Extensions tab (Ctrl+Shift+X), search for "LaTeX-Workshop," and click "Install."
+If you haven't already, download and install Visual Studio Code from [the official website](https://code.visualstudio.com/). Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution to consider.
 
-3. Create a LaTeX Document
-   Click "File" > "New File" in VS Code.
-   Save the file with a .tex extension, for example, "my_paper.tex."
-   Here's a simple LaTeX document template:
+### 2. Install the LaTeX-Workshop Extension
+
+Inside VS Code, go to the Extensions tab (Ctrl+Shift+X), search for "LaTeX-Workshop," and click "Install."
+
+### 3. Create a LaTeX Document
+
+Click "File" > "New File" in VS Code.
+Save the file with a .tex extension, for example, "my_paper.tex."
+Here's a simple LaTeX document template:
 
 ```latex
-
 \documentclass{article}
 \title{My Research Paper}
 \author{Your Name}
@@ -54,32 +56,38 @@ Now, let's go through the process of creating and publishing a research paper or
 
 \section{Introduction}
 Your introduction goes here.
+
 \section{Methodology}
 Explain your methodology.
+
 \section{Results}
 Present your results.
+
 \section{Conclusion}
 Summarize your findings.
 
 \end{document}
-
 ```
 
-4. Configure LaTeX-Workshop
-   Open the settings in VS Code by clicking on the gear icon (⚙) in the bottom left corner and selecting "Settings."
-   Search for "LaTeX Workshop" and configure your preferences, such as the TeX distribution (e.g., TeX Live) and default compiler (usually pdflatex).
-   Ensure the "TeX Path" points to your TeX Live installation directory.
+### 4. Configure LaTeX-Workshop
 
-5. Build and Preview
-   Open your .tex file in VS Code.
-   In the bottom toolbar, find the LaTeX Workshop commands and click on the green triangle icon labeled "Build LaTeX Project."
-   LaTeX Workshop will compile your document and generate a PDF. The PDF preview will open in a new tab in VS Code.
+Open the settings in VS Code by clicking on the gear icon (⚙) in the bottom left corner and selecting "Settings."
+Search for "LaTeX Workshop" and configure your preferences, such as the TeX distribution (e.g., TeX Live) and default compiler (usually pdflatex).
+Ensure the "TeX Path" points to your TeX Live installation directory.
 
-6. Customization (Optional)
-   You can customize the build process and appearance by editing LaTeX Workshop settings in VS Code settings. For example, you can specify a different LaTeX engine or include additional packages.
+### 5. Build and Preview
 
-7. Save Your Work
-   Remember to save your document regularly (Ctrl+S or Cmd+S on Mac) as you make changes.
+Open your .tex file in VS Code.
+In the bottom toolbar, find the LaTeX Workshop commands and click on the green triangle icon labeled "Build LaTeX Project."
+LaTeX Workshop will compile your document and generate a PDF. The PDF preview will open in a new tab in VS Code.
+
+### 6. Customization (Optional)
+
+You can customize the build process and appearance by editing LaTeX Workshop settings in VS Code settings. For example, you can specify a different LaTeX engine or include additional packages.
+
+### 7. Save Your Work
+
+Remember to save your document regularly (Ctrl+S or Cmd+S on Mac) as you make changes.
 
 With these steps, you can efficiently create, edit, compile, and preview LaTeX documents in Visual Studio Code. It's a powerful and user-friendly environment for writing research papers, academic journal articles, and technical blogs.
 
