@@ -23,10 +23,11 @@ If you are not familiar with LaTex, please do check out my post [Understanding L
 
 Visual Studio Code (VS Code) is a versatile, open-source code editor developed by Microsoft. While it's commonly used for coding, it's an excellent choice for LaTeX users too. Here's why:
 
-- LaTeX-Workshop Extension: VS Code offers the "LaTeX-Workshop" extension, which streamlines LaTeX document creation, compilation, and preview.
-- Code Editor and Markdown Support: VS Code provides a rich, extensible code editor with Markdown support, ideal for mixing text content with LaTeX markup.
-- Customization: You can tailor VS Code to your preferences by configuring LaTeX compilers, viewers, and other settings.
-- Now, let's go through the process of creating and publishing a research paper or technical blog using LaTeX and Visual Studio Code.
+- **LaTeX-Workshop Extension**: VS Code offers the "LaTeX-Workshop" extension, which streamlines LaTeX document creation, compilation, and preview.
+- **Code Editor and Markdown Support**: VS Code provides a rich, extensible code editor with Markdown support, ideal for mixing text content with LaTeX markup.
+- **Customization**: You can tailor VS Code to your preferences by configuring LaTeX compilers, viewers, and other settings.
+
+Now, let's go through the process of creating and publishing a research paper or technical blog using LaTeX and Visual Studio Code.
 
 ## Steps for Creating and Publishing
 
