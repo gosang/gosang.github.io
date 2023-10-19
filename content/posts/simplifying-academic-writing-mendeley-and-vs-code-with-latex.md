@@ -1,7 +1,7 @@
 +++
-title = 'Simplifying Academic Writing Mendeley Desktop and Visual Studio Code With Latex'
-date = 2023-10-18T12:36:42+01:00
-draft = true
+title = 'Simplifying Academic Writing Mendeley and Visual Studio Code With Latex'
+date = 2023-10-19T11:47:55+01:00
+draft = false
 +++
 
 In the realm of academia, the process of writing research papers, academic articles, or journal submissions can be a daunting and complex task. Scholars and researchers face the arduous challenge of managing references, citations, and the actual content creation, while adhering to strict formatting guidelines. In this blog, we will explore how to streamline the process using Mendeley Desktop for reference and citation management and Visual Studio Code with LaTeX as the editor of choice.
@@ -46,7 +46,7 @@ Open VS Code, and install the [LaTeX Workshop](https://marketplace.visualstudio.
 
 Create a new LaTeX document in VS Code by creating a .tex file. This is where you'll write your paper.
 
-If you are not familiar with LaTex, please do check out my post [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
+If you are not familiar with LaTex, please do check out my posts: [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
 
 ### Step 4: Writing Your Paper
 
