@@ -17,7 +17,7 @@ Why GitHub Pages, Hugo, and Markdown?
    Hugo is a popular static site generator written in Go. It offers incredible performance and flexibility, making it an excellent choice for tech blogs. Hugo allows you to create content in Markdown, which is a lightweight markup language widely adopted by the tech community. It enables you to focus on writing content while Hugo takes care of generating the site. This combination ensures a lightning-fast, highly customizable, and easily maintainable blog.
 
 3. Markdown
-   Markdown is a simple and intuitive way to format your content. It's easy to learn and allows you to focus on writing without worrying about the complexities of HTML. GitHub Pages and Hugo both work seamlessly with Markdown, making it a perfect choice for your tech blog.
+   Markdown is a simple and intuitive way to format your content. It's easy to learn and allows you to focus on writing without worrying about the complexities of HTML. GitHub Pages and Hugo both work seamlessly with Markdown, making it a great choice for your tech blog.
 
 In this post, we will show how we can create a personal blog for free using the above technologies.
 
@@ -82,7 +82,7 @@ See [here](https://gohugo.io/) for quickstart guide and full documentation.
 
 ### Step 4: Create Your First Blog Post
 
-1. Run the fo1. llowing Hugo command to create a new blog post:
+1. Run the following Hugo command to create a new blog post:
 
 ```
 hugo new posts/my-first-post.md
