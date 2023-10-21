@@ -17,7 +17,7 @@ LaTeX is favored for various reasons:
 - **Cross-Referencing and Citations**: LaTeX automates citation management and cross-referencing within your document.
 - **Version Control**: It integrates seamlessly with version control systems like Git, ensuring efficient collaboration and document history tracking.
 
-If you are not familiar with LaTex, please do check out my post [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}).
+If you are not familiar with LaTex, please do check out my post [Learning Latex in 5 Minutes]({{< ref "/posts/learning-latex-in-5-minutes" >}}).
 
 ## Why Visual Studio Code?
 
