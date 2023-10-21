@@ -46,7 +46,7 @@ Open VS Code, and install the [LaTeX Workshop](https://marketplace.visualstudio.
 
 Create a new LaTeX document in VS Code by creating a .tex file. This is where you'll write your paper.
 
-If you are not familiar with LaTex and Visual Studio Code with LaTex, please do check out my posts: [Understanding Latex in 5 Minutes]({{< ref "/posts/understanding-latex-in-5-minutes" >}}) and [Publish Research Papers or Formal Blogs With Visual Studio Code and Latex]({{< ref "/posts/publish-research-papers-or-formal-blogs-with-visual-studio-code-and-latex" >}}).
+If you are not familiar with LaTex, please do check out [Learning Latex in 5 Minutes]({{< ref "/posts/learning-latex-in-5-minutes" >}}) and [Publish Research Papers or Formal Blogs With Visual Studio Code and Latex]({{< ref "/posts/publish-research-papers-or-formal-blogs-with-visual-studio-code-and-latex" >}}).
 
 ### Step 4: Writing Your Paper
 
