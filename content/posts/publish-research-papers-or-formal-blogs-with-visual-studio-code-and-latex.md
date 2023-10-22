@@ -33,17 +33,18 @@ Now, let's go through the process of creating and publishing a research paper or
 
 ### 1. Install Visual Studio Code and LaTeX
 
-If you haven't already, download and install Visual Studio Code from [the official website](https://code.visualstudio.com/). Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution to consider.
+If you haven't already, download and install [Visual Studio Code](https://code.visualstudio.com/). Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution to consider.
 
 ### 2. Install the LaTeX-Workshop Extension
 
-Inside VS Code, go to the Extensions tab (Ctrl+Shift+X), search for "LaTeX-Workshop," and click "Install."
+Inside VS Code, go to the Extensions tab (Ctrl+Shift+X), search for `LaTeX-Workshop`, and click `Install`.
 
 ### 3. Create a LaTeX Document
 
-Click "File" > "New File" in VS Code.
-Save the file with a .tex extension, for example, "my_paper.tex."
-Here's a simple LaTeX document template:
+- Click `File` > `New File` in VS Code.
+- Save the file with a `.tex` extension, for example, `my_paper.tex`.
+
+  Here's a simple LaTeX document template:
 
 ```latex
 \documentclass{article}
@@ -71,15 +72,15 @@ Summarize your findings.
 
 ### 4. Configure LaTeX-Workshop
 
-Open the settings in VS Code by clicking on the gear icon (⚙) in the bottom left corner and selecting "Settings."
-Search for "LaTeX Workshop" and configure your preferences, such as the TeX distribution (e.g., TeX Live) and default compiler (usually pdflatex).
-Ensure the "TeX Path" points to your TeX Live installation directory.
+- Open the settings in VS Code by clicking on the gear icon `(⚙)` in the bottom left corner and selecting `Settings`.
+- Search for `LaTeX Workshop` and configure your preferences, such as the TeX distribution (e.g., TeX Live) and default compiler (usually pdflatex).
+- Ensure the `TeX Path` points to your TeX Live installation directory.
 
 ### 5. Build and Preview
 
-Open your .tex file in VS Code.
-In the bottom toolbar, find the LaTeX Workshop commands and click on the green triangle icon labeled "Build LaTeX Project."
-LaTeX Workshop will compile your document and generate a PDF. The PDF preview will open in a new tab in VS Code.
+- Open your `.tex` file in VS Code.
+- In the bottom toolbar, find the LaTeX Workshop commands and click on the green triangle icon labeled `Build LaTeX Project`.
+- LaTeX Workshop will compile your document and generate a PDF. The PDF preview will open in a new tab in VS Code.
 
 ### 6. Customization (Optional)
 
