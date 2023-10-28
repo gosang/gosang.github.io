@@ -1,6 +1,6 @@
 +++
 title = 'Simplifying Academic Writing Mendeley and Visual Studio Code With Latex'
-date = 2023-10-19T11:47:55+01:00
+date = 2023-04-19T11:47:55+01:00
 draft = false
 +++
 
