@@ -1,5 +1,5 @@
 +++
-title = 'Modern Devops Branching Strategies a Guide to Efficient Development Workflows'
+title = 'Modern Devops Branching Strategies: a Guide to Efficient Development Workflows'
 date = 2023-10-22T20:03:14+01:00
 draft = false
 +++
