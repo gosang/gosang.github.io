@@ -1,6 +1,6 @@
 +++
 title = 'Creating and Maintaining a Free Blog in Github Pages, Hugo and Markdown'
-date = 2023-10-15T12:25:49+01:00
+date = 2023-01-15T12:25:49+01:00
 draft = false
 +++
 
