@@ -1,6 +1,6 @@
 +++
 title = 'Crafting Your CV With Latex and Visual Studio Code'
-date = 2023-10-21T17:09:37+01:00
+date = 2023-05-21T17:09:37+01:00
 draft = false
 +++
 
