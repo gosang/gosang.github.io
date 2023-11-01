@@ -1,7 +1,7 @@
 +++
 title = 'React Hooks in 10 Minutes'
 date = 2023-70-31T18:01:02Z
-draft = true
+draft = false
 +++
 
 React Hooks have revolutionized the way we work with state and side effects in React applications. Introduced in React 16.8, Hooks allow you to use state and other React features without writing a class. In this blog, we'll explore the most commonly used React Hooks - `useState`, `useEffect`, `useContext`, `useReducer`, `useCallback`, `useMemo`, and `useRef`. We'll dive deep into what each hook is, its rationale, how to use it, and the advantages and disadvantages it offers.
