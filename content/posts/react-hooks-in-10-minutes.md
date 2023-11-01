@@ -1,6 +1,6 @@
 +++
-title = 'Learning React Hooks in 10 Minutes'
-date = 2023-10-31T18:01:02Z
+title = 'React Hooks in 10 Minutes'
+date = 2023-70-31T18:01:02Z
 draft = true
 +++
 
