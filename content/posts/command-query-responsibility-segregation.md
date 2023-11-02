@@ -32,7 +32,7 @@ CQRS tackles several common issues in software development:
 
 - **Fine-Grained Security**: Command operations frequently require stricter access control compared to query operations. CQRS enables fine-grained security measures for command execution.
 
-# Implementing CQRS with C# .NET Core Web API and Repositories
+# Implementing CQRS in .NET Core
 
 Let's put theory into practice with a simplified e-commerce application. We will create an Order entity and showcase command and query operations using C# .NET Core Web API and repositories.
 
@@ -139,7 +139,7 @@ CQRS is a valuable pattern in specific use cases and scenarios, including:
 
 - **Fine-Grained Security**: In systems with varying access control requirements for commands and queries, CQRS offers a fine-grained approach to security.
 
-# Best Practices and Recommendations
+# Best Practices
 
 To make the most of CQRS, consider these best practices:
 
