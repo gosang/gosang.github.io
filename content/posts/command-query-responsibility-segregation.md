@@ -1,6 +1,6 @@
 +++
 title = 'Command Query Responsibility Segregation (CQRS)'
-date = 2023-11-01T19:18:44Z
+date = 2023-08-01T19:18:44Z
 draft = true
 +++
 
@@ -159,7 +159,8 @@ To make the most of CQRS, consider these best practices:
 
 CQRS is a powerful architectural pattern that can significantly enhance the maintainability, scalability, and performance of your application. While it comes with challenges, thoughtful implementation of CQRS can lead to more resilient and efficient systems. By adhering to best practices and recommendations, you can navigate the complexities and reap the benefits of CQRS in your projects.
 
-# References:
+# References
 
 - [CQRS in Microsoft Documentation](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+- [CQRS](https://martinfowler.com/bliki/CQRS.html)
 - [MediatR Library](https://github.com/jbogard/MediatR)
