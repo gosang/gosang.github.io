@@ -173,4 +173,8 @@ When implementing the Mediator Pattern, follow these best practices:
 
 The Mediator Pattern is a powerful tool for developers working on microservices or modular monolithic applications. By centralizing communication, isolating components, and promoting loose coupling, it simplifies complex interactions and enhances maintainability. When applied judiciously and with the best practices in mind, the Mediator Pattern can significantly improve the architecture of your software.
 
-For further reading on the Mediator Pattern and CQRS, refer to [MediatR](https://github.com/jbogard/MediatR), [MediatR Wiki](https://github.com/jbogard/MediatR/wiki) and [CQRS with MediatR](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+For further reading on the Mediator Pattern and CQRS, refer to:
+
+- [MediatR](https://github.com/jbogard/MediatR),
+- [MediatR Wiki](https://github.com/jbogard/MediatR/wiki)
+- [CQRS with MediatR](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
