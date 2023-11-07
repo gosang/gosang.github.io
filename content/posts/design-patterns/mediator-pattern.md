@@ -175,6 +175,6 @@ The Mediator Pattern is a powerful tool for developers working on microservices 
 
 For further reading on the Mediator Pattern and CQRS, refer to:
 
-- [MediatR](https://github.com/jbogard/MediatR),
+- [MediatR](https://github.com/jbogard/MediatR)
 - [MediatR Wiki](https://github.com/jbogard/MediatR/wiki)
 - [CQRS with MediatR](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)
