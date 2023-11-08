@@ -1,7 +1,7 @@
 +++
 title = 'Event Sourcing Pattern'
 date = 2023-08-20T08:49:40Z
-draft = true
+draft = false
 +++
 
 Event Sourcing is a powerful design pattern that has gained significant traction in the software development world. This pattern offers a novel approach to managing data changes, particularly in the context of microservices and modular monolithic architectures. In this guide, we will provide a detailed exploration of Event Sourcing, covering what it is, why it's used, practical examples using C# .NET Core, the advantages and disadvantages, when to use it, and best practices.
@@ -10,7 +10,7 @@ Event Sourcing is a powerful design pattern that has gained significant traction
 
 Event Sourcing is a pattern that revolves around capturing every change to an application's state as a sequence of immutable events. Instead of maintaining the current state of an entity, Event Sourcing stores a series of events that describe how that entity reached its current state. These events serve as the single source of truth for the application's state. By replaying these events, you can recreate the application's state at any historical point in time.
 
-## Rationale for Event Sourcing
+## The Rationale for Event Sourcing
 
 The adoption of Event Sourcing can be justified by several compelling reasons:
 
@@ -111,9 +111,9 @@ In this example, events are appended to the repository when an order is created,
 
 Event Sourcing is particularly well-suited for microservices architecture, where each service can maintain its own event store, independently processing events. In a modular monolithic architecture, you can still apply Event Sourcing by segmenting the monolith into modules, each with its own event store.
 
-## Advantages and Disadvantages
+# Advantages and Disadvantages
 
-### Advantages
+## Advantages
 
 - **Historical Insight**: Event Sourcing provides a historical log of state changes, invaluable for debugging and auditing.
 
@@ -125,7 +125,7 @@ Event Sourcing is particularly well-suited for microservices architecture, where
 
 - **Event-Driven**: Easily integrates with event-driven architectures and messaging systems.
 
-### Disadvantages
+## Disadvantages
 
 - **Complexity**: Implementing Event Sourcing can be complex and may introduce additional overhead.
 
@@ -135,7 +135,7 @@ Event Sourcing is particularly well-suited for microservices architecture, where
 
 - **Learning Curve**: Developers new to Event Sourcing may need time to adapt to the new paradigm.
 
-## When to Use Event Sourcing
+# When to Use Event Sourcing
 
 Event Sourcing is most beneficial in scenarios where a complete historical record of state changes and time-travel capabilities are required. Consider using Event Sourcing in the following scenarios:
 
@@ -147,7 +147,7 @@ Event Sourcing is most beneficial in scenarios where a complete historical recor
 
 - **E-commerce Platforms**: Managing inventory changes and order history is simplified with Event Sourcing.
 
-## Best Practices and Recommendations
+# Best Practices
 
 To make the most of Event Sourcing, adhere to these best practices:
 
