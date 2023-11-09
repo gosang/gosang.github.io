@@ -1,6 +1,6 @@
 +++
 title = 'Command Query Responsibility Segregation (CQRS)'
-date = 2023-08-01T19:18:44Z
+date = 2023-03-01T19:18:44Z
 draft = false
 +++
 
