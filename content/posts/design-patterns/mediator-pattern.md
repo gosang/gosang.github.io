@@ -1,6 +1,6 @@
 +++
 title = 'Mediator Pattern'
-date = 2023-08-10T08:28:08Z
+date = 2023-03-10T08:28:08Z
 draft = false
 +++
 
