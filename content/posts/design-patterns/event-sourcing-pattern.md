@@ -1,6 +1,6 @@
 +++
 title = 'Event Sourcing Pattern'
-date = 2023-08-20T08:49:40Z
+date = 2023-03-18T08:49:40Z
 draft = false
 +++
 
