@@ -1,6 +1,6 @@
 +++
 title = 'Securing Your Next.js 13 Application With Http Security Headers'
-date = 2023-05-24T18:16:44+01:00
+date = 2023-01-25T18:16:44+01:00
 draft = false
 +++
 
