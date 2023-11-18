@@ -1,7 +1,7 @@
 +++
 title = 'Strategy Pattern'
 date = 2023-02-15T11:26:09Z
-draft = true
+draft = false
 +++
 
 When designing software systems, it's essential to create flexible and maintainable code. One way to achieve this is by using design patterns, which are well-established solutions to common software design problems. The Strategy Pattern is one such pattern that offers a structured approach to defining a family of algorithms and making them interchangeable.
@@ -12,11 +12,11 @@ In this blog post, we'll explore the Strategy Pattern in detail, its rationale, 
 
 The Strategy Pattern is a behavioral design pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows a client to choose the appropriate algorithm to execute at runtime without altering the client's code. This promotes flexibility and ensures that changes in algorithm behavior do not affect the client code.
 
-# Rationale
+## Rationale
 
 The Strategy Pattern aims to solve a common problem in software design: the need to define multiple algorithms for a particular task and dynamically select one at runtime. By encapsulating each algorithm within its own class, the Strategy Pattern enables the client to select the appropriate algorithm based on the context or user input. This separation of concerns makes the code more maintainable and less error-prone.
 
-# Problems It Resolves
+## Problems It Resolves
 
 The Strategy Pattern addresses several issues in software design:
 
@@ -117,7 +117,7 @@ Use the Strategy Pattern when:
 - You want to isolate and test algorithms independently.
 - You anticipate changes or additions to the algorithms in the future.
 
-## Use Cases/Scenarios
+# Use Cases/Scenarios
 
 The Strategy Pattern is suitable for a wide range of scenarios:
 
