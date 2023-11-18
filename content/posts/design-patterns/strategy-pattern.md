@@ -28,9 +28,9 @@ The Strategy Pattern addresses several issues in software design:
 
 - **Testing and Debugging**: Individual algorithms are easier to test and debug in isolation.
 
-# Using the Strategy Pattern in C# .NET Core Web API
+# Using the Strategy Pattern in C# .NET Core
 
-Let's illustrate the Strategy Pattern using a C# .NET Core Web API and a repository. In this example, we will create a simplified e-commerce system that calculates discounts for products. We'll define multiple discount calculation algorithms and allow the client to choose one at runtime.
+Let's illustrate the Strategy Pattern using C# .NET Core. In this example, we will create a simplified e-commerce system that calculates discounts for products. We'll define multiple discount calculation algorithms and allow the client to choose one at runtime.
 
 ## Step 1: Define the Strategy Interface
 
