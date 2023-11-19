@@ -1,10 +1,10 @@
 +++
 title = 'Facade Pattern'
 date = 2023-01-20T12:55:19Z
-draft = true
+draft = false
 +++
 
-In the world of software development, dealing with complex systems is a common challenge. As systems grow in size and functionality, managing and using their various components can become overwhelming. This is where the Facade Pattern comes to the rescue. In this blog post, we will explore what the Facade Pattern is, its rationale, how it can be used, and its relevance in the context of microservices and modular monolithic applications. We'll also provide C# .NET Core examples to illustrate its implementation and discuss its advantages, disadvantages, use cases, best practices, and recommendations.
+In the world of software development, dealing with complex systems is a common challenge. As systems grow in size and functionality, managing and using their various components can become overwhelming. This is where the Facade Pattern comes to the rescue. In this blog post, we will explore what the Facade Pattern is, its rationale, how it can be used, and its relevance in the context of microservices and modular monolithic applications. We'll also provide C# .NET Core examples to illustrate its implementation and discuss its advantages, disadvantages, use cases and best practices.
 
 # What is the Facade Pattern?
 
