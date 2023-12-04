@@ -28,7 +28,7 @@ Now, let's walk through the process of creating a CV using LaTeX and Visual Stud
 
 ### 1. Install Visual Studio Code and LaTeX
 
-First, download and install [Visual Studio Code](https://code.visualstudio.com/). Ensure you also have LaTeX installed on your system; [TeX Live](https://tug.org/texlive/) is a common distribution.
+First, download and install [Visual Studio Code](https://code.visualstudio.com/). Ensure you also have LaTeX installed on your system; [TeX Live](https://tug.org/texlive/) is a common distribution, and comes with the required packages, etc. If you want a lightweight or on-the- fly package installation, [MiKTeX](https://miktex.org/) is another option.
 
 ### 2. Install the LaTeX-Workshop Extension
 
