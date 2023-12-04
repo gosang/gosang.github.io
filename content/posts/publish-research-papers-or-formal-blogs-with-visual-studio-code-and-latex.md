@@ -33,7 +33,7 @@ Now, let's go through the process of creating and publishing a research paper or
 
 ### 1. Install Visual Studio Code and LaTeX
 
-If you haven't already, download and install [Visual Studio Code](https://code.visualstudio.com/). Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution to consider.
+If you haven't already, download and install [Visual Studio Code](https://code.visualstudio.com/). Also, ensure that you have LaTeX (TeX Live) installed on your system. [TeX Live](https://tug.org/texlive/) is a common distribution and it comes with the required packages, etc. If you want a lightweight or on-the-fly package installation, [MiKTeX](https://miktex.org/) is another option to consider.
 
 ### 2. Install the LaTeX-Workshop Extension
 
