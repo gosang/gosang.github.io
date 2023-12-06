@@ -31,7 +31,6 @@ The Flyweight pattern addresses several common problems:
 To illustrate the Flyweight pattern, we'll create a simple example using C# .NET Core for a Web API and repository. Suppose we are building a system to manage books, and we have a large number of books with similar properties like titles, authors, and publication years. Here's how you can implement the Flyweight pattern:
 
 ```csharp
-Copy code
 // Intrinsic state shared among all book objects
 class BookInfo
 {
@@ -123,3 +122,7 @@ When implementing the Flyweight pattern, keep the following best practices in mi
 # Conclusion
 
 The Flyweight design pattern is a powerful tool for optimizing resource usage in software applications. By sharing intrinsic state and separating it from extrinsic state, you can significantly reduce memory consumption and improve performance. It is particularly valuable in scenarios where you need to manage a large number of similar objects efficiently. When used correctly, the Flyweight pattern can be a valuable addition to your design pattern toolkit.
+
+For more information on the Flyweight pattern, you can refer to the [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) book by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, also known as the "Gang of Four" book, which is considered a classic reference on design patterns.
+
+That's all for our exploration of the Flyweight pattern in C# .NET Core. We hope this blog has provided you with a clear understanding of the pattern and how to use it effectively in your software projects.
