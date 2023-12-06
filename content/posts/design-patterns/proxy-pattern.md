@@ -1,6 +1,6 @@
 +++
 title = 'Proxy Pattern'
-date = 2023-04-11T12:26:08Z
+date = 2022-03-15T12:26:08Z
 draft = false
 +++
 

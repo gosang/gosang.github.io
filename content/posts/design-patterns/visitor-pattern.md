@@ -1,6 +1,6 @@
 +++
 title = 'Visitor Pattern'
-date = 2023-12-03T12:23:36Z
+date = 2022-03-23T12:23:36Z
 draft = false
 +++
 

@@ -1,6 +1,6 @@
 +++
 title = 'Flyweight Pattern'
-date = 2023-04-08T12:28:06Z
+date = 2022-03-11T12:28:06Z
 draft = false
 +++
 

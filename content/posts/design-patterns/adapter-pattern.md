@@ -1,6 +1,6 @@
 +++
 title = 'Adapter Pattern'
-date = 2023-02-22T08:37:58Z
+date = 2022-02-22T08:37:58Z
 draft = false
 +++
 

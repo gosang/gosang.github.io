@@ -1,6 +1,6 @@
 +++
 title = 'Facade Pattern'
-date = 2023-01-20T12:55:19Z
+date = 2022-01-20T12:55:19Z
 draft = false
 +++
 

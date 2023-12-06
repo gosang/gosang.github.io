@@ -1,6 +1,6 @@
 +++
 title = 'Chain of Responsibility Pattern'
-date = 2023-04-01T12:22:44Z
+date = 2022-03-01T12:22:44Z
 draft = false
 +++
 

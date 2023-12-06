@@ -1,6 +1,6 @@
 +++
 title = 'Strategy Pattern'
-date = 2023-02-15T11:26:09Z
+date = 2022-02-15T11:26:09Z
 draft = false
 +++
 
