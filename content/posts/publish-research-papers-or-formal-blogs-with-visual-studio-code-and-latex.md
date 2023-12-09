@@ -1,6 +1,6 @@
 +++
 title = 'Publish Research Papers or Formal Blogs With Visual Studio Code and Latex'
-date = 2023-02-18T12:14:44+01:00
+date = 2021-07-18T12:14:44+01:00
 draft = false
 +++
 
