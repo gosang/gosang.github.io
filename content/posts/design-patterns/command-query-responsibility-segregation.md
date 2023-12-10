@@ -2,6 +2,8 @@
 title = 'Command Query Responsibility Segregation (CQRS)'
 date = 2023-03-01T19:18:44Z
 draft = false
+series = "Design Patterns"
+tags = ["CQRS"]
 +++
 
 In the ever-evolving world of software architecture, Command Query Responsibility Segregation (CQRS) has emerged as a powerful design pattern. CQRS is all about separating the responsibilities of executing commands (actions that change the state of an application) and handling queries (read-only operations).

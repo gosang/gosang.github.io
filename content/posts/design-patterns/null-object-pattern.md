@@ -2,6 +2,7 @@
 title = 'Null Object Pattern'
 date = 2022-05-06T12:18:18Z
 draft = false
+series = "Design Patterns"
 +++
 
 In the world of software development, handling null values can be a persistent challenge. The Null Object pattern is a design pattern that addresses this challenge by providing a systematic way to represent and handle null objects. This blog post aims to explore the Null Object pattern in-depth, covering its definition, rationale, usage, implementation in C# .NET Core with CacheStorage, advantages, disadvantages, use cases, and best practices.

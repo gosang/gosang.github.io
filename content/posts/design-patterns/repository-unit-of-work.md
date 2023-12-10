@@ -2,6 +2,8 @@
 title = 'Repository Unit of Work'
 date = 2022-02-12T08:56:22Z
 draft = false
+series = "Design Patterns"
+tags = ["Repository", "Unit of Work"]
 +++
 
 In the ever-evolving landscape of software architecture and data management, certain design patterns stand out as foundational concepts that can greatly improve the organization and maintainability of your applications. Among these, the Repository Pattern and the Unit of Work Pattern are two of the most vital. In this comprehensive guide, we'll explore these patterns in depth, understand their significance, and learn how to wield them effectively in a C# .NET Core Web API, harnessing the capabilities of Entity Framework Core 6.0. We'll also delve into their utility in the context of microservices and modular monolithic architectures, and clarify when and where to employ these patterns.

@@ -2,6 +2,8 @@
 title = 'Repository Pattern'
 date = 2022-01-29T08:43:48Z
 draft = false
+series = "Design Patterns"
+tags = ["Repository", "Unit of Work"]
 +++
 
 In the realm of software development, maintaining a clean, organized, and efficient codebase is paramount. One of the key design patterns that facilitates this is the Repository Pattern. In this comprehensive guide, we'll embark on a journey to understand the Repository Pattern from the ground up, exploring its purpose, the problems it elegantly resolves, and how to employ it in a C# .NET Core Web API powered by Entity Framework Core 6.0. We'll also delve into its application in the context of microservices and modular monolithic architectures, elucidate the when and why of using this pattern, and provide best practices and recommendations.
