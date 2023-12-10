@@ -2,6 +2,8 @@
 title = 'Flyweight Pattern'
 date = 2022-03-11T12:28:06Z
 draft = false
+series = "Structural Design Patterns"
+tags = ["Design Patterns", "Flyweight"]
 +++
 
 The Flyweight design pattern is a structural pattern that falls under the category of design patterns in software engineering. It is used to optimize memory usage or computational resources by sharing as much as possible with related objects. The Flyweight pattern is particularly valuable when you need to create a large number of similar objects and you want to conserve resources.

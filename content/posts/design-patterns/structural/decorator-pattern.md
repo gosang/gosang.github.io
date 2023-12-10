@@ -2,6 +2,8 @@
 title = 'Decorator Pattern'
 date = 2022-03-08T12:27:13Z
 draft = false
+series = "Structural Design Patterns"
+tags = ["Design Patterns", "Decorator"]
 +++
 
 In software development, design patterns play a pivotal role in structuring and organizing code to make it more maintainable and extensible. One such design pattern that proves to be invaluable in enhancing the functionality of objects without altering their structure is the Decorator Pattern. In this blog, we will delve into the Decorator Pattern, its rationale, implementation in C# .NET Core, and how it can be beneficial for microservices and modular monolithic applications.

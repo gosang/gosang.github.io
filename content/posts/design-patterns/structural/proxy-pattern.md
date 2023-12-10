@@ -2,6 +2,8 @@
 title = 'Proxy Pattern'
 date = 2022-03-15T12:26:08Z
 draft = false
+series = "Structural Design Patterns"
+tags = ["Design Patterns", "Proxy"]
 +++
 
 When building complex software systems, especially in the context of microservices or modular monolithic applications, managing resources efficiently and controlling access to them becomes crucial. The Proxy Pattern is a powerful design pattern that helps solve these challenges by providing a surrogate or placeholder for another object to control its access. In this blog, we will dive deep into the Proxy Pattern, explore its rationale, use cases, advantages, disadvantages, and best practices. We'll also provide code examples using C# .NET Core Web API and Repository.

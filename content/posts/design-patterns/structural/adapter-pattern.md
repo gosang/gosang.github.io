@@ -2,6 +2,8 @@
 title = 'Adapter Pattern'
 date = 2022-02-22T08:37:58Z
 draft = false
+series = "Structural Design Patterns"
+tags = ["Design Patterns", "Adapter"]
 +++
 
 In the world of software development, you often encounter scenarios where you need to integrate new components or systems with existing ones. These components may not always speak the same "language," and bridging this gap can be a challenging task. That's where the Adapter Pattern comes to the rescue. In this blog, we will dive deep into the Adapter Pattern, understand its purpose, see how it resolves integration problems, and explore its usage in the context of microservices and modular monolithic applications using C# .NET Core. We'll also discuss its advantages, disadvantages, best practices, and provide code snippets for a better grasp of the concept.

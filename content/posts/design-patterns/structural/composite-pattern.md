@@ -3,7 +3,7 @@ title = 'Composite Pattern'
 date = 2022-06-16T12:56:42Z
 draft = false
 series = "Structural Design Patterns"
-tags = ["Design Patterns", "Composite Pattern"]
+tags = ["Design Patterns", "Composite"]
 +++
 
 The Composite Pattern is a structural design pattern that allows you to compose objects into tree structures to represent part-whole hierarchies. This pattern lets clients treat individual objects and compositions of objects uniformly. In simpler terms, it enables you to work with both individual objects and groups of objects in a unified manner.
