@@ -2,8 +2,8 @@
 title = 'Interpreter Pattern'
 date = 2022-06-28T13:00:16Z
 draft = false
-series = "Design Patterns"
-tags = ["Interpreter Pattern"]
+series = "Structural Design Patterns"
+tags = ["Design Patterns", "Interpreter Pattern"]
 +++
 
 In the realm of design patterns, the Interpreter pattern stands out as a powerful tool for solving specific types of problems. This blog post will delve into the intricacies of the Interpreter pattern, exploring what it is, its rationale, applications in the context of microservices or modular monolithic architectures, and providing practical examples using C# .NET Core.
