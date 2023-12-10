@@ -1,8 +1,9 @@
 +++
-title = 'Event Sourcing Pattern'
+title = 'Event Sourcing Design Pattern'
 date = 2023-03-18T08:49:40Z
 draft = false
 series = "Design Patterns"
+tags = ["Event Sourcing", "CQRS", "Microservices"]
 +++
 
 Event Sourcing is a powerful design pattern that has gained significant traction in the software development world. This pattern offers a novel approach to managing data changes, particularly in the context of microservices and modular monolithic architectures. In this guide, we will provide a detailed exploration of Event Sourcing, covering what it is, why it's used, practical examples using C# .NET Core, the advantages and disadvantages, when to use it, and best practices.
