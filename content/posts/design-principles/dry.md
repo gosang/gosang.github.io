@@ -2,7 +2,7 @@
 title = 'DRY Design Principle'
 date = 2022-08-11T13:26:13Z
 draft = false
-series = "Design Patterns"
+series = "Design Principles"
 tags = ["DRY"]
 +++
 
