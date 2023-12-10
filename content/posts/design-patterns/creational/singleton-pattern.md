@@ -2,6 +2,8 @@
 title = 'Singleton Pattern'
 date = 2022-05-16T12:23:54Z
 draft = false
+series = "Creational Design Patterns"
+tags = ["Design Patterns", "Singleton"]
 +++
 
 # Introduction

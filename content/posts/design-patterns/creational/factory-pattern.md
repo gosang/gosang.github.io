@@ -3,7 +3,7 @@ title = 'Factory Pattern'
 date = 2022-08-02T13:19:18Z
 draft = false
 series = "Creational Design Patterns"
-tags = ["Design Patterns", "Factory Pattern"]
+tags = ["Design Patterns", "Factory"]
 +++
 
 Design patterns play a crucial role in creating modular, scalable, and maintainable software. Among them, Factory Patterns are widely used to encapsulate object creation, providing a flexible way to instantiate objects without specifying their exact classes. In this blog, we'll explore three types of Factory Patterns: Concrete, Static, and Abstract, discussing their rationale, usage in an e-commerce system with C# .NET Core examples, advantages, disadvantages, and best practices.

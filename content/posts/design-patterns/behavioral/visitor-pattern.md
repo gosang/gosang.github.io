@@ -2,6 +2,8 @@
 title = 'Visitor Pattern'
 date = 2022-03-23T12:23:36Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "Visitor"]
 +++
 
 The Visitor Pattern is a design pattern that provides a way to separate the algorithm from the object structure it operates on. It is a powerful and flexible pattern that is often used to add new operations to a set of classes without modifying their source code. In this blog, we will dive deep into the Visitor Pattern, explore its rationale, benefits, and drawbacks, and provide real-world examples in the context of a .NET Core Web API with a repository.

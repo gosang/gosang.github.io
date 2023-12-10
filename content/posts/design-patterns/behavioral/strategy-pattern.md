@@ -2,6 +2,8 @@
 title = 'Strategy Pattern'
 date = 2022-02-15T11:26:09Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "Strategy"]
 +++
 
 When designing software systems, it's essential to create flexible and maintainable code. One way to achieve this is by using design patterns, which are well-established solutions to common software design problems. The Strategy Pattern is one such pattern that offers a structured approach to defining a family of algorithms and making them interchangeable.

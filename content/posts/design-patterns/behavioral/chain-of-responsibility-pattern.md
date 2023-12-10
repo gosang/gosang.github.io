@@ -2,6 +2,8 @@
 title = 'Chain of Responsibility Pattern'
 date = 2022-03-01T12:22:44Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "Chain of Responsibility"]
 +++
 
 The Chain of Responsibility Pattern is a behavioral design pattern that allows you to pass requests along a chain of handlers. Each handler can choose to process the request or pass it to the next handler in the chain. This pattern promotes loose coupling between the sender and receiver of a request, making it a powerful tool in building extensible and maintainable software systems. In this blog, we will explore what the Chain of Responsibility Pattern is, its rationale, how it can be used in C# .NET Core, and its relevance in the context of microservices or modular monolithic applications.

@@ -2,6 +2,8 @@
 title = 'State Pattern'
 date = 2022-05-28T12:28:51Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "State"]
 +++
 
 State Pattern

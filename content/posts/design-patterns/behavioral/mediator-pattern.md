@@ -2,6 +2,8 @@
 title = 'Mediator Pattern'
 date = 2023-03-10T08:28:08Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "Mediator"]
 +++
 
 In the realm of software design, the Mediator Pattern shines as a potent tool for simplifying complex systems, promoting loose coupling, and improving maintainability. Whether you're developing microservices or working on modular monolithic applications, the Mediator Pattern can be a game-changer.

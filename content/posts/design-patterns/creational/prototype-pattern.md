@@ -3,7 +3,7 @@ title = 'Prototype Pattern'
 date = 2022-07-04T13:09:32Z
 draft = false
 series = "Creational Design Patterns"
-tags = ["Design Patterns", "Prototype Pattern"]
+tags = ["Design Patterns", "Prototype"]
 +++
 
 The Prototype pattern is a creational design pattern that focuses on creating objects by copying an existing object, known as the prototype. This pattern allows you to create new objects by duplicating an existing one, providing a convenient way to produce new instances without specifying their exact types. In this blog post, we'll explore the Prototype pattern, its rationale, implementation in C# .NET Core, and its relevance in the context of microservices and modular monolithic architectures.

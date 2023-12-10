@@ -2,6 +2,8 @@
 title = 'Template Method Pattern'
 date = 2022-03-18T12:24:18Z
 draft = false
+series = "Behavioral Design Patterns"
+tags = ["Design Patterns", "Template Method"]
 +++
 
 The Template Method Pattern is a fundamental design pattern in software development that provides a framework for defining the structure of an algorithm while allowing specific steps of the algorithm to be implemented by derived classes. In this blog, we will explore the Template Method Pattern in detail, including its rationale, how it's used in C# .NET Core, and its relevance in both microservices and modular monolithic applications. We'll also delve into its advantages and disadvantages, use cases, best practices, and recommendations.
