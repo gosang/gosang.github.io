@@ -1,5 +1,5 @@
 +++
-title = 'Open Closed Principle'
+title = 'Open-Closed Principle (OCP)'
 date = 2023-02-11T13:13:36Z
 draft = false
 series = "SOLID Design Principles"
