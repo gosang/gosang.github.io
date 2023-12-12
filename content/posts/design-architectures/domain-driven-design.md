@@ -21,7 +21,7 @@ Traditional software development often results in systems that inadequately capt
 1. **Ambiguity in Requirements**
    In many projects, the requirements can be ambiguous or open to interpretation. DDD addresses this issue by promoting the use of a ubiquitous language—a shared vocabulary between domain experts and developers—which ensures a clear and consistent understanding of the system.
 
-2. ** Complex Business Logic**
+2. **Complex Business Logic**
    Business logic can become convoluted and scattered across the codebase. DDD tackles this problem by organizing code around domain concepts, encapsulating complex logic within entities, and ensuring a clean separation of concerns.
 
 3. **Communication Challenges**
@@ -175,9 +175,9 @@ These DDD concepts ensure that the software accurately mirrors the complexities 
 
 # When to Use DDD
 
-- Complex Business Logic: DDD is ideal when dealing with intricate business rules.
-- Collaborative Teams: Suitable for projects where collaboration between domain experts and developers is crucial.
-- Long-Term Projects: Best suited for projects with a long lifespan.
+- **Complex Business Logic**: DDD is ideal when dealing with intricate business rules.
+- **Collaborative Teams**: Suitable for projects where collaboration between domain experts and developers is crucial.
+- **Long-Term Projects**: Best suited for projects with a long lifespan.
 
 # Best Practices
 
