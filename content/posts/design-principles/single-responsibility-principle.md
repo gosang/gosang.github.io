@@ -1,6 +1,6 @@
 +++
 title = 'Single Responsibility Principle (SRP)'
-date = 2022-09-16T13:13:36Z
+date = 2023-02-02T13:13:36Z
 draft = false
 series = "SOLID Design Principles"
 tags = ["SOLID", "SRP"]
