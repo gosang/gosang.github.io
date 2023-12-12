@@ -1,6 +1,6 @@
 +++
 title = 'Mediator Pattern'
-date = 2023-03-10T08:28:08Z
+date = 2022-10-10T08:28:08Z
 draft = false
 series = "Behavioral Design Patterns"
 tags = ["Design Patterns", "Mediator"]

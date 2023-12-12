@@ -1,6 +1,6 @@
 +++
 title = 'Flyweight Pattern'
-date = 2022-03-11T12:28:06Z
+date = 2022-04-05T12:28:06Z
 draft = false
 series = "Structural Design Patterns"
 tags = ["Design Patterns", "Flyweight"]

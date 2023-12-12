@@ -1,6 +1,6 @@
 +++
 title = 'Strategy Pattern'
-date = 2022-02-15T11:26:09Z
+date = 2022-04-25T11:26:09Z
 draft = false
 series = "Behavioral Design Patterns"
 tags = ["Design Patterns", "Strategy"]
