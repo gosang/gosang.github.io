@@ -1,0 +1,769 @@
+<!doctype html><html xmlns=http://www.w3.org/1999/xhtml xml:lang=en-us lang=en-us><head><script defer language=javascript type=text/javascript src=/js/bundle.min.aaddf69428b38a6431e3b84a00ae39ccc4f159833076ec8e133fc58eafca6b8e.js></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.png><title itemprop=name>Go Sang - Clean Architecture</title>
+<meta property="og:title" content="Go Sang - Clean Architecture"><meta name=twitter:title content="Go Sang - Clean Architecture"><meta itemprop=name content="Go Sang - Clean Architecture"><meta name=application-name content="Go Sang - Clean Architecture"><meta property="og:site_name" content><meta name=description content><meta itemprop=description content><meta property="og:description" content><meta name=twitter:description content><base href=https://gosang.github.io/posts/design-architectures/clean-architecture/><link rel=canonical href=https://gosang.github.io/posts/design-architectures/clean-architecture/ itemprop=url><meta name=url content="https://gosang.github.io/posts/design-architectures/clean-architecture/"><meta name=twitter:url content="https://gosang.github.io/posts/design-architectures/clean-architecture/"><meta property="og:url" content="https://gosang.github.io/posts/design-architectures/clean-architecture/"><meta property="og:updated_time" content="25002-25-01T258:28:23Z"><link rel=sitemap type=application/xml title=Sitemap href=https://gosang.github.io/sitemap.xml><meta name=robots content="index,follow"><meta name=googlebot content="index,follow"><meta name=twitter:site content><meta name=twitter:creator content><meta property="fb:admins" content><meta name=apple-mobile-web-app-title content><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black"><meta property="og:type" content="article"><meta property="article:publisher" content><meta property="og:article:published_time" content="25002-25-01T258:28:23Z"><meta property="article:published_time" content="25002-25-01T258:28:23Z"><script defer type=application/ld+json>{"@context":"http://schema.org","@type":"Article","headline":"Clean Architecture","author":{"@type":"Person","name":"https:\/\/github.com\/gosang"},"datePublished":"2023-02-25","description":"","wordCount":"3048","mainEntityOfPage":"True","dateModified":"2023-02-25","image":{"@type":"imageObject","url":""},"publisher":{"@type":"Organization","name":"","logo":{"@type":"imageObject","url":""}}}</script><meta name=generator content="Hugo 0.121.1"><link type=text/css rel=stylesheet href=/css/bundle.min.178e339ccb9acabffeebf9adbb0bb23c1ec0b72a2a50edee18a5007d4d5a68aa.css><style>body{--sidebar-bg-color:#202020;--sidebar-img-border-color:#515151;--sidebar-p-color:#909090;--sidebar-h1-color:#FFF;--sidebar-a-color:#FFF;--sidebar-socials-color:#FFF;--text-color:#222;--bkg-color:#FAF9F6;--post-title-color:#303030;--list-color:#5a5a5a;--link-color:#268bd2;--date-color:#515151;--table-border-color:#E5E5E5;--table-stripe-color:#F9F9F9;--code-color:#bf616a;--code-background-color:#E5E5E5;--moon-sun-color:#FFF;--moon-sun-background-color:#515151}body.dark-theme{--text-color:#eee;--bkg-color:#121212;--post-title-color:#DBE2E9;--list-color:#9d9d9d;--link-color:#268bd2;--date-color:#9a9a9a;--table-border-color:#515151;--table-stripe-color:#202020;--code-color:#ff7f7f;--code-background-color:#393D47}body{background-color:var(--bkg-color)}</style></head><body><div class=wrapper><aside class=sidebar><div class="container sidebar-sticky"><div class=light-dark align=right><button class=btn-light-dark title="Toggle light/dark mode"><svg class="moon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentcolor" d="M6 .278a.768.768.0 01.08.858 7.208 7.208.0 00-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527.0 1.04-.055 1.533-.16a.787.787.0 01.81.316.733.733.0 01-.031.893A8.349 8.349.0 018.344 16C3.734 16 0 12.286.0 7.71.0 4.266 2.114 1.312 5.124.06A.752.752.0 016 .278z"/></svg><svg class="sun" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentcolor" d="M8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 0zm0 13a.5.5.0 01.5.5v2a.5.5.0 01-1 0v-2A.5.5.0 018 13zm8-5a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2a.5.5.0 01.5.5zM3 8a.5.5.0 01-.5.5h-2a.5.5.0 010-1h2A.5.5.0 013 8zm10.657-5.657a.5.5.0 010 .707l-1.414 1.415a.5.5.0 11-.707-.708l1.414-1.414a.5.5.0 01.707.0zm-9.193 9.193a.5.5.0 010 .707L3.05 13.657a.5.5.0 01-.707-.707l1.414-1.414a.5.5.0 01.707.0zm9.193 2.121a.5.5.0 01-.707.0l-1.414-1.414a.5.5.0 01.707-.707l1.414 1.414a.5.5.0 010 .707zM4.464 4.465a.5.5.0 01-.707.0L2.343 3.05a.5.5.0 11.707-.707l1.414 1.414a.5.5.0 010 .708z"/></svg></button></div><div class=sidebar-about><h1 class=brand><a href=https://gosang.github.io/><h1>Go Sang</h1></a></h1><p class=lead>Learning about technology.</p></div><nav><ul class=sidebar-nav><li class=heading><a href=/posts/>Posts</a></li><li class=sub-heading>Recent</li><li class=bullet><a href=https://gosang.github.io/posts/ai/llm/>Large Language Models (LLMs)</a></li><li class=bullet><a href=https://gosang.github.io/posts/design-architectures/modular-monolithic-architecture/>Modular Monolithic Architecture</a></li><li class=bullet><a href=https://gosang.github.io/posts/design-architectures/domain-driven-design/>Domain Driven Design (DDD)</a></li><li class=bullet><a href=https://gosang.github.io/posts/design-principles/dependency-inversion-principle/>Dependency Inversion Principle (DIP) and Dependency Injection (DI)</a></li><li class=bullet><a href=https://gosang.github.io/posts/design-principles/interface-segregation-principle/>Interface Segregation Principle (ISP)</a></li></ul></nav><a target=_blank class=social title=GitHub href=https://github.com/gosang><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="-2 -2 24 24"><path fill="currentcolor" d="M18.88 1.099C18.147.366 17.265.0 16.233.0H3.746C2.714.0 1.832.366 1.099 1.099.366 1.832.0 2.714.0 3.746v12.487c0 1.032.366 1.914 1.099 2.647.733.733 1.615 1.099 2.647 1.099H6.66c.19.0.333-.007.429-.02a.504.504.0 00.286-.169c.095-.1.143-.245.143-.435l-.007-.885c-.004-.564-.006-1.01-.006-1.34l-.3.052c-.19.035-.43.05-.721.046a5.555 5.555.0 01-.904-.091 2.026 2.026.0 01-.872-.39 1.651 1.651.0 01-.572-.8l-.13-.3a3.25 3.25.0 00-.41-.663c-.186-.243-.375-.407-.566-.494l-.09-.065a.956.956.0 01-.17-.156.723.723.0 01-.117-.182c-.026-.061-.004-.111.065-.15.07-.04.195-.059.378-.059l.26.04c.173.034.388.138.643.311a2.1 2.1.0 01.631.677c.2.355.44.626.722.813.282.186.566.28.852.28.286.0.533-.022.742-.065a2.59 2.59.0 00.585-.196c.078-.58.29-1.028.637-1.34a8.907 8.907.0 01-1.333-.234 5.314 5.314.0 01-1.223-.507 3.5 3.5.0 01-1.047-.872c-.277-.347-.505-.802-.683-1.365-.177-.564-.266-1.215-.266-1.952.0-1.049.342-1.942 1.027-2.68-.32-.788-.29-1.673.091-2.652.252-.079.625-.02 1.119.175.494.195.856.362 1.086.5.23.14.414.257.553.352a9.233 9.233.0 012.497-.338c.859.0 1.691.113 2.498.338l.494-.312a6.997 6.997.0 011.197-.572c.46-.174.81-.221 1.054-.143.39.98.424 1.864.103 2.653.685.737 1.028 1.63 1.028 2.68.0.737-.089 1.39-.267 1.957-.177.568-.407 1.023-.689 1.366a3.65 3.65.0 01-1.053.865c-.42.234-.828.403-1.223.507a8.9 8.9.0 01-1.333.235c.45.39.676 1.005.676 1.846v3.11c0 .147.021.266.065.357a.36.36.0 00.208.189c.096.034.18.056.254.064.074.01.18.013.318.013h2.914c1.032.0 1.914-.366 2.647-1.099.732-.732 1.099-1.615 1.099-2.647V3.746c0-1.032-.367-1.914-1.1-2.647z"/></svg></a><a target=_blank class=social title="RSS Feed" href=https://gosang.github.io//posts/index.xml><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1.2em" viewBox="0 0 1280 1280"><g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="currentcolor"><path d="M2295 11929c-284-12-642-45-707-65-17-5-18-63-18-1039 0-569 4-1036 8-1039 5-3 74 6 153 19 510 86 1168 95 1789 25 1348-153 2602-677 3670-1531 385-308 820-744 1126-1129 842-1060 1362-2313 1514-3650 70-621 61-1279-25-1789-13-79-22-148-19-153 3-4 471-8 1039-8h1035l5 23c51 225 85 942 67 1419-23 605-77 1044-198 1617-294 14e2-927 2734-1823 3846-1043 1295-2364 2259-3909 2854-1158 447-2451 656-3707 6e2z"/><path d="M2255 7845c-269-25-620-81-667-106-17-9-18-55-18-899 0-706 3-890 13-890 6 0 66 18 132 41 130 44 288 79 467 105 154 21 577 30 749 15 1207-107 2267-823 2814-1902 166-327 268-637 330-1001 38-227 48-384 42-662-8-348-44-590-126-831-23-66-41-126-41-132 0-10 184-13 890-13 844 0 890 1 899 18 27 50 88 452 110 725 14 162 14 624 1 782-59 703-233 1323-545 1945-481 956-1313 1788-2270 2268-620 310-1239 483-1940 542-165 14-669 10-840-5z"/><path d="M2519 3815c-391-66-725-336-868-703-79-201-96-462-45-677 83-344 338-641 666-774 116-47 205-69 330-80 412-39 811 153 1040 5e2 193 292 240 648 128 981-135 403-492 699-914 757-1e2 14-241 12-337-4z"/></g></svg></a><p class=footnote>powered by <a target=_blank href=https://gohugo.io>Hugo</a> | themed with <a target=_blank href=https://github.com/lukeorth/poison>poison</a><br>&copy; 2023 . All rights reserved.</p></div></aside><main class="content container"><div class=post><div class=info><h1 class=post-title><a href=https://gosang.github.io/posts/design-architectures/clean-architecture/>Clean Architecture</a></h1><time datetime=2023-02-25T13:58:28Z class=post-date>February 25, 2023</time><p class=seriesname>Series: <a href=https://gosang.github.io/series/design-architectures>Design Architectures</a></p></div><p>In the ever-evolving world of software development, architects and developers are in pursuit of a design pattern that not only ensures the maintainability of their applications but also enables scalability and adaptability. Clean Architecture, a concept popularized by Uncle Bob (Robert C. Martin), has gained prominence for its ability to provide a structured approach to software design. In this blog post, we will explore Clean Architecture comprehensively, covering its key concepts, components, rationale, and real-world implementation in the context of an online shopping system. We will use .NET Core, C#, Web API, CQRS with MediatR, Repository Pattern with Entity Framework Core 6.0, React Next.js UI, Docker, and Docker Compose to exemplify Clean Architecture.</p><h1 id=understanding-clean-architecture>Understanding Clean Architecture</h1><p>At its core, Clean Architecture emphasizes a clear separation of concerns by organizing an application into distinct layers, each with a specific responsibility. The primary components of Clean Architecture are:</p><p><strong>Presentation Layer</strong></p><ul><li>The outermost layer is responsible for user interfaces, such as web applications, APIs, and CLI interfaces.</li><li>It communicates with the Application Layer to handle user input and output.</li></ul><p><strong>Application Layer</strong></p><ul><li>This layer contains application-specific business logic, including use cases and workflows.</li><li>It relies on the Domain Layer for domain-specific rules and entities.</li></ul><p><strong>Domain Layer</strong></p><ul><li>The heart of the application, it contains the core business logic, entities, and value objects.</li><li>It is entirely independent of the Presentation and Infrastructure layers, making it highly testable and maintainable.</li></ul><p><strong>Infrastructure Layer</strong></p><ul><li>Responsible for external concerns, such as databases, third-party libraries, and frameworks.</li><li>Implements the interfaces defined in the Application and Domain layers.</li><li>Decouples the core business logic from external dependencies.</li></ul><h1 id=the-rationale-behind-clean-architecture>The Rationale Behind Clean Architecture</h1><p>Clean Architecture addresses several critical issues in software development:</p><ul><li><p><strong>Maintainability</strong>: By enforcing a strict separation of concerns, it becomes easier to make changes or extend the application without affecting the entire system. This separation reduces the risk of creating tightly coupled and hard-to-maintain code.</p></li><li><p><strong>Testability</strong>: With its clear division of responsibilities, Clean Architecture promotes unit testing by making it easier to test individual components in isolation. This results in more reliable and bug-free code.</p></li><li><p><strong>Independence</strong>: Clean Architecture ensures that the core business logic remains isolated from external dependencies. This independence enables the application to adapt to changes in technologies, frameworks, or databases.</p></li><li><p><strong>Scalability</strong>: Clean Architecture&rsquo;s modularity allows for straightforward scaling by adding or modifying components, making it well-suited for microservices and modular monolithic applications.</p></li></ul><h1 id=realizing-clean-architecture-in-an-online-shopping-system>Realizing Clean Architecture in an Online Shopping System</h1><p>Let&rsquo;s explore Clean Architecture in action by considering an online shopping system. In both microservices and modular monolithic approaches, Clean Architecture can be effectively applied. We will delve into three essential use cases: Customer Management, Order Processing, and Shipping, along with email notifications.</p><h3 id=project-structure>Project Structure</h3><p>The organization of these use cases in a .NET Core project might look like this:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span><span style=color:#66d9ef>-</span> OnlineShoppingApplication
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Presentation (Web API and React UI)
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Application
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Customer
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Order
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Shipping
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Domain
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Customer
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Order
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Shipping
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Infrastructure
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> Repositories
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>-</span> EmailServices
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>-</span> Docker Compose
+</span></span></code></pre></div><h3 id=customer-management>Customer Management</h3><p>In Clean Architecture, the Customer Management use case can be represented as follows:</p><ul><li><strong>Entities</strong>: Define a <code>Customer</code> entity with properties like name, email, and address.</li><li><strong>Use Cases</strong>: Implement business logic for customer creation, updates, and retrieval.</li><li><strong>Interfaces</strong>: Create interfaces for customer data access (repositories) and customer notification services (e.g., email).</li><li><strong>Adapters</strong>: Develop implementations for data access (using Entity Framework Core) and notification (SMTP email service).</li></ul><h4 id=example-customer-domain-entity-customer-application-service-and-customer-repository>Example Customer Domain Entity, Customer Application Service and Customer Repository:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Domain/Customer/Customer.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Domain.Customer
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Customer</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> Id { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Name { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Email { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Address { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Customer/CustomerApplicationService.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Customer
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomerApplicationService</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMediator _mediator;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> CustomerApplicationService(IMediator mediator)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _mediator = mediator;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;CustomerDto&gt; CreateCustomer(CreateCustomerCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _mediator.Send(command);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other customer-related application methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Infrastructure/Repositories/CustomerRepository.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoMapper;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.EntityFrameworkCore;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.Repositories
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomerRepository</span> : ICustomerRepository
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> AppDbContext _dbContext;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMapper _mapper;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> CustomerRepository(AppDbContext dbContext, IMapper mapper)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext = dbContext;
+</span></span><span style=display:flex><span>            _mapper = mapper;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Customer&gt; GetByIdAsync(<span style=color:#66d9ef>int</span> id)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _dbContext.Customers.FirstOrDefaultAsync(c =&gt; c.Id == id);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Customer&gt; AddAsync(Customer customer)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext.Customers.Add(customer);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> _dbContext.SaveChangesAsync();
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> customer;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other repository methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Presentation/Controllers/CustomerController.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.AspNetCore.Mvc;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Presentation.Controllers
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [Route(&#34;api/[controller]</span><span style=color:#e6db74>&#34;)]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#a6e22e>    [ApiController]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomerController</span> : ControllerBase
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> CustomerApplicationService _customerService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> CustomerController(CustomerApplicationService customerService)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _customerService = customerService;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>        [HttpPost]</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;ActionResult&lt;CustomerDto&gt;&gt; CreateCustomer([FromBody] CreateCustomerCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> result = <span style=color:#66d9ef>await</span> _customerService.CreateCustomer(command);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> Ok(result);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other customer-related API methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=order-processing>Order Processing</h3><p>For the Order Processing use case:</p><ul><li><strong>Entities</strong>: Represent an <code>Order</code> entity with attributes like order date, items, and customer reference.</li><li><strong>Use Cases</strong>: Implement logic for order placement, order fulfillment, and order history.</li><li><strong>Interfaces</strong>: Define interfaces for order data access and customer notification services.</li><li><strong>Adapters</strong>: Create implementations for data access (Entity Framework Core) and notification (email).</li></ul><h4 id=example-order-domain-entity-order-application-service-and-order-repository>Example Order Domain Entity, Order Application Service and Order Repository:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Domain/Order/Order.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Domain.Order
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Order</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> Id { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> CustomerId { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Items { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other order-related properties...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Order/OrderApplicationService.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Order
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OrderApplicationService</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMediator _mediator;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> OrderApplicationService(IMediator mediator)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _mediator = mediator;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;OrderDto&gt; PlaceOrder(PlaceOrderCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _mediator.Send(command);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other order-related application methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Infrastructure/Repositories/OrderRepository.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoMapper;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.EntityFrameworkCore;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Order;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.Repositories
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OrderRepository</span> : IOrderRepository
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> AppDbContext _dbContext;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMapper _mapper;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> OrderRepository(AppDbContext dbContext, IMapper mapper)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext = dbContext;
+</span></span><span style=display:flex><span>            _mapper = mapper;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Order&gt; GetByIdAsync(<span style=color:#66d9ef>int</span> id)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _dbContext.Orders.FirstOrDefaultAsync(o =&gt; o.Id == id);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Order&gt; AddAsync(Order order)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext.Orders.Add(order);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> _dbContext.SaveChangesAsync();
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> order;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other repository methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Presentation/Controllers/OrderController.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.AspNetCore.Mvc;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Order;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Presentation.Controllers
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [Route(&#34;api/[controller]</span><span style=color:#e6db74>&#34;)]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#a6e22e>    [ApiController]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>OrderController</span> : ControllerBase
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> OrderApplicationService _orderService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> OrderController(OrderApplicationService orderService)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _orderService = orderService;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>        [HttpPost]</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;ActionResult&lt;OrderDto&gt;&gt; PlaceOrder([FromBody] PlaceOrderCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> result = <span style=color:#66d9ef>await</span> _orderService.PlaceOrder(command);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> Ok(result);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other order-related API methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Presentation/Controllers/ShippingController.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.AspNetCore.Mvc;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Shipping;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Presentation.Controllers
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span><span style=color:#a6e22e>    [Route(&#34;api/[controller]</span><span style=color:#e6db74>&#34;)]
+</span></span></span><span style=display:flex><span><span style=color:#e6db74></span><span style=color:#a6e22e>    [ApiController]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ShippingController</span> : ControllerBase
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> ShippingApplicationService _shippingService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ShippingController(ShippingApplicationService shippingService)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _shippingService = shippingService;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>        [HttpPost]</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;ActionResult&lt;ShippingDto&gt;&gt; ShipOrder([FromBody] ShipOrderCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> result = <span style=color:#66d9ef>await</span> _shippingService.ShipOrder(command);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> Ok(result);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other shipping-related API methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// xUnit Tests</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Tests/Application.Tests/CustomerApplicationServiceTests.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoFixture;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> FluentAssertions;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Moq;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Xunit;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomerApplicationServiceTests</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> Fixture _fixture;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> Mock&lt;IMediator&gt; _mediatorMock;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> CustomerApplicationService _customerService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> CustomerApplicationServiceTests()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        _fixture = <span style=color:#66d9ef>new</span> Fixture();
+</span></span><span style=display:flex><span>        _mediatorMock = <span style=color:#66d9ef>new</span> Mock&lt;IMediator&gt;();
+</span></span><span style=display:flex><span>        _customerService = <span style=color:#66d9ef>new</span> CustomerApplicationService(_mediatorMock.Object);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>    [Fact]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task CreateCustomer_ShouldReturnCustomerDto()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Arrange</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> createCustomerCommand = _fixture.Create&lt;CreateCustomerCommand&gt;();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> expectedCustomerDto = _fixture.Create&lt;CustomerDto&gt;();
+</span></span><span style=display:flex><span>        _mediatorMock.Setup(x =&gt; x.Send(createCustomerCommand, <span style=color:#66d9ef>default</span>)).ReturnsAsync(expectedCustomerDto);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Act</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> result = <span style=color:#66d9ef>await</span> _customerService.CreateCustomer(createCustomerCommand);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Assert</span>
+</span></span><span style=display:flex><span>        result.Should().BeEquivalentTo(expectedCustomerDto);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Additional tests for other customer-related methods...</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=shipping>Shipping</h3><p>In the context of microservices, the Shipping use case can be treated as a separate service, adhering to Clean Architecture principles. It would have its entities, use cases, interfaces, and adapters, similar to Customer and Order Management.</p><h4 id=example-shipping-domain-entity-shipping-application-service-and-shipping-repository>Example Shipping Domain Entity, Shipping Application Service and Shipping Repository:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Domain/Shipping/Shipping.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Domain.Shipping
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Shipping</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> Id { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> OrderId { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Status { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other shipping-related properties...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Shipping/ShippingApplicationService.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Shipping
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ShippingApplicationService</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMediator _mediator;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ShippingApplicationService(IMediator mediator)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _mediator = mediator;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;ShippingDto&gt; ShipOrder(ShipOrderCommand command)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _mediator.Send(command);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other shipping-related application methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Infrastructure/Repositories/ShippingRepository.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoMapper;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.EntityFrameworkCore;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Shipping;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.Repositories
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ShippingRepository</span> : IShippingRepository
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> AppDbContext _dbContext;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMapper _mapper;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ShippingRepository(AppDbContext dbContext, IMapper mapper)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext = dbContext;
+</span></span><span style=display:flex><span>            _mapper = mapper;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Shipping&gt; GetByIdAsync(<span style=color:#66d9ef>int</span> id)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> _dbContext.Shippings.FirstOrDefaultAsync(s =&gt; s.Id == id);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;Shipping&gt; AddAsync(Shipping shipping)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _dbContext.Shippings.Add(shipping);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> _dbContext.SaveChangesAsync();
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> shipping;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Other repository methods...</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=email-service>Email Service</h3><p>In the Infrastructure layer, we&rsquo;ll integrate an Email Service using AWS Simple Email Service (SES). This service allows you to send transactional and marketing emails.</p><h4 id=example-email-service-using-aws-ses>Example Email Service using AWS SES:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// install the AWS SDK for .NET</span>
+</span></span><span style=display:flex><span>dotnet <span style=color:#66d9ef>add</span> package AWSSDK.SimpleEmail
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Infrastructure/EmailServices/AWSSesEmailService.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Amazon.SimpleEmail;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Amazon.SimpleEmail.Model;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.EmailServices
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AWSSesEmailService</span> : IEmailService
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IAmazonSimpleEmailService _sesClient;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> AWSSesEmailService(IAmazonSimpleEmailService sesClient)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _sesClient = sesClient;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task SendEmailAsync(<span style=color:#66d9ef>string</span> toAddress, <span style=color:#66d9ef>string</span> subject, <span style=color:#66d9ef>string</span> body)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> sendRequest = <span style=color:#66d9ef>new</span> SendEmailRequest
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                Source = <span style=color:#e6db74>&#34;your-ses-verified-email@example.com&#34;</span>,
+</span></span><span style=display:flex><span>                Destination = <span style=color:#66d9ef>new</span> Destination
+</span></span><span style=display:flex><span>                {
+</span></span><span style=display:flex><span>                    ToAddresses = <span style=color:#66d9ef>new</span>[] { toAddress }
+</span></span><span style=display:flex><span>                },
+</span></span><span style=display:flex><span>                Message = <span style=color:#66d9ef>new</span> Message
+</span></span><span style=display:flex><span>                {
+</span></span><span style=display:flex><span>                    Subject = <span style=color:#66d9ef>new</span> Content(subject),
+</span></span><span style=display:flex><span>                    Body = <span style=color:#66d9ef>new</span> Body
+</span></span><span style=display:flex><span>                    {
+</span></span><span style=display:flex><span>                        Html = <span style=color:#66d9ef>new</span> Content(body)
+</span></span><span style=display:flex><span>                    }
+</span></span><span style=display:flex><span>                }
+</span></span><span style=display:flex><span>            };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> _sesClient.SendEmailAsync(sendRequest);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This class uses the AWS SDK to send emails through SES. Replace &ldquo;<a href=mailto:your-ses-verified-email@example.com>your-ses-verified-email@example.com</a>&rdquo; with the email address you&rsquo;ve verified in the AWS SES console.</p><p>Now, configure the AWS SES client in your <code>Startup.cs</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Infrastructure/Extensions/AwsSesExtensions.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Amazon.SimpleEmail;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.Extensions.Configuration;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.Extensions.DependencyInjection;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.Extensions
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AwsSesExtensions</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> AddAwsSes(<span style=color:#66d9ef>this</span> IServiceCollection services, IConfiguration configuration)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            services.AddDefaultAWSOptions(configuration.GetAWSOptions());
+</span></span><span style=display:flex><span>            services.AddAWSService&lt;IAmazonSimpleEmailService&gt;();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Ensure you call <code>services.AddAwsSes(configuration)</code>; in your <code>Startup.cs</code> <code>ConfigureServices</code> method.</p><p>Finally, update the <code>Infrastructure/EmailServices/EmailServiceModule.cs</code> to use the new AWS SES service:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Infrastructure/EmailServices/EmailServiceModule.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Autofac;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Email;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Infrastructure.EmailServices;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Infrastructure.Modules
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>EmailServiceModule</span> : Module
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>protected</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>void</span> Load(ContainerBuilder builder)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            builder.RegisterType&lt;AWSSesEmailService&gt;().As&lt;IEmailService&gt;().InstancePerLifetimeScope();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Now, we have a functioning Email Service integrated with AWS SES in our Clean Architecture project.</p><h1 id=leveraging-c-and-net-core>Leveraging C# and .NET Core</h1><p>To implement Clean Architecture with C# and .NET Core, we can use popular software design patterns:</p><h2 id=cqrs-with-mediatr>CQRS with MediatR</h2><p>Implement Command Query Responsibility Segregation (CQRS) for separating read and write operations. MediatR simplifies the implementation of the mediator pattern, allowing you to handle commands and queries efficiently.</p><h4 id=example-mediatr-commands-and-handlers-for-customer>Example MediatR Commands and Handlers for customer:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Customer/CreateCustomerCommand.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Customer
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CreateCustomerCommand</span> : IRequest&lt;CustomerDto&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Name { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Email { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> Address { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Customer/CreateCustomerCommandHandler.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoMapper;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Infrastructure.Repositories;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Customer
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CreateCustomerCommandHandler</span> : IRequestHandler&lt;CreateCustomerCommand, CustomerDto&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> ICustomerRepository _customerRepository;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IMapper _mapper;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> CreateCustomerCommandHandler(ICustomerRepository customerRepository, IMapper mapper)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _customerRepository = customerRepository;
+</span></span><span style=display:flex><span>            _mapper = mapper;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;CustomerDto&gt; Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> newCustomer = <span style=color:#66d9ef>new</span> Customer
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                Name = request.Name,
+</span></span><span style=display:flex><span>                Email = request.Email,
+</span></span><span style=display:flex><span>                Address = request.Address
+</span></span><span style=display:flex><span>            };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>await</span> _customerRepository.AddAsync(newCustomer);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> _mapper.Map&lt;CustomerDto&gt;(newCustomer);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Similar command and handler structures would be created for orders and shipping.</p><h2 id=mediatr-pipelinebehavior>MediatR PipelineBehavior</h2><p>MediatR PipelineBehaviors allow you to add cross-cutting concerns to your MediatR requests and responses. In this case, let&rsquo;s use FluentValidation for request validation.</p><h4 id=example-mediatr-pipelinebehavior>Example MediatR PipelineBehavior:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>//  install the necessary NuGet packages:</span>
+</span></span><span style=display:flex><span>dotnet <span style=color:#66d9ef>add</span> package FluentValidation
+</span></span><span style=display:flex><span>dotnet <span style=color:#66d9ef>add</span> package MediatR.Extensions.Microsoft.DependencyInjection
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Application/Behaviors/ValidationBehavior.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> FluentValidation;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Collections.Generic;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Linq;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Behaviors
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ValidationBehavior</span>&lt;TRequest, TResponse&gt; : IPipelineBehavior&lt;TRequest, TResponse&gt;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>where</span> TRequest : IRequest&lt;TResponse&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> IEnumerable&lt;IValidator&lt;TRequest&gt;&gt; _validators;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ValidationBehavior(IEnumerable&lt;IValidator&lt;TRequest&gt;&gt; validators)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            _validators = validators;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task&lt;TResponse&gt; Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate&lt;TResponse&gt; next)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> context = <span style=color:#66d9ef>new</span> ValidationContext(request);
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> failures = _validators
+</span></span><span style=display:flex><span>                .Select(v =&gt; v.Validate(context))
+</span></span><span style=display:flex><span>                .SelectMany(result =&gt; result.Errors)
+</span></span><span style=display:flex><span>                .Where(f =&gt; f != <span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>                .ToList();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (failures.Count != <span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ValidationException(failures);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>await</span> next();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Register the behavior in the `Startup.cs`</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Presentation/Extensions/MediatrExtensions.cs</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> FluentValidation;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> MediatR;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.Extensions.DependencyInjection;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Behaviors;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Presentation.Extensions
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MediatrExtensions</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> AddMediatr(<span style=color:#66d9ef>this</span> IServiceCollection services)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            services.AddMediatR(<span style=color:#66d9ef>typeof</span>(Startup));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            services.AddTransient(<span style=color:#66d9ef>typeof</span>(IPipelineBehavior&lt;,&gt;), <span style=color:#66d9ef>typeof</span>(ValidationBehavior&lt;,&gt;));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>            services.AddValidatorsFromAssembly(<span style=color:#66d9ef>typeof</span>(Startup).Assembly);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Ensure you call <code>services.AddMediatr();</code> in your <code>Startup.cs</code> <code>ConfigureServices</code> method.</p><p>Now, every MediatR request will be automatically validated using FluentValidation.</p><h2 id=repository-pattern-with-ef-core-60>Repository Pattern with EF Core 6.0</h2><p>The repository pattern abstracts data access and allows the application to interact with the database through interfaces. Entity Framework Core 6.0 is a robust choice for database interaction in .NET Core.</p><h2 id=fluent-validation>Fluent Validation</h2><p>Fluent validation can be implemented to define custom validations for our classes.</p><h4 id=example-fluent-validation>Example Fluent validation:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Application/Customer/CreateCustomerCommandValidator.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> FluentValidation;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Customer
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CreateCustomerCommandValidator</span> : AbstractValidator&lt;CreateCustomerCommand&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> CreateCustomerCommandValidator()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            RuleFor(x =&gt; x.Name).NotEmpty().MaximumLength(<span style=color:#ae81ff>100</span>);
+</span></span><span style=display:flex><span>            RuleFor(x =&gt; x.Email).NotEmpty().EmailAddress();
+</span></span><span style=display:flex><span>            RuleFor(x =&gt; x.Address).NotEmpty().MaximumLength(<span style=color:#ae81ff>200</span>);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Similar validators would be created for orders and shipping.</p><h2 id=automapper>AutoMapper</h2><p>AutoMapper can be implemented for mapping objects.</p><h4 id=example-automapper-configuration>Example AutoMapper configuration:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Application/Mappings/MappingProfile.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoMapper;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Order;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Shipping;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Application.Mappings
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MappingProfile</span> : Profile
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> MappingProfile()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            CreateMap&lt;Customer, CustomerDto&gt;().ReverseMap();
+</span></span><span style=display:flex><span>            CreateMap&lt;Order, OrderDto&gt;().ReverseMap();
+</span></span><span style=display:flex><span>            CreateMap&lt;Shipping, ShippingDto&gt;().ReverseMap();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=swagger>Swagger</h2><p>Swagger can be integrated for API documentation.</p><h4 id=example-swagger-integration>Example Swagger Integration:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Presentation/Extensions/SwaggerExtensions.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.AspNetCore.Builder;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.Extensions.DependencyInjection;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Microsoft.OpenApi.Models;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>namespace</span> OnlineShoppingApp.Presentation.Extensions
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SwaggerExtensions</span>
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> AddSwagger(<span style=color:#66d9ef>this</span> IServiceCollection services)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            services.AddSwaggerGen(c =&gt;
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                c.SwaggerDoc(<span style=color:#e6db74>&#34;v1&#34;</span>, <span style=color:#66d9ef>new</span> OpenApiInfo { Title = <span style=color:#e6db74>&#34;OnlineShoppingApp API&#34;</span>, Version = <span style=color:#e6db74>&#34;v1&#34;</span> });
+</span></span><span style=display:flex><span>            });
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> UseSwaggerAndUI(<span style=color:#66d9ef>this</span> IApplicationBuilder app)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            app.UseSwagger();
+</span></span><span style=display:flex><span>            app.UseSwaggerUI(c =&gt;
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                c.SwaggerEndpoint(<span style=color:#e6db74>&#34;/swagger/v1/swagger.json&#34;</span>, <span style=color:#e6db74>&#34;OnlineShoppingApp API V1&#34;</span>);
+</span></span><span style=display:flex><span>            });
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=unit-test>Unit Test</h2><p>Unit tests can be implemented using xUnit, AutoFixture, FluentAssertions.</p><h4 id=example-xunit-test>Example xUnit Test:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#75715e>// Tests/Application.Tests/CustomerApplicationServiceTests.cs</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> AutoFixture;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> FluentAssertions;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Moq;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Application.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> OnlineShoppingApp.Domain.Customer;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> System.Threading.Tasks;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>using</span> Xunit;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>CustomerApplicationServiceTests</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> Fixture _fixture;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> Mock&lt;IMediator&gt; _mediatorMock;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> CustomerApplicationService _customerService;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> CustomerApplicationServiceTests()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        _fixture = <span style=color:#66d9ef>new</span> Fixture();
+</span></span><span style=display:flex><span>        _mediatorMock = <span style=color:#66d9ef>new</span> Mock&lt;IMediator&gt;();
+</span></span><span style=display:flex><span>        _customerService = <span style=color:#66d9ef>new</span> CustomerApplicationService(_mediatorMock.Object);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span><span style=color:#a6e22e>
+</span></span></span><span style=display:flex><span><span style=color:#a6e22e>    [Fact]</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>async</span> Task CreateCustomer_ShouldReturnCustomerDto()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Arrange</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> createCustomerCommand = _fixture.Create&lt;CreateCustomerCommand&gt;();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> expectedCustomerDto = _fixture.Create&lt;CustomerDto&gt;();
+</span></span><span style=display:flex><span>        _mediatorMock.Setup(x =&gt; x.Send(createCustomerCommand, <span style=color:#66d9ef>default</span>)).ReturnsAsync(expectedCustomerDto);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Act</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>var</span> result = <span style=color:#66d9ef>await</span> _customerService.CreateCustomer(createCustomerCommand);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// Assert</span>
+</span></span><span style=display:flex><span>        result.Should().BeEquivalentTo(expectedCustomerDto);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Additional tests for other customer-related methods...</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Similar tests would be created for order and shipping.</p><h2 id=react-ui>React UI</h2><p>For the user interface, React with Next.js can be used to create a responsive and interactive web application that communicates with the Clean Architecture backend.</p><h4 id=sample-code-for-react-nextjs-customer-order-acceptance>Sample Code for React Next.js Customer Order Acceptance</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-tsx data-lang=tsx><span style=display:flex><span><span style=color:#75715e>// components/CustomerOrderForm.tsx
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>React</span>, { <span style=color:#a6e22e>useState</span> } <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#34;react&#34;</span>;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>import</span> <span style=color:#a6e22e>axios</span> <span style=color:#66d9ef>from</span> <span style=color:#e6db74>&#34;axios&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>CustomerOrderForm</span>: <span style=color:#66d9ef>React.FC</span> <span style=color:#f92672>=</span> () <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> [<span style=color:#a6e22e>order</span>, <span style=color:#a6e22e>setOrder</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>useState</span>({
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>customerName</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>items</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>  });
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleInputChange</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>e</span>: <span style=color:#66d9ef>React.ChangeEvent</span>&lt;<span style=color:#f92672>HTMLInputElement</span>&gt;) <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> { <span style=color:#a6e22e>name</span>, <span style=color:#a6e22e>value</span> } <span style=color:#f92672>=</span> <span style=color:#a6e22e>e</span>.<span style=color:#a6e22e>target</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>setOrder</span>({ ...<span style=color:#a6e22e>order</span>, [<span style=color:#a6e22e>name</span>]<span style=color:#f92672>:</span> <span style=color:#a6e22e>value</span> });
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>handleOrderSubmit</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>async</span> () <span style=color:#f92672>=&gt;</span> {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// Send the order data to the server using Axios
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#66d9ef>await</span> <span style=color:#a6e22e>axios</span>.<span style=color:#a6e22e>post</span>(<span style=color:#e6db74>&#34;/api/orders&#34;</span>, <span style=color:#a6e22e>order</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// Clear the form after successful submission
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>setOrder</span>({
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>customerName</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>items</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;&#34;</span>,
+</span></span><span style=display:flex><span>      });
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#34;Order submitted successfully!&#34;</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>catch</span> (<span style=color:#a6e22e>error</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>error</span>(<span style=color:#e6db74>&#34;Error submitting order:&#34;</span>, <span style=color:#a6e22e>error</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>alert</span>(<span style=color:#e6db74>&#34;Failed to submit the order. Please try again later.&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>return</span> (
+</span></span><span style=display:flex><span>    &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:#f92672>h2</span>&gt;<span style=color:#a6e22e>Customer</span> <span style=color:#a6e22e>Order</span> <span style=color:#a6e22e>Form</span>&lt;/<span style=color:#f92672>h2</span>&gt;
+</span></span><span style=display:flex><span>      &lt;<span style=color:#f92672>form</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>label</span> <span style=color:#a6e22e>htmlFor</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;customerName&#34;</span>&gt;<span style=color:#a6e22e>Customer</span> <span style=color:#a6e22e>Name</span><span style=color:#f92672>:</span>&lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>input</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;customerName&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;customerName&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>order</span>.<span style=color:#a6e22e>customerName</span>}
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>onChange</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>handleInputChange</span>}
+</span></span><span style=display:flex><span>          /&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>label</span> <span style=color:#a6e22e>htmlFor</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;items&#34;</span>&gt;<span style=color:#a6e22e>Items</span><span style=color:#f92672>:</span>&lt;/<span style=color:#f92672>label</span>&gt;
+</span></span><span style=display:flex><span>          &lt;<span style=color:#f92672>input</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;text&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>id</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;items&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>name</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;items&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>value</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>order</span>.<span style=color:#a6e22e>items</span>}
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>onChange</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>handleInputChange</span>}
+</span></span><span style=display:flex><span>          /&gt;
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>        &lt;<span style=color:#f92672>button</span> <span style=color:#a6e22e>type</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;button&#34;</span> <span style=color:#a6e22e>onClick</span><span style=color:#f92672>=</span>{<span style=color:#a6e22e>handleOrderSubmit</span>}&gt;
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>Submit</span> <span style=color:#a6e22e>Order</span>
+</span></span><span style=display:flex><span>        &lt;/<span style=color:#f92672>button</span>&gt;
+</span></span><span style=display:flex><span>      &lt;/<span style=color:#f92672>form</span>&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#f92672>div</span>&gt;
+</span></span><span style=display:flex><span>  );
+</span></span><span style=display:flex><span>};
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>export</span> <span style=color:#66d9ef>default</span> <span style=color:#a6e22e>CustomerOrderForm</span>;
+</span></span></code></pre></div><p>In the above code, we&rsquo;ve created a simple form for capturing customer name and order items. When the &ldquo;Submit Order&rdquo; button is clicked, the order data is sent to the server using Axios.</p><h1 id=docker-and-docker-compose>Docker and Docker Compose</h1><p>Docker and Docker Compose provide a powerful solution for containerizing your Clean Architecture application and managing dependencies. This enables easy deployment and scaling in both microservices and modular monolithic setups.</p><h4 id=example-docker-compose-yaml>Example docker compose YAML:</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>version</span>: <span style=color:#e6db74>&#34;3&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>services</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>web</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>context</span>: <span style=color:#ae81ff>./path/to/react-app</span> <span style=color:#75715e># Path to the directory containing the Dockerfile</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;3000:3000&#34;</span> <span style=color:#75715e># Map container port 3000 to host port 3000</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>webapi</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>online-shopping-app-webapi</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>context</span>: <span style=color:#ae81ff>./OnlineShoppingApp.Presentation</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>ports</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#e6db74>&#34;5000:80&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>depends_on</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>db</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>networks</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>online-shopping-network</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>db</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>image</span>: <span style=color:#ae81ff>mcr.microsoft.com/mssql/server</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>environment</span>:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>SA_PASSWORD</span>: <span style=color:#e6db74>&#34;YourPassword&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>ACCEPT_EULA</span>: <span style=color:#e6db74>&#34;Y&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>networks</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>online-shopping-network</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>networks</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>online-shopping-network</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>driver</span>: <span style=color:#ae81ff>bridge</span>
+</span></span></code></pre></div><p>This <code>docker-compose.yaml</code> file defines three services: <code>web</code> for the React Application, <code>webapi</code> for the web API and <code>db</code> for the database. The <code>depends_on</code> option ensures that the <code>db</code> service starts before the webapi service.</p><p>Note: Make sure to replace &ldquo;YourPassword&rdquo; in the <code>SA_PASSWORD</code> environment variable with a strong password.</p><h1 id=advantages-and-disadvantages-of-clean-architecture>Advantages and Disadvantages of Clean Architecture</h1><h2 id=advantages>Advantages</h2><ul><li><strong>Maintainability</strong>: Clean Architecture simplifies maintenance by keeping core business logic separate from external concerns.</li><li><strong>Testability</strong>: The separation of concerns results in more straightforward unit testing, improving code quality.</li><li><strong>Independence</strong>: Clean Architecture ensures that the core business logic is decoupled from specific technologies, making the application adaptable.</li><li><strong>Scalability</strong>: Modularity allows for easy scaling by adding or modifying components.</li></ul><h2 id=disadvantages>Disadvantages</h2><ul><li><strong>Complexity</strong>: Implementing Clean Architecture can be more complex than traditional approaches, especially for smaller applications.</li><li><strong>Learning Curve</strong>: Developers may need time to learn the architectural patterns and adapt to the separation of concerns.</li><li><strong>Initial Development Time</strong>: Creating the necessary infrastructure can extend the project&rsquo;s initial development time.</li></ul><h1 id=when-to-use-clean-architecture>When to Use Clean Architecture</h1><p>Clean Architecture is a valuable choice when:</p><ul><li>Your project&rsquo;s long-term maintainability and adaptability are essential.</li><li>You anticipate changes in your application&rsquo;s external dependencies, such as databases or user interfaces.</li><li>You want to maximize code quality, testability, and separation of concerns.</li></ul><h1 id=best-practices>Best Practices</h1><p>To effectively implement Clean Architecture:</p><ul><li>Begin by clearly defining the core business logic and use cases of your application.</li><li>Always use interfaces and abstractions for external interactions, allowing for easy replacement of components.</li><li>Utilize SOLID principles, especially the Single Responsibility Principle, to ensure each component has a well-defined purpose.</li><li>Invest in unit tests to maintain code quality and validate the independence of components.</li><li>Keep documentation and communication clear, as Clean Architecture can be conceptually challenging.</li></ul><h1 id=conclusion>Conclusion</h1><p>Clean Architecture provides a solid foundation for designing maintainable, testable, and adaptable software systems. Whether you&rsquo;re building microservices or modular monolithic applications, Clean Architecture, combined with technologies like C#, .NET Core, React, and Docker, can empower your development team to create reliable and scalable solutions. By understanding the principles, advantages, and best practices of Clean Architecture, you can embark on a path toward building resilient software that stands the test of time.</p><p>For a more in-depth exploration of Clean Architecture, consider reading:</p><ul><li>Clean Architecture: A Craftsman&rsquo;s Guide to Software Structure and Design by Robert C. Martin</li></ul><p>As you delve deeper into Clean Architecture, you&rsquo;ll discover new ways to refine and adapt this approach to your specific project requirements. Happy coding!</p><hr><div class=footer><p>This is a post in the <b><a href=https://gosang.github.io/series/design-architectures>Design Architectures</a></b> series.<br>Other posts in this series:<ul class=series><li>May 30, 2023 -
+<a href=/posts/design-architectures/modular-monolithic-architecture/>Modular Monolithic Architecture</a></li><li>May 16, 2023 -
+<a href=/posts/design-architectures/domain-driven-design/>Domain Driven Design (DDD)</a></li><li>February 25, 2023 -
+Clean Architecture</li><li>January 15, 2023 -
+<a href=/posts/design-architectures/microservices/>Microservices Design Architecture</a></li></ul></p></div></div></main><div class=article-toc><div class=toc-wrapper><h4 id=contents></h4><nav id=TableOfContents><ul><li><ul><li><a href=#project-structure>Project Structure</a></li><li><a href=#customer-management>Customer Management</a></li><li><a href=#order-processing>Order Processing</a></li><li><a href=#shipping>Shipping</a></li><li><a href=#email-service>Email Service</a></li></ul></li></ul><ul><li><a href=#cqrs-with-mediatr>CQRS with MediatR</a><ul><li></li></ul></li><li><a href=#mediatr-pipelinebehavior>MediatR PipelineBehavior</a><ul><li></li></ul></li><li><a href=#repository-pattern-with-ef-core-60>Repository Pattern with EF Core 6.0</a></li><li><a href=#fluent-validation>Fluent Validation</a><ul><li></li></ul></li><li><a href=#automapper>AutoMapper</a><ul><li></li></ul></li><li><a href=#swagger>Swagger</a><ul><li></li></ul></li><li><a href=#unit-test>Unit Test</a><ul><li></li></ul></li><li><a href=#react-ui>React UI</a><ul><li></li></ul></li></ul><ul><li><ul><li></li></ul></li></ul><ul><li><a href=#advantages>Advantages</a></li><li><a href=#disadvantages>Disadvantages</a></li></ul></nav></div></div></div></body></html>
