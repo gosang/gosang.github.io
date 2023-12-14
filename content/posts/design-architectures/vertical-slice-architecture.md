@@ -172,7 +172,7 @@ Vertical Slice Architecture in .NET 6 offers a fresh perspective on code organiz
 
 # References:
 
-- [Vertical Slice Architecture by Jimmy Bogard] (https://www.jimmybogard.com/vertical-slice-architecture/)
+- [Vertical Slice Architecture by Jimmy Bogard](https://www.jimmybogard.com/vertical-slice-architecture/)
 - [MediatR Documentation](https://github.com/jbogard/MediatR)
 - [AutoMapper Documentation](https://docs.automapper.org/en/stable/)
 - [EF Core Documentation](https://docs.microsoft.com/en-us/ef/core/)
