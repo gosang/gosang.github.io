@@ -126,7 +126,7 @@ Implementing the Single Responsibility Principle in an e-commerce system results
 - **Enhanced Readability**: Code becomes more readable and self-explanatory.
 - **Easier Testing**: Classes with a single responsibility are often easier to test.
 
-# Disadvantages
+## Disadvantages
 
 - Increased Number of Classes: Adhering strictly to SRP may lead to a proliferation of small, focused classes.
 
