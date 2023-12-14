@@ -168,7 +168,7 @@ These DDD concepts ensure that the software accurately mirrors the complexities 
 - **Maintainability**: The modular and organized structure of DDD makes the codebase more maintainable.
 - **Clear Communication**: Shared vocabulary improves communication between technical and non-technical stakeholders.
 
-##Disadvantages
+## Disadvantages
 
 - **Learning Curve**: Implementing DDD requires a solid understanding of both the domain and DDD principles.
 - **Overhead**: In smaller projects, DDD might introduce unnecessary complexity.

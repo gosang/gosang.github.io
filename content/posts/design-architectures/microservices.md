@@ -47,7 +47,7 @@ Microservices Design Architecture is the blueprint that guides the development a
 - **Resilience**: Fault isolation prevents system-wide failures.
 - **Technology Diversity**: Choose the most suitable technology for each microservice.
 
-# Disadvantages:
+## Disadvantages:
 
 - **Complexity**: Managing a distributed system can be complex.
 - **Integration Challenges**: Ensuring smooth communication and data consistency between services.

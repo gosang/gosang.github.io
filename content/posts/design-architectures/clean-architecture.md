@@ -66,7 +66,7 @@ The organization of these use cases in a .NET Core project might look like this:
   - Infrastructure
     - Repositories
     - EmailServices
-  - Docker Compose
+- Docker Compose
 ```
 
 ### Customer Management
@@ -547,7 +547,6 @@ Finally, update the `Infrastructure/EmailServices/EmailServiceModule.cs` to use 
 ```csharp
 // Infrastructure/EmailServices/EmailServiceModule.cs
 
-using Autofac;
 using OnlineShoppingApp.Application.Email;
 using OnlineShoppingApp.Infrastructure.EmailServices;
 
