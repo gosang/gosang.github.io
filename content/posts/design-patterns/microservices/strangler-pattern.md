@@ -37,7 +37,7 @@ dotnet add package Ocelot
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 ```
 
-## Building the API Gateway with Ocelot
+## Building the API Gateway with Ocelot and Service Registry with Consul
 
 Ocelot simplifies the implementation of API Gateways in a microservices architecture. Configure Ocelot in the `Startup.cs` file:
 
