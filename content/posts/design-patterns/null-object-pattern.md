@@ -1,6 +1,6 @@
 +++
 title = 'Null Object Pattern'
-date = 2022-05-06T12:18:18Z
+date = 2021-08-03T08:43:48Z
 draft = false
 series = "Design Patterns"
 +++
@@ -25,7 +25,7 @@ Null references often lead to runtime errors, making code less robust and harder
 
 ## Implementing the Null Object Pattern in C# .NET Core
 
-Let's delve into a practical example by considering the Null Object pattern in the context of a CacheStorage module.
+Let's delve into a practical example by considering the Null Object pattern in the context of a `CacheStorage` module.
 
 ```csharp
 // Interface for CacheStorage
@@ -66,7 +66,7 @@ public class NullCacheObject : ICacheStorage
 }
 ```
 
-In this example, the NullCacheObject acts as the null object, implementing the ICacheStorage interface without affecting the behavior of the client code.
+In this example, the `NullCacheObject` acts as the null object, implementing the `ICacheStorage` interface without affecting the behavior of the client code.
 
 # Advantages and Disadvantages of the Null Object Pattern
 
@@ -88,20 +88,22 @@ The Null Object pattern is most beneficial when:
 - Frequent null checks are required.
 - Default behavior can be safely provided by a null object.
 - Enhancing code readability and maintainability is a priority.
-- Use Cases/Scenarios for the Null Object Pattern
-- Configuration Settings: Use a null object to represent default values for missing configuration settings.
-- Dependency Injection: Employ null objects to handle optional dependencies without breaking the application.
+
+# Use Cases/Scenarios for the Null Object Pattern
+
+- **Configuration Settings**: Use a null object to represent default values for missing configuration settings.
+- **Dependency Injection**: Employ null objects to handle optional dependencies without breaking the application.
 
 # Best Practices
 
-- Clear Documentation: Clearly document the null object's behavior and purpose to aid developers in understanding its role.
-- Consistent Interface: Ensure that the null object adheres to the same interface as the concrete implementations.
-- Careful Default Behavior: Be cautious when defining default behavior in null objects to avoid unintended consequences.
+- **Clear Documentation**: Clearly document the null object's behavior and purpose to aid developers in understanding its role.
+- **Consistent Interface**: Ensure that the null object adheres to the same interface as the concrete implementations.
+- **Careful Default Behavior**: Be cautious when defining default behavior in null objects to avoid unintended consequences.
 
 # Conclusion
 
 The Null Object pattern is a powerful tool in a developer's arsenal for handling null values effectively. By providing a structured approach to representing null objects, it enhances code readability, reduces errors, and promotes maintainability. When used judiciously and in accordance with best practices, the Null Object pattern can significantly contribute to the robustness of software systems.
 
-# References:
+#References:
 
 - Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). Design Patterns: Elements of Reusable Object-Oriented Software. Addison-Wesley.
