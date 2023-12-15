@@ -18,9 +18,9 @@ The primary goal of the Strangler Pattern is risk mitigation. Rather than embark
 
 # Problems Resolved by the Strangler Pattern
 
-Risk Reduction: Minimizes the risk of system-wide failures during migration.
-Continuous Delivery: Facilitates the deployment of new features while transitioning.
-Incremental Progress: Permits developers to replace one module at a time.
+- **Risk Reduction**: Minimizes the risk of system-wide failures during migration.
+- **Continuous Delivery**: Facilitates the deployment of new features while transitioning.
+- **Incremental Progress**: Permits developers to replace one module at a time.
 
 # Using the Strangler Pattern in .NET
 
@@ -50,6 +50,13 @@ Define routes for the API Gateway in the `ocelot.json` configuration file:
 
 ```json
 {
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "localhost",
+      "Port": 8500,
+      "Type": "Consul"
+    }
+  },
   "Routes": [
     {
       "DownstreamPathTemplate": "/product-api/{everything}",
@@ -66,6 +73,13 @@ Define routes for the API Gateway in the `ocelot.json` configuration file:
     // Other routes...
   ]
 }
+```
+
+#### Integrate Consul for service registry:
+
+```csharp
+// Register with Consul in Startup.cs
+app.UseConsul(Configuration);
 ```
 
 ## Building RESTful APIs with MediatR, FluentValidation, AutoMapper, and EF Core InMemory
@@ -148,7 +162,7 @@ public class YourDbContext : DbContext
 
 ```
 
-Integrating Ocelot for the API Gateway, MediatR for CQRS pattern, FluentValidation for command validation, AutoMapper for object-to-object mapping, and EF Core InMemory for the database, we've demonstrated an e-commerce system following the Strangler Pattern. This modular and scalable approach facilitates seamless migration and ensures the continuous delivery of new features.
+By integrating Ocelot for the API Gateway, Consul for service registry, MediatR for CQRS pattern, FluentValidation for command validation, AutoMapper for object-to-object mapping, and EF Core InMemory for the database, we've demonstrated a resilient and scalable e-commerce system following the Strangler Pattern. This approach enables a gradual migration and ensures continuous delivery of new features in a microservices architecture.
 
 # Advantages and Disadvantages
 
@@ -186,6 +200,7 @@ The Strangler Pattern, when applied judiciously in .NET, serves as a bridge betw
 
 - [Martin Fowler's Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)
 - [Ocelot Documentation](https://ocelot.readthedocs.io/en/latest/)
+- [Consul Documentation](https://www.consul.io/)
 - [MediatR Documentation](https://github.com/jbogard/MediatR)
 - [FluentValidation Documentation](https://fluentvalidation.net/)
 - [AutoMapper Documentation](https://docs.automapper.org/)
