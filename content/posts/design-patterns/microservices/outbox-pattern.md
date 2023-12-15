@@ -3,7 +3,7 @@ title = 'Outbox Pattern'
 date = 2023-04-30T19:18:44Z
 draft = false
 series = "Design Patterns"
-tags = ["Microservices"]
+tags = ["Outbox", "Microservices"]
 +++
 
 In the realm of microservices and modular monolithic architectures, managing distributed transactions and ensuring data consistency across services can be challenging. The Outbox Design Pattern is a powerful solution to address these challenges. In this blog, we will delve into the intricacies of the Outbox Design Pattern, its rationale, implementation using Entity Framework Core 6 in C# .NET Core, and discuss its advantages, disadvantages, use cases, and best practices.
