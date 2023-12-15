@@ -1,15 +1,15 @@
 +++
-title = 'Modular Monolithic Architecture'
+title = 'Modular Monolith Architecture'
 date = 2023-05-30T13:58:28Z
 draft = false
 series = "Design Architectures"
 +++
 
-In the ever-evolving landscape of software development, choosing the right architecture is crucial for building scalable, maintainable, and efficient applications. One architecture gaining popularity is the Modular Monolithic Architecture. In this blog, we'll explore what this architecture entails, its key components, advantages, disadvantages, use cases, and best practices.
+In the ever-evolving landscape of software development, choosing the right architecture is crucial for building scalable, maintainable, and efficient applications. One architecture gaining popularity is the Modular Monolith Architecture. In this blog, we'll explore what this architecture entails, its key components, advantages, disadvantages, use cases, and best practices.
 
-# What is Modular Monolithic Architecture?
+# What is Modular Monolith Architecture?
 
-Modular Monolithic Architecture is an approach that combines the modularity of microservices with the simplicity of a monolithic architecture. In essence, it retains the cohesive nature e.g. single codebase of a monolith while breaking down the application into distinct, independently replaceable modules, each responsible for a specific business capability.
+Modular Monolith Architecture is an approach that combines the modularity of microservices with the simplicity of a monolith architecture. In essence, it retains the cohesive nature e.g. single codebase of a monolith while breaking down the application into distinct, independently replaceable modules, each responsible for a specific business capability.
 
 # Key Concepts and Components
 
@@ -25,9 +25,9 @@ Unlike microservices, which have multiple codebases, a modular monolith maintain
 **Independent Deployment**
 Each module can be deployed independently, granting teams the flexibility to release updates without affecting the entire system.
 
-# Rationale for Modular Monolithic Design Architecture
+# Rationale for Modular Monolith Design Architecture
 
-The modular monolithic approach aims to address the challenges faced by traditional monoliths and microservices architectures. It strikes a balance by providing:
+The modular monolith approach aims to address the challenges faced by traditional monoliths and microservices architectures. It strikes a balance by providing:
 
 ## Simplicity of Monoliths:
 
@@ -65,9 +65,9 @@ The modular monolithic approach aims to address the challenges faced by traditio
 - **Risk of Tight Coupling**:
   - Poorly defined interfaces may lead to tight coupling between modules.
 
-# When to Use Modular Monolithic Design Architecture
+# When to Use Modular Monolith Design Architecture
 
-Modular Monolithic Design Architecture is suitable when:
+Modular Monolith Design Architecture is suitable when:
 
 - **Unified Development Team**:
 
@@ -106,7 +106,7 @@ Modular Monolithic Design Architecture is suitable when:
 
 # Conclusion
 
-Modular Monolithic Architecture offers a pragmatic approach for organizations seeking a balance between the simplicity of monoliths and the scalability of microservices. By understanding its key concepts, advantages, disadvantages, and best practices, developers can make informed decisions when choosing the right architecture for their projects.
+Modular Monolith Architecture offers a pragmatic approach for organizations seeking a balance between the simplicity of monoliths and the scalability of microservices. By understanding its key concepts, advantages, disadvantages, and best practices, developers can make informed decisions when choosing the right architecture for their projects.
 
 # References:
 
