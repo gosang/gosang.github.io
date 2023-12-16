@@ -6,6 +6,8 @@ series = "Design Patterns"
 tags = ["Caching"]
 +++
 
+Caching is a pivotal technique in optimizing application performance, and in the world of .NET Core, developers have two powerful tools at their disposal: `.NET Core IMemoryCache` and `Redis Caching`. Each solution has distinct characteristics and is tailored for specific use cases.
+
 # .NET Core IMemoryCache
 
 ## Overview:
@@ -90,7 +92,7 @@ Suitable for complex caching scenarios involving data structures beyond simple k
 
 # Conclusion:
 
-The choice between .NET Core `IMemoryCache` and Redis Caching depends on the specific requirements of the application. `IMemoryCache` is excellent for local, lightweight caching, whereas Redis Caching excels in distributed scenarios, providing scalability and advanced features. The decision should align with the architectural considerations and performance needs of the application.
+The choice between `.NET Core IMemoryCache` and `Redis Caching` depends on the specific requirements of the application. `.NET Core IMemoryCache` is excellent for local, lightweight caching, whereas `Redis Caching` excels in distributed scenarios, providing scalability and advanced features. The decision should align with the architectural considerations and performance needs of the application.
 
 # References:
 
