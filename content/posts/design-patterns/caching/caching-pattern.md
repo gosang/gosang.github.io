@@ -148,55 +148,55 @@ public async Task DeleteProductAsync(int productId)
 
 ## Cache Aside:
 
-**Advantages**: Developer control, flexibility.
-**Disadvantages**: Cache staleness, code complexity.
+- **Advantages**: Developer control, flexibility.
+- **Disadvantages**: Cache staleness, code complexity.
 
 ## Write Through:
 
-**Advantages**: Consistency, reduced staleness.
-**Disadvantages**: Increased write latency.
+- **Advantages**: Consistency, reduced staleness.
+- **Disadvantages**: Increased write latency.
 
 ## Read Through:
 
-**Advantages**: Read optimization, reduced database load.
-**Disadvantages**: Cache staleness, increased read latency.
+- **Advantages**: Read optimization, reduced database load.
+- **Disadvantages**: Cache staleness, increased read latency.
 
 ## Write Back:
 
-**Advantages**: Improved write performance.
-**Disadvantages**: Potential data loss on system failure.
+- **Advantages**: Improved write performance.
+- **Disadvantages**: Potential data loss on system failure.
 
 ## Write Around:
 
-**Advantages**: Minimized cache pollution, suitable for large data.
-**Disadvantages**: Increased read latency for uncached data.
+- **Advantages**: Minimized cache pollution, suitable for large data.
+- **Disadvantages**: Increased read latency for uncached data.
 
 # Use Cases and Best Practices
 
 ## Cache Aside:
 
-**Use Cases**: Frequently read but infrequently updated data.
-**Best Practices**: Careful cache invalidation, monitor cache size.
+- **Use Cases**: Frequently read but infrequently updated data.
+- **Best Practices**: Careful cache invalidation, monitor cache size.
 
 ## Write Through:
 
-**Use Cases**: Systems requiring strong consistency.
-**Best Practices**: Optimize write operations, handle failures gracefully.
+- **Use Cases**: Systems requiring strong consistency.
+- **Best Practices**: Optimize write operations, handle failures gracefully.
 
 ## Read Through:
 
-**Use Cases**: Read-heavy workloads.
-**Best Practices**: Optimize cache refresh strategy, monitor cache hits.
+- **Use Cases**: Read-heavy workloads.
+- **Best Practices**: Optimize cache refresh strategy, monitor cache hits.
 
 ## Write Back:
 
-**Use Cases**: Write-intensive workloads with acceptable data loss.
-**Best Practices**: Implement reliable background processes, handle failures gracefully.
+- **Use Cases**: Write-intensive workloads with acceptable data loss.
+- **Best Practices**: Implement reliable background processes, handle failures gracefully.
 
 ## Write Around:
 
-**Use Cases**: Large or infrequently accessed data.
-**Best Practices**: Evaluate caching impact, monitor cache effectiveness.
+- **Use Cases**: Large or infrequently accessed data.
+- **Best Practices**: Evaluate caching impact, monitor cache effectiveness.
 
 # Conclusion
 
