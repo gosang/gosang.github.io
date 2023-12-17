@@ -2,8 +2,8 @@
 title = 'Difference Between Imemorycache and Redis'
 date = 2023-08-03T08:43:48Z
 draft = false
-series = "Design Patterns"
-tags = ["Caching"]
+series = "Caching"
+tags = ["IMemoryCache", "Redis"]
 +++
 
 Caching is a pivotal technique in optimizing application performance, and in the world of .NET Core, developers have two powerful tools at their disposal: `.NET Core IMemoryCache` and `Redis Caching`. Each solution has distinct characteristics and is tailored for specific use cases.
