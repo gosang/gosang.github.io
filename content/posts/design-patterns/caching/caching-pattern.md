@@ -9,15 +9,15 @@ Caching is a crucial aspect of modern software development, especially in the co
 
 # 1. Cache Aside
 
-## Overview:
+## Overview
 
 Cache Aside, also known as Lazy Loading, is a popular caching pattern where the application code is responsible for managing the cache. When a request is made, the application checks the cache first. If the data is present, it's returned; otherwise, the data is fetched from the data source, and the cache is updated.
 
-## Rationale:
+## Rationale
 
 This pattern provides a simple and flexible approach. It helps in reducing load on the database and promotes scalability by enabling developers to control what data is cached and when.
 
-## Example implementation:
+## Example implementation
 
 ```csharp
 // C# .NET Core Code
@@ -39,15 +39,15 @@ public async Task<Product> GetProductAsync(int productId)
 
 # 2. Write Through
 
-## Overview:
+## Overview
 
 Write Through is a pattern where data is written to the cache and the underlying data source simultaneously. This ensures that the cache is always consistent with the database.
 
-## Rationale:
+## Rationale
 
 It helps maintain data consistency between the cache and the data source. Although writes might be slower due to the dual write, reads benefit from the up-to-date cache.
 
-## Example implementation:
+## Example implementation
 
 ```csharp
 // C# .NET Core Code
@@ -63,15 +63,15 @@ public async Task UpdateProductAsync(Product product)
 
 # 3. Read Through
 
-## Overview:
+## Overview
 
 Read Through involves reading data from the cache. If the data is not found, it is loaded from the data source, and the cache is updated.
 
-## Rationale:
+## Rationale
 
 This pattern is suitable for read-heavy workloads, as it minimizes the load on the data source by reading from the cache whenever possible.
 
-## Example implementation:
+## Example implementation
 
 ```csharp
 // C# .NET Core Code
@@ -93,15 +93,15 @@ public async Task<List<Product>> GetAllProductsAsync()
 
 # 4. Write Back
 
-## Overview:
+## Overview
 
 Write Back, or Write Behind, involves writing data to the cache and deferring the actual write to the data source to a later time.
 
-## Rationale:
+## Rationale
 
 This pattern optimizes write performance by allowing the application to continue without waiting for the data source write operation to complete.
 
-## Example implementation:
+## Example implementation
 
 ```csharp
 // C# .NET Core Code
@@ -122,15 +122,15 @@ public void AddProductToCart(Product product)
 
 # 5. Write Around
 
-## Overview:
+## Overview
 
 Write Around involves writing data directly to the data source without caching it. Subsequent reads fetch the data from the data source and populate the cache.
 
-## Rationale:
+## Rationale
 
 This pattern is useful for large or infrequently accessed data that doesn't benefit significantly from caching.
 
-## Example implementation:
+## Example implementation
 
 ```csharp
 // C# .NET Core Code
@@ -145,39 +145,39 @@ public async Task DeleteProductAsync(int productId)
 
 # Advantages and Disadvantages
 
-## Cache Aside:
+## Cache Aside
 
 - **Advantages**: Developer control, flexibility.
 - **Disadvantages**: Cache staleness, code complexity.
 
-## Write Through:
+## Write Through
 
 - **Advantages**: Consistency, reduced staleness.
 - **Disadvantages**: Increased write latency.
 
-## Read Through:
+## Read Through
 
 - **Advantages**: Read optimization, reduced database load.
 - **Disadvantages**: Cache staleness, increased read latency.
 
-## Write Back:
+## Write Back
 
 - **Advantages**: Improved write performance.
 - **Disadvantages**: Potential data loss on system failure.
 
-## Write Around:
+## Write Around
 
 - **Advantages**: Minimized cache pollution, suitable for large data.
 - **Disadvantages**: Increased read latency for uncached data.
 
 # Use Cases and Best Practices
 
-## Cache Aside:
+## Cache Aside
 
 - **Use Cases**: Frequently read but infrequently updated data.
 - **Best Practices**: Careful cache invalidation, monitor cache size.
 
-## Write Through:
+## Write Through
 
 - **Use Cases**: Systems requiring strong consistency.
 - **Best Practices**: Optimize write operations, handle failures gracefully.
@@ -187,12 +187,12 @@ public async Task DeleteProductAsync(int productId)
 - **Use Cases**: Read-heavy workloads.
 - **Best Practices**: Optimize cache refresh strategy, monitor cache hits.
 
-## Write Back:
+## Write Back
 
 - **Use Cases**: Write-intensive workloads with acceptable data loss.
 - **Best Practices**: Implement reliable background processes, handle failures gracefully.
 
-## Write Around:
+## Write Around
 
 - **Use Cases**: Large or infrequently accessed data.
 - **Best Practices**: Evaluate caching impact, monitor cache effectiveness.

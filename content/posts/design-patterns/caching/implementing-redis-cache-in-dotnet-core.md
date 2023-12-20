@@ -102,6 +102,7 @@ In this example, the `ProductService` checks the Redis cache for a list of produ
 # When to Use Redis as a Cache Service
 
 Use Cases/Scenarios:
+
 **Frequent Read Operations**
 
 - Ideal for scenarios where read operations outnumber writes.
