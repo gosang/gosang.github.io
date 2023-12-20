@@ -1,6 +1,6 @@
 +++
 title = 'Crafting Your CV With LaTeX and Visual Studio Code'
-date = 2021-07-11T17:09:37+01:00
+date = 2021-03-19T17:09:37+01:00
 draft = false
 series = "LaTeX"
 tags = ["CV in LaTeX", "CV in LaTex with Visual Studio code"]

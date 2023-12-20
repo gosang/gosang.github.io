@@ -1,6 +1,6 @@
 +++
 title = 'Learning LaTeX in 5 Minutes'
-date = 2021-05-30T16:43:29+01:00
+date = 2021-02-10T16:43:29+01:00
 draft = false
 series = "LaTeX"
 tags = ["Basic LaTeX", "Writing in LaTeX"]
