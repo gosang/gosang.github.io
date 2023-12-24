@@ -1,6 +1,6 @@
 +++
 title = 'Implementing In-Memory Caching in .NET Core with IMemoryCache'
-date = 2023-08-27T08:43:48Z
+date = 2022-06-14T08:43:48Z
 draft = false
 series = "Caching"
 tags = ["IMemoryCache"]

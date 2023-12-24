@@ -1,6 +1,6 @@
 +++
 title = 'Microservices Design Architecture'
-date = 2023-01-15T13:58:28Z
+date = 2022-03-15T13:58:28Z
 draft = false
 series = "Design Architectures"
 tags = ["Microservices"]

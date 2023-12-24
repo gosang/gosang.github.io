@@ -1,6 +1,6 @@
 +++
 title = 'Template Method Pattern'
-date = 2021-09-18T12:24:18Z
+date = 2020-05-23T12:24:18Z
 draft = false
 series = "Behavioral Design Patterns"
 tags = ["Design Patterns", "Template Method"]

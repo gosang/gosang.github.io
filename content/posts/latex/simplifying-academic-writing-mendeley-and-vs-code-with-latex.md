@@ -1,6 +1,6 @@
 +++
 title = 'Simplifying Academic Writing Mendeley and Visual Studio Code With LaTeX'
-date = 2021-03-01T11:47:55+01:00
+date = 2020-03-15T11:47:55+01:00
 draft = false
 series = "LaTeX"
 tags = ["Papers in LaTeX", "Mendeley", "Visual Studio Code With LaTeX"]

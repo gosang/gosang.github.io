@@ -1,6 +1,6 @@
 +++
 title = 'Caching Pattern'
-date = 2023-07-28T08:43:48Z
+date = 2022-04-12T08:43:48Z
 draft = false
 series = "Caching"
 +++

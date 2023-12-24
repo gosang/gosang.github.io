@@ -1,6 +1,6 @@
 +++
 title = 'Implementing Redis as a Cache Service in .NET Core'
-date = 2023-08-11T08:43:48Z
+date = 2022-07-17T08:43:48Z
 draft = false
 series = "Caching"
 tags = ["Redis"]

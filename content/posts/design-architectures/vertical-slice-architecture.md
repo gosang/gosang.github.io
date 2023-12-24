@@ -1,6 +1,6 @@
 +++
 title = 'Vertical Slice Architecture'
-date = 2023-03-25T13:58:28Z
+date = 2021-08-07T13:58:28Z
 draft = false
 series = "Design Architectures"
 +++

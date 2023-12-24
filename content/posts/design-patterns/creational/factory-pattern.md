@@ -1,6 +1,6 @@
 +++
 title = 'Factory Pattern'
-date = 2022-08-02T13:19:18Z
+date = 2021-12-05T13:19:18Z
 draft = false
 series = "Creational Design Patterns"
 tags = ["Design Patterns", "Factory"]

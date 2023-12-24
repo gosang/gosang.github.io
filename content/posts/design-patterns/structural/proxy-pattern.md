@@ -1,6 +1,6 @@
 +++
 title = 'Proxy Pattern'
-date = 2022-03-15T12:26:08Z
+date = 2021-06-15T12:26:08Z
 draft = false
 series = "Structural Design Patterns"
 tags = ["Design Patterns", "Proxy"]

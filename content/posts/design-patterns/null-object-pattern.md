@@ -1,6 +1,6 @@
 +++
 title = 'Null Object Pattern'
-date = 2021-08-03T08:43:48Z
+date = 2021-01-23T08:43:48Z
 draft = false
 series = "Design Patterns"
 +++
