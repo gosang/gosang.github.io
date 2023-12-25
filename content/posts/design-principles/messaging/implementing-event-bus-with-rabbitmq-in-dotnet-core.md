@@ -164,6 +164,12 @@ services.AddHostedService<NotificationService>();
 
 The NotificationService, running as a background service, subscribes to the OrderPlacedEvent using the event bus. When an event is published, the corresponding event handler (`OrderPlacedNotificationHandler`) is triggered, allowing you to implement specific notification logic.
 
+Considerations for Consuming Events:
+
+- **Dedicated Handlers**: Create dedicated event handlers for specific event types to maintain a clean and modular codebase.
+- **Error Handling**: Implement robust error handling within event handlers to ensure graceful degradation.
+- **Logging**: Include detailed logging within event handlers for easier troubleshooting and monitoring.
+
 # Advantages of Implementing an Event Bus with RabbitMQ in .NET Core
 
 - **Scalability**: Enables scaling of individual services independently.
@@ -202,12 +208,6 @@ Consider using an event bus with RabbitMQ in the following scenarios:
 - **Error Handling**: Implement robust error handling mechanisms, considering retries and dead-letter queues.
 - **Testing**: Include comprehensive unit tests for event handlers and the overall event bus.
 - **Security**: Secure communication with RabbitMQ, considering authentication and encryption.
-
-## Best Practices and Recommendations for Consuming Events
-
-- **Dedicated Handlers**: Create dedicated event handlers for specific event types to maintain a clean and modular codebase.
-- **Error Handling**: Implement robust error handling within event handlers to ensure graceful degradation.
-- **Logging**: Include detailed logging within event handlers for easier troubleshooting and monitoring.
 
 In conclusion, implementing an event bus with RabbitMQ in .NET Core offers a powerful solution for building scalable and decoupled systems. By following best practices and understanding when to use this pattern, you can leverage the benefits of event-driven architectures in your software projects.
 
