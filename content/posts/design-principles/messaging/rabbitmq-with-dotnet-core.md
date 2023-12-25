@@ -3,7 +3,7 @@ title = 'Using RabbitMQ with ASP.NET Core'
 date = 2022-06-29T13:58:28Z
 draft = false
 series = "Design Principles"
-tags = ["Messaging", "RabbitMQ"]
+tags = ["Microservices", "Messaging"]
 +++
 
 In the ever-evolving landscape of modern software development, efficient communication between components is crucial. As applications grow in complexity and adopt microservices architecture, a reliable message broker is essential. RabbitMQ, a powerful open-source message broker, has become a cornerstone technology for achieving scalable and robust communication between different parts of an application. In this blog, we will dive deep into RabbitMQ, explain its rationale, explore how it resolves common problems, and demonstrate its usage with ASP.NET Core. We'll also discuss best practices, advantages, and disadvantages of RabbitMQ.
