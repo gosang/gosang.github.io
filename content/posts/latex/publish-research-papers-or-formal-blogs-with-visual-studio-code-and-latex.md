@@ -1,6 +1,6 @@
 +++
 title = 'Publish Research Papers or Formal Blogs With Visual Studio Code and LaTeX'
-date = 2020-02-02T12:14:44+01:00
+date = 2020-01-20T12:14:44+01:00
 draft = false
 series = "LaTeX"
 tags = ["Writing papers in LaTeX", "Visual Studio code with LaTeX"]
