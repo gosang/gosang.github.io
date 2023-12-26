@@ -2,6 +2,7 @@
 title = 'Modern Devops Branching Strategies: a Guide to Efficient Development Workflows'
 date = 2021-05-07T20:03:14+01:00
 draft = false
+tags = ["Devops"]
 +++
 
 In today's fast-paced software development world, DevOps has emerged as a vital approach for fostering collaboration between development and operations teams. A key component of DevOps is the use of branching strategies, which help teams manage code effectively, streamline workflows, and boost development efficiency.

@@ -2,6 +2,8 @@
 title = 'Securing Your Next.js 13 Application With Http Security Headers'
 date = 2023-01-25T18:16:44+01:00
 draft = false
+series = "Next.js"
+tags = ["React"]
 +++
 
 In the ever-evolving landscape of web security, it's essential to employ multiple layers of defense to protect your web applications and users. One of the fundamental aspects of securing your web application is implementing HTTP security headers. These headers are crucial in preventing various attacks such as `cross-site scripting (XSS)`, `clickjacking`, `code injection`, and many others.
