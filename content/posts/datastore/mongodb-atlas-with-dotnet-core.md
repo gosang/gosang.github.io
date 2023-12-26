@@ -254,7 +254,7 @@ Please note that these are simplified snippets, and in a real-world scenario, yo
 
 1. Create MongoDB Atlas Account
 
-   - Visit the MongoDB Atlas website.
+   - Visit the [MongoDB Atlas website](https://www.mongodb.com/cloud/atlas/register).
    - Sign up for a new account or log in if you already have one.
 
 2. Create a Cluster
@@ -263,15 +263,15 @@ Please note that these are simplified snippets, and in a real-world scenario, yo
    - Choose your preferred cloud provider, region, and other settings.
    - Click "Create Cluster" to initiate the cluster creation.
 
-3. Configure Database Users
+3. Configure a Database User
 
    - In the MongoDB Atlas dashboard, navigate to "Database Access" under the "Security" section.
    - Add a new database user with the necessary privileges.
 
 4. Configure Network Access
 
-- In the MongoDB Atlas dashboard, navigate to "Network Access" under the "Security" section.
-- Add your IP address to the IP Whitelist to allow connections.
+   - In the MongoDB Atlas dashboard, navigate to "Network Access" under the "Security" section.
+   - Add your IP address to the IP Whitelist to allow connections.
 
 5. Get Connection String
    - In the MongoDB Atlas dashboard, click on "Connect" for your cluster.
