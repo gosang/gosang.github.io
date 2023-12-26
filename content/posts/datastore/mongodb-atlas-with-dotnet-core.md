@@ -280,84 +280,90 @@ Please note that these are simplified snippets, and in a real-world scenario, yo
 ### Local Environment Setup
 
 1. Create .NET Core API Project
+
    - Open a terminal and run the following commands:
 
-```bash
-dotnet new webapi -n ECommerce.API
-cd ECommerce.API
-```
+   ```bash
+   dotnet new webapi -n ECommerce.API
+   cd ECommerce.API
+   ```
 
 2. Install MongoDB.Driver
+
    - Add MongoDB.Driver package to your project. Update the `.csproj` file:
 
-```xml
-<PackageReference Include="MongoDB.Driver" Version="2.13.1" />
-```
+   ```xml
+   <PackageReference Include="MongoDB.Driver" Version="2.13.1" />
+   ```
 
-- Run `dotnet restore` to install the package.
+   - Run `dotnet restore` to install the package.
 
 3. Configure AppSettings
+
    - Add the MongoDB connection string to the `appsettings.json` file:
 
-```json
-{
-  "ConnectionStrings": {
-    "MongoDbConnection": "your_mongodb_connection_string"
-  }
-  // Other settings...
-}
-```
+   ```json
+   {
+     "ConnectionStrings": {
+       "MongoDbConnection": "your_mongodb_connection_string"
+     }
+     // Other settings...
+   }
+   ```
 
 4. Docker Setup
+
    - Create a `Dockerfile` in the root of the project:
 
-```dockerfile
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
-WORKDIR /app
-EXPOSE 80
+   ```dockerfile
+   FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+   WORKDIR /app
+   EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY ["ECommerce.API/ECommerce.API.csproj", "ECommerce.API/"]
-RUN dotnet restore "ECommerce.API/ECommerce.API.csproj"
-COPY . .
-WORKDIR "/src/ECommerce.API"
-RUN dotnet build "ECommerce.API.csproj" -c Release -o /app/build
+   FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+   WORKDIR /src
+   COPY ["ECommerce.API/ECommerce.API.csproj", "ECommerce.API/"]
+   RUN dotnet restore "ECommerce.API/ECommerce.API.csproj"
+   COPY . .
+   WORKDIR "/src/ECommerce.API"
+   RUN dotnet build "ECommerce.API.csproj" -c Release -o /app/build
 
-FROM build AS publish
-RUN dotnet publish "ECommerce.API.csproj" -c Release -o /app/publish
+   FROM build AS publish
+   RUN dotnet publish "ECommerce.API.csproj" -c Release -o /app/publish
 
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "ECommerce.API.dll"]
-```
+   FROM base AS final
+   WORKDIR /app
+   COPY --from=publish /app/publish .
+   ENTRYPOINT ["dotnet", "ECommerce.API.dll"]
+   ```
 
 5. Docker Compose Setup
+
    - Create a `docker-compose.yml` file in the root of the project:
 
-```yaml
-version: "3.4"
+   ```yaml
+   version: "3.4"
 
-services:
-  ecommerce-api:
-    image: ecommerce-api
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "5000:80"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__MongoDbConnection=your_mongodb_connection_string
-```
+   services:
+   ecommerce-api:
+     image: ecommerce-api
+     build:
+     context: .
+     dockerfile: Dockerfile
+     ports:
+       - "5000:80"
+     environment:
+       - ASPNETCORE_ENVIRONMENT=Development
+       - ConnectionStrings__MongoDbConnection=your_mongodb_connection_string
+   ```
 
 6. Run in Docker
+
    - Open a terminal and run:
 
-```bash
-docker-compose up
-```
+   ```bash
+   docker-compose up
+   ```
 
 Now, your .NET Core API project is running in a Docker container, connected to MongoDB Atlas. You can access the API at http://localhost:5000.
 
