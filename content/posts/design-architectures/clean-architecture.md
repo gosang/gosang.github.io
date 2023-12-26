@@ -1,6 +1,6 @@
 +++
 title = 'Clean Architecture'
-date = 2020-12-07T13:58:28Z
+date = 2020-03-02T13:58:28Z
 draft = false
 series = "Design Architectures"
 +++

@@ -116,7 +116,17 @@ In this Kafka Consumer example, a consumer is configured to subscribe to the "or
 dotnet new web -n ECommerceApi
 ```
 
-2. Add necessary dependencies using the MediatR and AutoMapper NuGet packages.
+2. Add necessary dependencies using the Confluent.Kafka, SchemaRegistry, MediatR and AutoMapper NuGet packages.
+
+```sh
+dotnet add package Confluent.Kafka --version 2.3.0
+dotnet add package Confluent.SchemaRegistry.Serdes.Avro --version 2.3.0
+dotnet add package Confluent.SchemaRegistry.Serdes.Json --version 2.3.0
+dotnet add package Confluent.SchemaRegistry --version 2.3.0
+dotnet add package MediatR
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+dotnet add package xunit
+```
 
 3. Docker Compose YAML
 
@@ -290,4 +300,6 @@ Apache Kafka stands as a powerful solution for building scalable, real-time even
 - [Zookeeper documentation](https://cwiki.apache.org/confluence/display/ZOOKEEPER/Index)
 - [Kafka client protocol](https://cwiki.apache.org/confluence/display/KAFKA/A+Guide+To+The+Kafka+Protocol)
 - [Apache Kafka .NET Client](https://docs.confluent.io/kafka-clients/dotnet/current/overview.html)
+- [Apache Kafka developer guide for Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/apache-kafka-developer-guide)
+- [Confluent Kafka Dotnet](https://github.com/confluentinc/confluent-kafka-dotnet)
 - [Apache Kafka developer guide for Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/apache-kafka-developer-guide)

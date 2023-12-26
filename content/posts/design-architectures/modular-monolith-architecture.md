@@ -1,6 +1,6 @@
 +++
 title = 'Modular Monolith Architecture'
-date = 2021-03-03T13:58:28Z
+date = 2020-05-03T13:58:28Z
 draft = false
 series = "Design Architectures"
 +++
