@@ -3,7 +3,7 @@ title = 'Implementing Event Bus With Rabbitmq in Dotnet Core'
 date = 2022-07-30T13:58:28Z
 draft = false
 series = "Design Principles"
-tags = ["Microservices", "Messaging"]
+tags = ["Microservices", "Messaging", "Event-driven architecture"]
 +++
 
 As a Software Engineer, you understand the importance of efficient communication between components in a distributed system. In this blog post, we'll explore the implementation of an event bus with RabbitMQ in .NET Core, focusing on an e-commerce system built using .NET Core services and APIs. We'll leverage MediatR for CQRS, AutoMapper for object mapping, EF Core InMemory database for simplicity, and xUnit for unit tests. Let's dive into the rationale, implementation steps, advantages, and best practices.
