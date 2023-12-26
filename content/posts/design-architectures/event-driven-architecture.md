@@ -276,4 +276,4 @@ Event-Driven Architecture provides a robust solution for building scalable, flex
 
 # References
 
-- [Event-Driven Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
+[Event-Driven Architecture](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)

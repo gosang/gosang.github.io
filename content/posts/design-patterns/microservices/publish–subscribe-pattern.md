@@ -139,6 +139,6 @@ In conclusion, the Publish–Subscribe pattern emerges as a potent tool in the m
 
 # References:
 
-[MediatR Documentation](https://github.com/jbogard/MediatR)
-[Docker Compose Documentation](https://docs.docker.com/compose/)
-[Visual Studio Code Debugging with Docker](https://code.visualstudio.com/docs/containers/debug-common)
+- [MediatR Documentation](https://github.com/jbogard/MediatR)
+- [Docker Compose Documentation](https://docs.docker.com/compose/)
+- [Visual Studio Code Debugging with Docker](https://code.visualstudio.com/docs/containers/debug-common)
