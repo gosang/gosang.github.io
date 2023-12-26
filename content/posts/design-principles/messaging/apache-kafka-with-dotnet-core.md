@@ -1,5 +1,5 @@
 +++
-title = 'Apache Kafka With Dotnet Core'
+title = 'Apache Kafka With .NET Core'
 date = 2022-04-09T13:58:28Z
 draft = false
 series = "Design Principles"

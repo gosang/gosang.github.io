@@ -1,5 +1,5 @@
 +++
-title = 'Implementing Event Bus With Rabbitmq in Dotnet Core'
+title = 'Implementing Event Bus With RabbitMQ in .NET Core'
 date = 2022-07-30T13:58:28Z
 draft = false
 series = "Design Principles"
