@@ -3,7 +3,7 @@ title = 'Mongodb Atlas With .NET Core'
 date = 2022-03-27T18:01:02Z
 draft = false
 series = "Data Store"
-tags = ["ASP.Net Core"]
+tags = ["ASP.Net Core", "MongoDB"]
 +++
 
 # Introduction

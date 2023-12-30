@@ -1,6 +1,6 @@
 +++
 title = 'gRPC: Revolutionizing Communication in Modern Microservices with .NET Core'
-date = 2022-05-28T13:58:28Z
+date = 2022-06-28T13:58:28Z
 draft = false
 series = "Design Principles"
 tags = ["Microservices", "gRPC"]
