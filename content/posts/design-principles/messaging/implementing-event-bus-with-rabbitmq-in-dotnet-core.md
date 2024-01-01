@@ -1,6 +1,6 @@
 +++
 title = 'Implementing Event Bus With RabbitMQ in .NET Core'
-date = 2022-07-30T13:58:28Z
+date = 2023-08-30T13:58:28Z
 draft = false
 series = "Design Principles"
 tags = ["Microservices", "Messaging", "Event-driven architecture"]
