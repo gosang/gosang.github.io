@@ -3,7 +3,7 @@ title = 'Implementing Entity Framework Core 6 With ASP.NET Core 6'
 date = 2024-01-20T11:50:54Z
 draft = false
 series = "Data Store"
-tags = ["Entity Framework Core", "ASP.Net Core"]
+tags = ["Entity Framework Core", "ASP.NET Core"]
 +++
 
 # Introduction
