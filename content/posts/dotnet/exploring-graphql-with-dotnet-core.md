@@ -2,7 +2,6 @@
 title = 'Exploring GraphQL With .NET Core'
 date = 2021-05-27T18:01:02Z
 draft = false
-series = "GraphQL API"
 tags = ["ASP.Net Core"]
 +++
 

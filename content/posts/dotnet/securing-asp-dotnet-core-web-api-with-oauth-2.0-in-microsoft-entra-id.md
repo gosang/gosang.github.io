@@ -17,12 +17,6 @@ OAuth 2.0 is an open standard authorization framework that enables secure, deleg
 
 The primary goal of OAuth 2.0 is to provide a secure and standardized way for applications to access resources on behalf of users. It resolves the issue of sharing passwords between different services and enhances security by using access tokens.
 
-# Implementing OAuth 2.0 with Microsoft Entra ID
-
-## Scenario: E-commerce System
-
-Consider an e-commerce system with ASP.NET Core Web API backend and a React frontend. The API is built using CQRS MediatR pattern, FluentValidation for input validation, AutoMapper for object mapping, Entity Framework Core for database interactions, and Testcontainers with xUnit for unit tests.
-
 ## OAuth 2.0 Flow
 
 OAuth 2.0 defines several authorization flows that cater to different use cases. Two prominent flows are the Authorization Code Flow and the Client Credentials Flow. Let's delve into the details of each and explore their respective use cases.
@@ -34,6 +28,12 @@ To implement the Authorization Code Flow, use the OpenID Connect middleware in y
 ### OAuth 2.0 Client Credentials Flow
 
 For scenarios where a client application needs to access resources without user involvement, use the Client Credentials Flow. In your API, configure the client application with the appropriate client ID and secret.
+
+# Implementing OAuth 2.0 with Microsoft Entra ID
+
+## Scenario: E-commerce System
+
+Consider an e-commerce system with ASP.NET Core Web API backend and a React frontend. The API is built using CQRS MediatR pattern, FluentValidation for input validation, AutoMapper for object mapping, Entity Framework Core for database interactions, and Testcontainers with xUnit for unit tests.
 
 ### Setting Up OAuth 2.0 Registration in Microsoft Entra ID
 
