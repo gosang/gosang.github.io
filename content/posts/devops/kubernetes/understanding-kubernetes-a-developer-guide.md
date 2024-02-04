@@ -1,5 +1,5 @@
 +++
-title = 'Understanding Kubernetes: A Developer\`s Guide'
+title = 'Understanding Kubernetes: A Developer`s Guide'
 date = 2024-02-03T13:34:00Z
 draft = false
 tags = ["Kubernetes"]
