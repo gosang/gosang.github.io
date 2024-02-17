@@ -1,8 +1,8 @@
 +++
-title = 'The Twelve Factor App a Modern Approach to Software Delivery'
+title = 'The Twelve-Factor App: A Modern Approach to Software Delivery'
 date = 2024-02-17T16:57:02Z
 draft = false
-tags = ["12 Factors App"]
+tags = ["12-Factor App"]
 +++
 
 In the fast-paced world of software development, maintaining scalable, robust, and easily deployable applications is crucial. Traditional methods often fall short in meeting the demands of modern software delivery. Enter the `Twelve-Factor App`, a methodology designed to address these challenges head-on by providing a set of best practices for building cloud-native applications.
