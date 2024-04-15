@@ -6,7 +6,7 @@ series = "SOLID Design Principles"
 tags = ["SOLID", "LSP"]
 +++
 
-In the realm of object-oriented design, the Liskov Substitution Principle (LSP) stands as a guiding light, emphasizing the importance of substitutability among objects of a base class and its derived classes. Coined by Barbara Liskov, this principle ensures that derived classes can be used interchangeably with their base classes without affecting the correctness of the program. In this blog post, we will delve into the Liskov Substitution Principle, its rationale, practical examples in C# .NET Core within the context of e-commerce, and discuss its relevance in both microservices and modular monolithic architectures.
+In the realm of object-oriented design, the Liskov Substitution Principle (LSP) stands as a guiding light, emphasizing the importance of substitutability among objects of a base class and its derived classes. Coined by Barbara Liskov, this principle ensures that derived classes can be used interchangeably with their base classes without affecting the correctness of the program. In this blog post, we will look into the Liskov Substitution Principle, its rationale, practical examples in C# .NET Core within the context of e-commerce, and discuss its relevance in both microservices and modular monolithic architectures.
 
 # What is the Liskov Substitution Principle?
 

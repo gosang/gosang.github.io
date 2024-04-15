@@ -6,7 +6,7 @@ series = "Design Patterns"
 tags = ["OOP", "GRASP"]
 +++
 
-When it comes to designing software systems, achieving a clear and maintainable architecture is paramount. General Responsibility Assignment Software Patterns (GRASP) is a set of principles that aids in designing object-oriented systems with a focus on responsibility assignment. In this blog post, we will delve into the core concepts of GRASP, its rationale, and how it can be effectively applied in the context of an e-commerce system using .NET Core, MediatR, AutoMapper, EF Core InMemory database, and React.
+When it comes to designing software systems, achieving a clear and maintainable architecture is paramount. General Responsibility Assignment Software Patterns (GRASP) is a set of principles that aids in designing object-oriented systems with a focus on responsibility assignment. In this blog post, we will look into the core concepts of GRASP, its rationale, and how it can be effectively applied in the context of an e-commerce system using .NET Core, MediatR, AutoMapper, EF Core InMemory database, and React.
 
 # Understanding GRASP
 

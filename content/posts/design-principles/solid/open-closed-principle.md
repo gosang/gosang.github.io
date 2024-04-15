@@ -18,7 +18,7 @@ The OCP addresses the challenges associated with modifying existing code. By adh
 
 # OCP in Action: C# .NET Core Examples
 
-Let's delve into the Open-Closed Principle with examples in the context of e-commerce.
+Let's look into the Open-Closed Principle with examples in the context of e-commerce.
 
 #### Order Management
 

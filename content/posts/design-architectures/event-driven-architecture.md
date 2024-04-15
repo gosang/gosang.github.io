@@ -5,7 +5,7 @@ draft = false
 series = "Design Architectures"
 +++
 
-Event-Driven Architecture (EDA) has become a pivotal design paradigm in building scalable, loosely-coupled systems. In this blog, we'll delve into the core concepts of Event-Driven Architecture, its implementation in the context of an e-commerce system using C# .NET Core, and explore its advantages, disadvantages, issues, and best practices.
+Event-Driven Architecture (EDA) has become a pivotal design paradigm in building scalable, loosely-coupled systems. In this blog, we'll look into the core concepts of Event-Driven Architecture, its implementation in the context of an e-commerce system using C# .NET Core, and explore its advantages, disadvantages, issues, and best practices.
 
 # What is Event-Driven Architecture?
 

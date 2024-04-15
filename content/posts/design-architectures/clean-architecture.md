@@ -46,7 +46,7 @@ Clean Architecture addresses several critical issues in software development:
 
 # Realizing Clean Architecture in an Online Shopping System
 
-Let's explore Clean Architecture in action by considering an online shopping system. In both microservices and modular monolithic approaches, Clean Architecture can be effectively applied. We will delve into three essential use cases: Customer Management, Order Processing, and Shipping, along with email notifications.
+Let's explore Clean Architecture in action by considering an online shopping system. In both microservices and modular monolithic approaches, Clean Architecture can be effectively applied. We will look into three essential use cases: Customer Management, Order Processing, and Shipping, along with email notifications.
 
 ### Project Structure
 
@@ -1022,4 +1022,4 @@ For a more in-depth exploration of Clean Architecture, consider reading:
 
 - Clean Architecture: A Craftsman's Guide to Software Structure and Design by Robert C. Martin
 
-As you delve deeper into Clean Architecture, you'll discover new ways to refine and adapt this approach to your specific project requirements. Happy coding!
+As you look deeper into Clean Architecture, you'll discover new ways to refine and adapt this approach to your specific project requirements. Happy coding!

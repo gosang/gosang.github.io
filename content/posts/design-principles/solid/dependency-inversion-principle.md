@@ -6,7 +6,7 @@ series = "SOLID Design Principles"
 tags = ["SOLID", "DIP", "DI"]
 +++
 
-In the ever-evolving landscape of software design, the Dependency Inversion Principle (DIP) and Dependency Injection (DI) pattern shine as beacons of flexibility and maintainability. Both concepts, integral to the SOLID principles, play a pivotal role in creating loosely coupled and scalable systems. In this blog post, we'll explore the Dependency Inversion Principle, delve into the Dependency Injection pattern, and discuss their application in the context of e-commerce using C# .NET Core. We'll also examine their relevance in microservices and modular monolithic architectures, along with the advantages, disadvantages, and best practices.
+In the ever-evolving landscape of software design, the Dependency Inversion Principle (DIP) and Dependency Injection (DI) pattern shine as beacons of flexibility and maintainability. Both concepts, integral to the SOLID principles, play a pivotal role in creating loosely coupled and scalable systems. In this blog post, we'll explore the Dependency Inversion Principle, look into the Dependency Injection pattern, and discuss their application in the context of e-commerce using C# .NET Core. We'll also examine their relevance in microservices and modular monolithic architectures, along with the advantages, disadvantages, and best practices.
 
 # Understanding Dependency Inversion Principle (DIP)
 

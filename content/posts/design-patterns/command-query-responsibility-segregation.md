@@ -8,7 +8,7 @@ tags = ["CQRS", "Microservices"]
 
 In the ever-evolving world of software architecture, Command Query Responsibility Segregation (CQRS) has emerged as a powerful design pattern. CQRS is all about separating the responsibilities of executing commands (actions that change the state of an application) and handling queries (read-only operations).
 
-In this article, we'll delve deep into CQRS, exploring what it is, the rationale behind it, the problems it solves, practical usage with C# .NET Core Web API and repositories, and its advantages and disadvantages. We'll also provide clear guidance on when to use CQRS and best practices for successful implementation.
+In this article, we'll look deep into CQRS, exploring what it is, the rationale behind it, the problems it solves, practical usage with C# .NET Core Web API and repositories, and its advantages and disadvantages. We'll also provide clear guidance on when to use CQRS and best practices for successful implementation.
 
 # Understanding CQRS
 

@@ -8,7 +8,7 @@ tags = ["Microservices", "gRPC"]
 
 # Introduction
 
-In the dynamic landscape of microservices architecture, efficient communication between services is paramount. Enter gRPC, which stands for gRPC Remote Procedure Call. It's a high-performance, open-source RPC (Remote Procedure Call) framework developed by Google. In this blog post, we'll delve into the intricacies of gRPC, explore its application in the context of a .NET 6 e-commerce system, and discuss best practices and use cases.
+In the dynamic landscape of microservices architecture, efficient communication between services is paramount. Enter gRPC, which stands for gRPC Remote Procedure Call. It's a high-performance, open-source RPC (Remote Procedure Call) framework developed by Google. In this blog post, we'll look into the intricacies of gRPC, explore its application in the context of a .NET 6 e-commerce system, and discuss best practices and use cases.
 
 # Understanding gRPC
 

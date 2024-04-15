@@ -8,7 +8,7 @@ tags = ["Outbox", "Microservices"]
 
 In the realm of microservices architectures, managing distributed transactions and ensuring data consistency across services can be challenging. The Outbox Design Pattern is a powerful solution to address these challenges, by facilitating the decoupling of business logic from the intricacies of distributed transactions. It aims to ensure atomicity and consistency of operations across multiple microservices or components.
 
-In this blog, we will delve into applying the Outbox Design Pattern in a simple problem. By introducing an "outbox" table to store events, this pattern separates concerns, providing a cleaner and more fault-tolerant approach to managing distributed transactions. In this refined scenario, we will explore how the Outbox Design Pattern can enhance the reliability of an e-commerce application using Entity Framework Core 6, addressing potential pitfalls associated with combined logic in the order repository.
+In this blog, we will look into applying the Outbox Design Pattern in a simple problem. By introducing an "outbox" table to store events, this pattern separates concerns, providing a cleaner and more fault-tolerant approach to managing distributed transactions. In this refined scenario, we will explore how the Outbox Design Pattern can enhance the reliability of an e-commerce application using Entity Framework Core 6, addressing potential pitfalls associated with combined logic in the order repository.
 
 # The Problem with Combined Logic in Order Repository
 

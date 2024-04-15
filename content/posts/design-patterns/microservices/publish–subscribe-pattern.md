@@ -6,7 +6,7 @@ series = "Design Patterns"
 tags = ["Microservices", "Messaging"]
 +++
 
-The Publish–Subscribe pattern, a stalwart in the realm of messaging patterns, orchestrates communication between components in a decoupled manner. Here, publishers categorize messages into topics and broadcast them without knowing the identity of subscribers. Subscribers express interest in specific topics, receiving messages related to those topics. Let's delve into the intricacies of this pattern, exploring its rationale, problem-solving capabilities, and its implementation in the context of a .NET Core e-commerce system.
+The Publish–Subscribe pattern, a stalwart in the realm of messaging patterns, orchestrates communication between components in a decoupled manner. Here, publishers categorize messages into topics and broadcast them without knowing the identity of subscribers. Subscribers express interest in specific topics, receiving messages related to those topics. Let's look into the intricacies of this pattern, exploring its rationale, problem-solving capabilities, and its implementation in the context of a .NET Core e-commerce system.
 
 ## The Rationale Behind Publish–Subscribe
 

@@ -6,7 +6,7 @@ series = "Design Principles"
 tags = ["DRY"]
 +++
 
-In the realm of software development, the Don't-Repeat-Yourself (DRY) design principle stands as a cornerstone, emphasizing the importance of avoiding redundancy in code. This principle is more than just a catchy phrase; it's a philosophy that guides developers toward writing efficient, maintainable, and scalable code. In this blog, we'll delve into the essence of DRY, its rationale, its application in microservices and modular monolithic architectures, and its practical implementation in an e-commerce system using C# dot net core examples.
+In the realm of software development, the Don't-Repeat-Yourself (DRY) design principle stands as a cornerstone, emphasizing the importance of avoiding redundancy in code. This principle is more than just a catchy phrase; it's a philosophy that guides developers toward writing efficient, maintainable, and scalable code. In this blog, we'll look into the essence of DRY, its rationale, its application in microservices and modular monolithic architectures, and its practical implementation in an e-commerce system using C# dot net core examples.
 
 # What is the DRY Design Principle?
 

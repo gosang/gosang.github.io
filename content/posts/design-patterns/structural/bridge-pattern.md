@@ -6,7 +6,7 @@ series = "Structural Design Patterns"
 tags = ["Design Patterns", "Bridge"]
 +++
 
-In the realm of software design patterns, the Bridge pattern stands out as a powerful tool for enhancing flexibility and maintainability. This pattern belongs to the structural design patterns, emphasizing the decoupling of abstraction from implementation. In this blog post, we'll delve into the intricacies of the Bridge pattern, its rationale, usage in microservices, and practical implementations in a C# .NET Core e-commerce system.
+In the realm of software design patterns, the Bridge pattern stands out as a powerful tool for enhancing flexibility and maintainability. This pattern belongs to the structural design patterns, emphasizing the decoupling of abstraction from implementation. In this blog post, we'll look into the intricacies of the Bridge pattern, its rationale, usage in microservices, and practical implementations in a C# .NET Core e-commerce system.
 
 # Bridge Pattern Overview
 

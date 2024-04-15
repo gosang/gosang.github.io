@@ -8,7 +8,7 @@ tags = ["Design Patterns", "Flyweight"]
 
 The Flyweight design pattern is a structural pattern that falls under the category of design patterns in software engineering. It is used to optimize memory usage or computational resources by sharing as much as possible with related objects. The Flyweight pattern is particularly valuable when you need to create a large number of similar objects and you want to conserve resources.
 
-In this blog, we will delve into the Flyweight design pattern, its rationale, how it resolves common problems, and how to implement it using C# .NET Core in the context of a Web API and repository pattern. We will also discuss its advantages, disadvantages, use cases, and best practices.
+In this blog, we will look into the Flyweight design pattern, its rationale, how it resolves common problems, and how to implement it using C# .NET Core in the context of a Web API and repository pattern. We will also discuss its advantages, disadvantages, use cases, and best practices.
 
 # Flyweight Pattern - The Basics
 

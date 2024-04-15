@@ -10,7 +10,7 @@ State Pattern
 
 # Introduction
 
-In the ever-evolving landscape of software design, patterns play a crucial role in enhancing maintainability, scalability, and flexibility of code. One such design pattern that proves invaluable in managing state-dependent behavior is the State Pattern. In this blog post, we'll delve into the State Pattern, exploring its rationale, application in real-world scenarios, and its advantages and disadvantages.
+In the ever-evolving landscape of software design, patterns play a crucial role in enhancing maintainability, scalability, and flexibility of code. One such design pattern that proves invaluable in managing state-dependent behavior is the State Pattern. In this blog post, we'll look into the State Pattern, exploring its rationale, application in real-world scenarios, and its advantages and disadvantages.
 
 # What is the State Pattern?
 

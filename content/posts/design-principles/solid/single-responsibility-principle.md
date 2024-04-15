@@ -26,7 +26,7 @@ The SRP aims to address the issues associated with classes that have multiple re
 
 # SRP in Action: C# .NET Core Examples
 
-Let's delve into the SRP principle with a simple `Order` class in an e-commerce system. The Order class juggles multiple responsibilities, which we'll refactor into separate classes, each with a single responsibility.
+Let's look into the SRP principle with a simple `Order` class in an e-commerce system. The Order class juggles multiple responsibilities, which we'll refactor into separate classes, each with a single responsibility.
 
 #### A simple `Order`
 

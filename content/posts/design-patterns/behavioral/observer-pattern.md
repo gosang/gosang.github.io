@@ -6,7 +6,7 @@ series = "Behavioral Design Patterns"
 tags = ["Design Patterns", "Observer"]
 +++
 
-In software development, designing systems that are flexible, scalable, and maintainable is paramount. One of the key challenges is establishing a communication mechanism between components without tight coupling. The Observer pattern provides an elegant solution to this problem. In this blog, we'll delve into the intricacies of the Observer pattern, explore its applications in an e-commerce system using C# .NET Core, and discuss best practices.
+In software development, designing systems that are flexible, scalable, and maintainable is paramount. One of the key challenges is establishing a communication mechanism between components without tight coupling. The Observer pattern provides an elegant solution to this problem. In this blog, we'll look into the intricacies of the Observer pattern, explore its applications in an e-commerce system using C# .NET Core, and discuss best practices.
 
 # Understanding the Observer Pattern
 

@@ -8,7 +8,7 @@ tags = ["Microservices", "Messaging", "Event-driven architecture"]
 
 # Introduction
 
-Apache Kafka has emerged as a game-changer in the realm of distributed systems, offering a robust and scalable solution for building event-driven architectures. In this technical blog, we will delve into the intricacies of Apache Kafka, exploring its core concepts, implementation in a .NET Core e-commerce system, and discussing the advantages, disadvantages, issues, and best practices associated with its use.
+Apache Kafka has emerged as a game-changer in the realm of distributed systems, offering a robust and scalable solution for building event-driven architectures. In this technical blog, we will look into the intricacies of Apache Kafka, exploring its core concepts, implementation in a .NET Core e-commerce system, and discussing the advantages, disadvantages, issues, and best practices associated with its use.
 
 # Understanding Apache Kafka
 
@@ -36,7 +36,7 @@ Our e-commerce system is built using .NET Core, leveraging the MediatR library f
 
 ## Event-Driven Architecture with Kafka
 
-In an event-driven architecture using Apache Kafka, the key components are the Event Producer, Event Consumer, and the Event Bus. Let's delve into each of these elements to understand their roles in facilitating seamless communication within a distributed system.
+In an event-driven architecture using Apache Kafka, the key components are the Event Producer, Event Consumer, and the Event Bus. Let's look into each of these elements to understand their roles in facilitating seamless communication within a distributed system.
 
 ### Event Producer
 

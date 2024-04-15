@@ -5,7 +5,7 @@ draft = false
 series = "Caching"
 +++
 
-Caching is a crucial aspect of modern software development, especially in the context of microservices or modular monolithic applications. It helps improve performance, reduce latency, and enhance the overall user experience. In this blog post, we will delve into five caching patterns: `Cache Aside`, `Write Through`, `Read Through`, `Write Back`, and `Write Around`, exploring their characteristics, use cases, and code snippets using .NET.
+Caching is a crucial aspect of modern software development, especially in the context of microservices or modular monolithic applications. It helps improve performance, reduce latency, and enhance the overall user experience. In this blog post, we will look into five caching patterns: `Cache Aside`, `Write Through`, `Read Through`, `Write Back`, and `Write Around`, exploring their characteristics, use cases, and code snippets using .NET.
 
 # 1. Cache Aside
 

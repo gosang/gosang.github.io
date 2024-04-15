@@ -25,7 +25,7 @@ Null references often lead to runtime errors, making code less robust and harder
 
 ## Implementing the Null Object Pattern in C# .NET Core
 
-Let's delve into a practical example by considering the Null Object pattern in the context of a `CacheStorage` module.
+Let's look into a practical example by considering the Null Object pattern in the context of a `CacheStorage` module.
 
 ```csharp
 // Interface for CacheStorage
