@@ -8,7 +8,7 @@ tags = ["Dapper", "ASP.NET Core"]
 
 # Introduction
 
-In the realm of data access in ASP.NET Core 6, developers often face choices between various Object-Relational Mapping (ORM) tools. One such tool that has gained popularity is Dapper. In this blog post, we will delve into what Dapper is, its rationale, and how it can be effectively implemented in an ASP.NET Core 6 E-Commerce system.
+In the realm of data access in ASP.NET Core 6, developers often face choices between various Object-Relational Mapping (ORM) tools. One such tool that has gained popularity is Dapper. In this blog post, we will look into what Dapper is, its rationale, and how it can be effectively implemented in an ASP.NET Core 6 E-Commerce system.
 
 # Understanding Dapper
 
