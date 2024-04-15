@@ -8,7 +8,7 @@ tags = ["Kubernetes"]
 
 # Introduction
 
-In recent years, the landscape of software development and deployment has undergone a significant transformation. The demand for scalable, resilient, and easily manageable applications has led to the rise of container orchestration tools, with Kubernetes standing out as a powerful and widely adopted solution. In this blog post, we will delve into the world of Kubernetes, exploring its fundamentals, components, advantages, disadvantages, use cases, and best practices.
+In recent years, the landscape of software development and deployment has undergone a significant transformation. The demand for scalable, resilient, and easily manageable applications has led to the rise of container orchestration tools, with Kubernetes standing out as a powerful and widely adopted solution. In this blog post, we will look into the world of Kubernetes, exploring its fundamentals, components, advantages, disadvantages, use cases, and best practices.
 
 # What is Kubernetes?
 

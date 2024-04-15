@@ -5,7 +5,7 @@ draft = false
 tags = ["Delegate", "ASP.NET Core"]
 +++
 
-Delegates are powerful constructs in C# that allow for defining and passing around references to methods, providing flexibility and extensibility in programming. Two commonly used delegate types in C# are Action and Func. In this blog post, we'll delve into what these delegate types are, their rationale, how they're used, and provide examples to illustrate their utility.
+Delegates are powerful constructs in C# that allow for defining and passing around references to methods, providing flexibility and extensibility in programming. Two commonly used delegate types in C# are Action and Func. In this blog post, we'll look into what these delegate types are, their rationale, how they're used, and provide examples to illustrate their utility.
 
 # What are Delegates?
 

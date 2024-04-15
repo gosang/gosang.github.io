@@ -28,7 +28,7 @@ MongoDB Atlas is a fully managed cloud database service for MongoDB, a NoSQL dat
 
 # Implementing MongoDB Atlas with ASP.NET Core and CQRS
 
-Let's delve into a practical example of building an e-commerce system using MongoDB Atlas and ASP.NET Core using CQRS. We'll leverage Docker for containerization, MediatR for implementing the CQRS pattern, FluentValidation for validating input request, AutoMapper for object mapping, and xUnit for unit tests.
+Let's look into a practical example of building an e-commerce system using MongoDB Atlas and ASP.NET Core using CQRS. We'll leverage Docker for containerization, MediatR for implementing the CQRS pattern, FluentValidation for validating input request, AutoMapper for object mapping, and xUnit for unit tests.
 
 ## Key Technologies and Libraries
 

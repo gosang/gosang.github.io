@@ -6,7 +6,7 @@ series = "Design Principles"
 tags = ["SOLID"]
 +++
 
-SOLID is a set of five design principles that aim to create robust, scalable, and maintainable software. These principles were introduced by Robert C. Martin and have become a cornerstone for object-oriented design. In this blog post, we'll delve into each SOLID principle, discuss their rationale, provide practical examples in C# .NET Core, and explore how they can be applied in both monolithic and microservices architectures.
+SOLID is a set of five design principles that aim to create robust, scalable, and maintainable software. These principles were introduced by Robert C. Martin and have become a cornerstone for object-oriented design. In this blog post, we'll look into each SOLID principle, discuss their rationale, provide practical examples in C# .NET Core, and explore how they can be applied in both monolithic and microservices architectures.
 
 # What is SOLID?
 

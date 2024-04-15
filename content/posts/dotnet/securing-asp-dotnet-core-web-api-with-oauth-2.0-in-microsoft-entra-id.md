@@ -19,7 +19,7 @@ The primary goal of OAuth 2.0 is to provide a secure and standardized way for ap
 
 ## OAuth 2.0 Flow
 
-OAuth 2.0 defines several authorization flows that cater to different use cases. Two prominent flows are the Authorization Code Flow and the Client Credentials Flow. Let's delve into the details of each and explore their respective use cases.
+OAuth 2.0 defines several authorization flows that cater to different use cases. Two prominent flows are the Authorization Code Flow and the Client Credentials Flow. Let's look into the details of each and explore their respective use cases.
 
 ### OAuth 2.0 Authorization Code Flow
 

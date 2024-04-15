@@ -7,7 +7,7 @@ tags = ["Devops"]
 
 In today's fast-paced software development world, DevOps has emerged as a vital approach for fostering collaboration between development and operations teams. A key component of DevOps is the use of branching strategies, which help teams manage code effectively, streamline workflows, and boost development efficiency.
 
-In this blog, we'll explore modern DevOps branching strategies, starting with the importance and rationale behind these strategies. We'll then discuss key considerations for selecting a branching strategy and delve into the most common approaches, including `GitFlow`, `GitHub Flow`, `GitLab Flow`, and `Trunk-Based Development (TBD)`, along with their specific use cases, pros, cons, and their integration with CI/CD pipelines.
+In this blog, we'll explore modern DevOps branching strategies, starting with the importance and rationale behind these strategies. We'll then discuss key considerations for selecting a branching strategy and look into the most common approaches, including `GitFlow`, `GitHub Flow`, `GitLab Flow`, and `Trunk-Based Development (TBD)`, along with their specific use cases, pros, cons, and their integration with CI/CD pipelines.
 
 ## The Rationale for Modern DevOps Branching Strategies
 

@@ -16,7 +16,7 @@ Configuring resources with YAML manifests involves defining the desired state of
 
 ## Implementation
 
-YAML (YAML Ain't Markup Language) is a human-readable data serialization format. It allows users to express configurations concisely and in a format that is easy to understand. Let's delve into how YAML manifests are used to configure different Kubernetes resources.
+YAML (YAML Ain't Markup Language) is a human-readable data serialization format. It allows users to express configurations concisely and in a format that is easy to understand. Let's look into how YAML manifests are used to configure different Kubernetes resources.
 
 # Configuring Basic Kubernetes Components with YAML Manifests
 

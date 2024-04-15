@@ -6,7 +6,7 @@ series = "Data Store"
 tags = ["ETag", "Optimistic Concurrency", "ASP.NET Core"]
 +++
 
-Optimistic concurrency is a critical strategy for managing concurrent updates in modern web applications. The ETag header, or Entity Tag, serves as a powerful mechanism to implement optimistic concurrency. In this blog post, we'll thoroughly explore what ETag is, its rationale, how it differs from pessimistic concurrency, and how to leverage it in a .NET Core 8 e-commerce system. Additionally, we'll delve into two approaches for optimistic concurrency: one using Database-Generated Tokens and another using Application-Managed Tokens.
+Optimistic concurrency is a critical strategy for managing concurrent updates in modern web applications. The ETag header, or Entity Tag, serves as a powerful mechanism to implement optimistic concurrency. In this blog post, we'll thoroughly explore what ETag is, its rationale, how it differs from pessimistic concurrency, and how to leverage it in a .NET Core 8 e-commerce system. Additionally, we'll look into two approaches for optimistic concurrency: one using Database-Generated Tokens and another using Application-Managed Tokens.
 
 # Understanding ETag
 
