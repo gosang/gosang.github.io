@@ -1,5 +1,5 @@
 +++
-title = 'Alert and Monitoring in Dotnet Core With Serilog and Elastic Kibana'
+title = 'Alert and Monitoring in .NET Core using Serilog and Elastic Kibana'
 date = 2024-05-05T15:56:39+01:00
 draft = false
 tags = ["ASP.Net Core"]
