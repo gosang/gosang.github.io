@@ -5,7 +5,7 @@ draft = false
 tags = ["Devops"]
 +++
 
-In this technical blog, we'll explore how to set up and run Elastic Kibana locally using Docker and Docker Desktop on Windows 11. We'll cover what Elastic Kibana is, its benefits, and step-by-step instructions for basic installation and configuration.
+In this blog, we'll explore how to set up and run Elastic Kibana locally using Docker and Docker Desktop on Windows 11. We'll cover what Elastic Kibana is, its benefits, and step-by-step instructions for basic installation and configuration.
 
 # What is Elastic Kibana?
 
