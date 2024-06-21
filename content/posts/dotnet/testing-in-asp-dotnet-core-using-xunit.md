@@ -1,5 +1,5 @@
 +++
-title = 'Testing in Asp Dotnet Core Using Xunit'
+title = 'Testing in ASP.NET Core Using xUnit'
 date = 2024-06-21T12:22:42+01:00
 draft = false
 tags = ["ASP.Net Core", "Testing"]
