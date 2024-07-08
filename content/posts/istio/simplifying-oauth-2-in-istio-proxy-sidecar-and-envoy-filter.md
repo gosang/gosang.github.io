@@ -1,5 +1,5 @@
 +++
-title = 'Simplifying Oauth 2 in Istio Proxy Sidecar and Envoy Filter'
+title = 'Simplifying OAuth 2 in Istio Proxy, Sidecar and Envoy Filter'
 date = 2024-07-07T12:02:22+01:00
 draft = false
 tags = ["Istio", "OAuth 2.0"]
