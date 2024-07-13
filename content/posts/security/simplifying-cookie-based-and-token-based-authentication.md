@@ -1,4 +1,4 @@
-Cookie-based+++
++++
 title = 'Simplifying Cookie-based and Token-based Authentication'
 date = 2024-07-13T12:06:57+01:00
 draft = false
