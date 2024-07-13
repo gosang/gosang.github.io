@@ -1,21 +1,21 @@
-+++
-title = 'Simplifying Cookie Based and Token Based Authentication'
+Cookie-based+++
+title = 'Simplifying Cookie-based and Token-based Authentication'
 date = 2024-07-13T12:06:57+01:00
 draft = false
 tags = ["Security"]
 +++
 
-Authentication is a fundamental aspect of web security, ensuring that users are who they claim to be. Two prevalent methods for handling authentication are Cookie-Based and Token-Based authentication. In this blog, we’ll look into these methods, exploring their concepts, functionalities, advantages, and drawbacks. Additionally, we will provide detailed implementation guides for using Keycloak as an Identity Provider for Token-Based authentication in a .NET Core 8 API project and for Cookie-Based authentication in a React Next.js project using TypeScript.
+Authentication is a fundamental aspect of web security, ensuring that users are who they claim to be. Two prevalent methods for handling authentication are Cookie-based and Token-based authentication. In this blog, we’ll look into these methods, exploring their concepts, functionalities, advantages, and drawbacks. Additionally, we will provide detailed implementation guides for using Keycloak as an Identity Provider for Token-based authentication in a .NET Core 8 API project and for Cookie-based authentication in a React Next.js project using TypeScript.
 
 # What is Authentication?
 
 Authentication is the process of verifying the identity of a user or system. It ensures that the person or system accessing resources is indeed who they claim to be. Authentication is typically achieved through credentials such as usernames, passwords, tokens, or certificates.
 
-# Cookie-Based Authentication
+# Cookie-based Authentication
 
-## What is Cookie-Based Authentication?
+## What is Cookie-based Authentication?
 
-Cookie-Based Authentication uses HTTP cookies to manage user sessions. Upon successful login, the server creates a session and stores it on the server side. A cookie containing the session ID is sent to the client. For subsequent requests, the client sends the cookie to the server to verify the session.
+Cookie-based Authentication uses HTTP cookies to manage user sessions. Upon successful login, the server creates a session and stores it on the server side. A cookie containing the session ID is sent to the client. For subsequent requests, the client sends the cookie to the server to verify the session.
 
 ## Key Concepts
 
@@ -46,11 +46,11 @@ Cookie-Based Authentication uses HTTP cookies to manage user sessions. Upon succ
 
 **Highly Scalable Applications**: Not suitable for applications with large user bases due to server-side session management overhead.
 
-# Token-Based Authentication
+# Token-based Authentication
 
-## What is Token-Based Authentication?
+## What is Token-based Authentication?
 
-Token-Based Authentication uses tokens, such as JSON Web Tokens (JWT), to manage user sessions. Upon successful login, the server issues a token to the client. The client includes this token in the header of subsequent requests.
+Token-based Authentication uses tokens, such as JSON Web Tokens (JWT), to manage user sessions. Upon successful login, the server issues a token to the client. The client includes this token in the header of subsequent requests.
 
 ## Key Concepts
 
@@ -70,7 +70,7 @@ Token Verification: For each request, the server verifies the token.
 
 ## Disadvantages
 
-- **Complexity**: More complex to implement than cookie-based authentication.
+- **Complexity**: More complex to implement than Cookie-based authentication.
 - **Token Revocation**: Difficult to revoke tokens.
 
 ## When to Use
@@ -83,7 +83,7 @@ Token Verification: For each request, the server verifies the token.
 
 - **Simpler Applications**: Overkill for small applications with a limited user base.
 
-# Implementing Token-Based Authentication with Keycloak in .NET Core 8 API
+# Implementing Token-based Authentication with Keycloak in .NET Core 8 API
 
 ## Prerequisites
 
@@ -153,7 +153,7 @@ public class SecureController : ControllerBase
 }
 ```
 
-# Implementing Cookie-Based Authentication in React Next.js with TypeScript
+# Implementing Cookie-based Authentication in React Next.js with TypeScript
 
 ## Prerequisites
 
@@ -261,7 +261,7 @@ export default ProtectedPage;
 
 # Issues, Considerations, and Best Practices
 
-## Cookie-Based Authentication
+## Cookie-based Authentication
 
 ### Issues
 
@@ -278,7 +278,7 @@ export default ProtectedPage;
 - **Short Lifespan**: Keep session duration short.
 - **Regular Rotation**: Rotate session IDs regularly.
 
-## Token-Based Authentication
+## Token-based Authentication
 
 ### Issues
 
@@ -297,7 +297,7 @@ export default ProtectedPage;
 
 # Conclusion
 
-Understanding the differences between Cookie-Based and Token-Based authentication is crucial for building secure web applications. Each method has its unique advantages and disadvantages, making them suitable for different scenarios. By following the best practices and considerations outlined in this blog, you can implement robust authentication mechanisms tailored to your application's needs.
+Understanding the differences between Cookie-based and Token-based authentication is crucial for building secure web applications. Each method has its unique advantages and disadvantages, making them suitable for different scenarios. By following the best practices and considerations outlined in this blog, you can implement robust authentication mechanisms tailored to your application's needs.
 
 # References
 
