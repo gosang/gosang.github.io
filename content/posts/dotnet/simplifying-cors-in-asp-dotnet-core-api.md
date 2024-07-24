@@ -35,21 +35,45 @@ If not already included, install the CORS package:
 dotnet add package Microsoft.AspNetCore.Cors
 ```
 
-## Step 2: Configure CORS in Startup.cs
+## Step 2: Configure CORS in Startup.cs using appsettings.json
 
-Add the CORS services and middleware in the `Startup.cs` file:
+First, add the CORS settings in the `appsettings.json` file:
+
+```json
+{
+  "CorsSettings": {
+    "AllowedOrigins": ["http://example.com"],
+    "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+    "AllowedHeaders": ["Content-Type", "Authorization"]
+  }
+}
+```
+
+Then, modify the `Startup.cs` file to read these settings and configure CORS accordingly:
 
 ```csharp
 public class Startup
 {
+    public IConfiguration Configuration { get; }
+
+    public Startup(IConfiguration configuration)
+    {
+        Configuration = configuration;
+    }
+
     public void ConfigureServices(IServiceCollection services)
     {
+        var corsSettings = Configuration.GetSection("CorsSettings");
+        var allowedOrigins = corsSettings.GetSection("AllowedOrigins").Get<string[]>();
+        var allowedMethods = corsSettings.GetSection("AllowedMethods").Get<string[]>();
+        var allowedHeaders = corsSettings.GetSection("AllowedHeaders").Get<string[]>();
+
         services.AddCors(options =>
         {
-            options.AddPolicy("AllowSpecificOrigin",
-                builder => builder.WithOrigins("http://example.com")
-                                  .AllowAnyMethod()
-                                  .AllowAnyHeader());
+            options.AddPolicy("DefaultCorsPolicy",
+                builder => builder.WithOrigins(allowedOrigins)
+                                  .WithMethods(allowedMethods)
+                                  .WithHeaders(allowedHeaders));
         });
 
         services.AddControllers();
@@ -59,7 +83,7 @@ public class Startup
     {
         app.UseRouting();
 
-        app.UseCors("AllowSpecificOrigin");
+        app.UseCors("DefaultCorsPolicy");
 
         app.UseEndpoints(endpoints =>
         {
@@ -67,27 +91,55 @@ public class Startup
         });
     }
 }
+
 ```
 
 ## Enabling CORS in .NET 8 API
 
-With .NET 8's minimal API approach, enabling CORS looks slightly different:
+With .NET 8's minimal API approach, enabling CORS using settings from `appsettings.json` looks slightly different:
+
+### Step 1: Add the CORS settings in appsettings.json
+
+```json
+{
+  "CorsSettings": {
+    "AllowedOrigins": ["http://example.com"],
+    "AllowedMethods": ["GET", "POST", "PUT", "DELETE"],
+    "AllowedHeaders": ["Content-Type", "Authorization"]
+  }
+}
+```
+
+### Step 2: Modify Program.cs
+
+Modify the `Program.cs` file to read the CORS settings and configure CORS:
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
 
+// Read CORS settings from appsettings.json
+var corsSettings = builder.Configuration.GetSection("CorsSettings");
+var allowedOrigins = corsSettings.GetSection("AllowedOrigins").Get<string[]>();
+var allowedMethods = corsSettings.GetSection("AllowedMethods").Get<string[]>();
+var allowedHeaders = corsSettings.GetSection("AllowedHeaders").Get<string[]>();
+
+// Add CORS services
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        builder => builder.WithOrigins("http://example.com")
-                          .AllowAnyMethod()
-                          .AllowAnyHeader());
+    options.AddPolicy("DefaultCorsPolicy",
+        policy => policy.WithOrigins(allowedOrigins)
+                        .WithMethods(allowedMethods)
+                        .WithHeaders(allowedHeaders));
 });
 
-app.UseCors("AllowSpecificOrigin");
+builder.Services.AddControllers();
 
-app.MapGet("/", () => "Hello World!");
+var app = builder.Build();
+
+// Use CORS middleware
+app.UseCors("DefaultCorsPolicy");
+
+app.MapControllers();
 
 app.Run();
 ```
@@ -98,14 +150,14 @@ You can control access using various CORS headers such as `Access-Control-Allow-
 
 For example, to allow multiple origins and restrict methods:
 
-```csharp
-services.AddCors(options =>
+```json
 {
-    options.AddPolicy("AllowMultipleOrigins",
-        builder => builder.WithOrigins("http://example1.com", "http://example2.com")
-                          .WithMethods("GET", "POST")
-                          .AllowAnyHeader());
-});
+  "CorsSettings": {
+    "AllowedOrigins": ["http://example1.com", "http://example2.com"],
+    "AllowedMethods": ["GET", "POST"],
+    "AllowedHeaders": ["Content-Type"]
+  }
+}
 ```
 
 # Sample .NET Core 8 API Project
@@ -119,20 +171,26 @@ dotnet new webapi -n CorsSampleApi
 cd CorsSampleApi
 ```
 
-## Step 2: Modify Program.cs
+## Step 2: Modify Program.cs to use settings from appsettings.json
 
-Modify the `Program.cs` file to configure CORS:
+Modify the `Program.cs` file to read the CORS settings and configure CORS:
 
 ```csharp
 var builder = WebApplication.CreateBuilder(args);
 
+// Read CORS settings from appsettings.json
+var corsSettings = builder.Configuration.GetSection("CorsSettings");
+var allowedOrigins = corsSettings.GetSection("AllowedOrigins").Get<string[]>();
+var allowedMethods = corsSettings.GetSection("AllowedMethods").Get<string[]>();
+var allowedHeaders = corsSettings.GetSection("AllowedHeaders").Get<string[]>();
+
 // Add CORS services
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
-        policy => policy.WithOrigins("http://example.com")
-                        .AllowAnyMethod()
-                        .AllowAnyHeader());
+    options.AddPolicy("DefaultCorsPolicy",
+        policy => policy.WithOrigins(allowedOrigins)
+                        .WithMethods(allowedMethods)
+                        .WithHeaders(allowedHeaders));
 });
 
 builder.Services.AddControllers();
@@ -140,7 +198,7 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 // Use CORS middleware
-app.UseCors("AllowSpecificOrigin");
+app.UseCors("DefaultCorsPolicy");
 
 app.MapControllers();
 
