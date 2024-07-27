@@ -1,8 +1,8 @@
 +++
-title = 'Result Pattern in Asp Dotnet Core'
+title = 'Result Pattern in ASP.NET Core'
 date = 2024-07-27T11:50:37+01:00
 draft = false
-tags = ["ASP.NET Core"]
+tags = ["ASP.NET Core", "Design Pattern"]
 +++
 
 The Result Pattern is a design pattern that encapsulates the outcome of a function, including both the success and error states. It is particularly useful in APIs to provide clear, consistent, and structured responses. In this blog, we will explore what the Result Pattern is, its rationale, key concepts, functions, differences from exceptions, and its practical implementation in an ASP.NET Core 8 project. We'll also discuss the advantages, disadvantages, and best practices for using the Result Pattern.
