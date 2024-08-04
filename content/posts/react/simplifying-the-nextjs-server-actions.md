@@ -39,7 +39,7 @@ The main rationale behind Server Actions is to simplify the data-fetching and se
 - **Server Actions**: Executed on the server, can access server-side resources like databases and environment variables.
 - **Client Actions**: Executed on the client, limited to what the browser can access.
 
-# Sample Implementation Using TypeScript and Clerk
+# Sample Server Actions Implementation
 
 ## Project Setup
 
