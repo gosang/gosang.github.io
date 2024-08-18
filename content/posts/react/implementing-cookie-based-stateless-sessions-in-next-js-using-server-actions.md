@@ -1,5 +1,5 @@
 +++
-title = 'Implementing Cookie Based Stateless Sessions in Next Js Using Server Actions'
+title = 'Implementing Cookie-Based Stateless Sessions in Next.js Using Server Actions'
 date = 2024-08-18T12:44:19+01:00
 draft = false
 tags = ["Next.js", "SSR", "Cookie Sessions"]
