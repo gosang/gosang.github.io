@@ -250,32 +250,22 @@ To allow multiple mailboxes for sending email, similar steps should be followed.
 
 # Advantages and Disadvantages
 
-## Advantages
+| Advantages                                                        | Disadvantages                                                                              |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Security**: Leverage Microsoft’s security features.             | **Complexity**: Requires configuration and understanding of Microsoft Entra ID (Azure AD). |
+| **Integration**: Easily integrate with other Office 365 services. | **Cost**: Usage of Microsoft Graph API can incur costs depending on the volume of emails.  |
+| **Scalability**: Efficiently handle large volumes of emails.      | **Rate Limits**: Subject to Microsoft Graph API rate limits.                               |
+|                                                                   | **Microsoft mailbox limits**: Subject to Microsoft Mailbox limits if used.                 |
 
-- **Security**: Leverage Microsoft’s security features.
-- **Integration**: Easily integrate with other Office 365 services.
-- **Scalability**: Efficiently handle large volumes of emails.
-
-## Disadvantages
-
-- **Complexity**: Requires configuration and understanding of Azure AD.
-- **Cost**: Usage of Microsoft Graph API can incur costs depending on the volume of emails.
-- **Rate Limits**: Subject to Microsoft Graph API rate limits.
-- **Microsoft mailbox limits**: Subject to Microsoft Mailbox limits if used.
+|
 
 # When to Use and When Not to Use
 
-## When to Use
-
-- When you need to integrate deeply with other Microsoft services.
-- When security and compliance are top priorities.
-- When you are already within the Microsoft ecosystem and need a unified solution.
-
-## When Not to Use
-
-- When you need a simple, standalone email service without deep integrations.
-- When you are working with non-Microsoft ecosystems.
-- When cost is a major concern, and you have a high volume of emails to send.
+| When to use                                                                      | When not to use                                                             |
+| -------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| When you need to integrate deeply with other Microsoft services.                 | When you need a simple, standalone email service without deep integrations. |
+| When security and compliance are top priorities.                                 | When you are working with non-Microsoft ecosystems.                         |
+| When you are already within the Microsoft ecosystem and need a unified solution. | When cost is a major concern, and you have a high volume of emails to send. |
 
 # Issues, Considerations, and Best Practices
 
@@ -300,4 +290,4 @@ However, it requires proper setup, understanding of Azure AD, and handling poten
 
 By following the steps and best practices outlined in this blog, you can effectively implement and manage an email service using Microsoft Graph in your ASP.NET Core applications.
 
-For more detailed information, refer to the official Microsoft Graph documentation and Azure AD documentation.
+For more detailed information, refer to the official [Microsoft Graph documentation](https://learn.microsoft.com/en-us/graph/) and [Microsoft Entra ID (Azure AD) documentation](https://learn.microsoft.com/en-us/entra/identity/).
