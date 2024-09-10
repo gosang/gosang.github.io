@@ -168,6 +168,8 @@ In this example:
 
 ASP.NET Core 8's Minimal API with the REPR pattern is a powerful tool for building lightweight, performant APIs. By following the principles of Request-Endpoint-Response, developers can create clean, efficient APIs suited to a variety of use cases, from microservices to serverless functions. However, careful consideration should be given to the scalability and maintainability of such APIs as the application grows.
 
+A sample Minimal API can be found at [CQRS.MinimalAPI.Sample](https://github.com/gosang/CQRS.MinimalAPI.Sample).
+
 # References
 
 - [Microsoft Docs on Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis)
