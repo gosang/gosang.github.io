@@ -1,5 +1,5 @@
 +++
-title = 'Implementing Uuid in Asp Dotnet Core'
+title = 'Implementing UUID in ASP.NET Core 8'
 date = 2024-09-28T17:59:39+01:00
 draft = true
 tags = ["ASP.NET Core", "Unique Identifiers", "UUID"]
