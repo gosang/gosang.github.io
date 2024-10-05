@@ -201,5 +201,5 @@ Implementing UUIDs in .NET Core 8 can be highly beneficial for applications that
 
 # References
 
-- RFC 4122: A Universally Unique IDentifier (UUID) URN Namespace
-  .NET GUID Documentation
+- [RFC 4122: A Universally Unique IDentifier (UUID) URN Namespace](https://datatracker.ietf.org/doc/html/rfc4122)
+- [ASP.NET GUID Documentation](https://learn.microsoft.com/en-us/dotnet/api/system.guid?view=net-8.0)
