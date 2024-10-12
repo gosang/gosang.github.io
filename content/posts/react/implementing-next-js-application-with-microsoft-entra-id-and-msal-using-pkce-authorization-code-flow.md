@@ -1,5 +1,5 @@
 +++
-title = 'Implementing Next Js Application With Microsoft Entra Id and Msal Using Pkce Authorization Code Flow'
+title = 'Implementing Next.js 14 Application with Microsoft Entra ID and MSAL Using PKCE Authorization Code Flow'
 date = 2024-10-12T11:17:42+01:00
 draft = true
 tags = ["React", "OAuth"]
