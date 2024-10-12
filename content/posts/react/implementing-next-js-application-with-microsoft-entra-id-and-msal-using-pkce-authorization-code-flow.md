@@ -181,21 +181,23 @@ This function fetches the user’s group membership from Azure AD and checks if 
 
 # 8. Key Issues, Considerations, and Best Practices
 
-Token Security:
+- Token Security
 
-Store tokens securely (e.g., in session storage or a secure cookie).
-Never expose sensitive tokens on the client side.
-Authorization Strategy:
+  - Store tokens securely (e.g., in session storage or a secure cookie).
+    Never expose sensi
 
-Use Microsoft Graph to fetch user roles and enforce RBAC based on group membership.
-Always verify user roles server-side for critical operations.
-Error Handling:
+- Authorization Strategy
 
-Handle token expiration and authentication errors gracefully by using MSAL’s error management hooks (useMsalAuthentication).
-PKCE Best Practices:
+  - Use Microsoft Graph to fetch user roles and enforce RBAC based on group membership.
+  - Always verify user roles server-side for critical operations.
 
-Always use PKCE to protect your Authorization Code flow in public clients like SPAs.
-Rotate and monitor client secrets if used in backend services.
+- Error Handling
+
+  - Handle token expiration and authentication errors gracefully by using MSAL’s error management hooks (useMsalAuthentication).
+
+- PKCE Best Practices
+  - Always use PKCE to protect your Authorization Code flow in public clients like SPAs.
+  - Rotate and monitor client secrets if used in backend services.
 
 # 9. Conclusion
 
