@@ -221,5 +221,5 @@ Integrating a Next.js 14 application with Microsoft Entra ID and MSAL using the 
 
 # References
 
-- MSAL.js
-- Azure Active Directory
+- [MSAL.js](https://learn.microsoft.com/en-us/entra/identity-platform/msal-overview)
+- [Azure Active Directory](https://learn.microsoft.com/en-us/entra/identity/)
