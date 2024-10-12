@@ -185,17 +185,11 @@ This function fetches the user’s group membership from Azure AD and checks if 
 
 # 7. Advantages and Disadvantages
 
-## Advantages:
-
-Enhanced Security: Using the Authorization Code Flow with PKCE ensures better protection against token interception attacks.
-Seamless Integration: MSAL simplifies authentication with Azure AD, making it easy to work with Microsoft Graph API and manage users.
-Role-Based Access Control (RBAC): By utilizing AD groups, you can easily implement role-based security to control who can access specific resources.
-
-## Disadvantages:
-
-Complex Configuration: Setting up an Azure AD app registration and configuring permissions can be challenging.
-Extra Network Calls: Additional network calls to the Graph API can increase latency, especially when verifying user roles.
-Token Caching Issues: Improperly managing token caches (e.g., storing tokens insecurely) can expose the application to security risks.
+| Advantage                                                                                                                                                | Disadvantage                                                                                                                               |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Enhanced Security**: Using the Authorization Code Flow with PKCE ensures better protection against token interception attacks.                         | **Complex Configuration**: Setting up an Azure AD app registration and configuring permissions can be challenging.                         |
+| **Seamless Integration**: MSAL simplifies authentication with Azure AD, making it easy to work with Microsoft Graph API and manage users.                | **Extra Network Calls**: Additional network calls to the Graph API can increase latency, especially when verifying user roles.             |
+| **Role-Based Access Control (RBAC)**: By utilizing AD groups, you can easily implement role-based security to control who can access specific resources. | **Token Caching Issues**: Improperly managing token caches (e.g., storing tokens insecurely) can expose the application to security risks. |
 
 # 8. Key Issues, Considerations, and Best Practices
 
