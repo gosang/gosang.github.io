@@ -9,18 +9,6 @@ In this blog post, we will walk through how to implement a Next.js 14 applicatio
 
 We’ll also cover key issues, considerations, and best practices to follow when implementing Microsoft Entra ID and MSAL in a Next.js application.
 
-# Table of Contents
-
-- Introduction to MSAL and Microsoft Entra ID
-- Why Use Authorization Code Flow with PKCE?
-- Setting Up the Azure AD App Registration
-- Creating the Next.js 14 Application
-- Implementing MSAL in Next.js with TypeScript
-- Handling AD Groups and Role-based Authorization
-- Advantages and Disadvantages
-- Key Issues, Considerations, and Best Practices
-- Conclusion
-
 # 1. Introduction to MSAL and Microsoft Entra ID
 
 Microsoft Entra ID is Microsoft's cloud-based identity and access management service. It offers secure sign-in options, role-based access control (RBAC), and integrates seamlessly with Microsoft applications and APIs.
