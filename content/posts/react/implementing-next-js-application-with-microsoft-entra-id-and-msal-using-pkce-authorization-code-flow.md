@@ -184,7 +184,7 @@ This function fetches the user’s group membership from Azure AD and checks if 
 - Token Security
 
   - Store tokens securely (e.g., in session storage or a secure cookie).
-    Never expose sensi
+  - Never expose sensitive tokens on the client side.
 
 - Authorization Strategy
 
