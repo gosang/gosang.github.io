@@ -11,3 +11,10 @@ This blog covers the integration of PostgreSQL with ASP.NET Core 8, including an
 # What is PostgreSQL?
 
 PostgreSQL is an open-source object-relational database system (ORDBMS) with a strong emphasis on standards compliance and extensibility. Initially released in 1996, it has since become one of the most reliable and versatile database systems. It supports both SQL (relational) and JSON (non-relational) queries, making it suitable for handling structured and unstructured data.
+
+# Why PostgreSQL?
+
+- **Standards Compliance**: PostgreSQL adheres to the SQL standard (SQL:2011) and provides extensions that allow for advanced operations.
+- **Extensibility**: It supports custom data types, functions, and operators, allowing developers to build more complex and domain-specific logic directly in the database.
+- **Reliability**: PostgreSQL is known for ACID compliance (Atomicity, Consistency, Isolation, Durability), ensuring data integrity and reliable transactions.
+- **Performance**: With features like advanced indexing techniques (e.g., GiST, GIN), parallel query processing, and robust optimization strategies, PostgreSQL is a performant choice for many applications.
