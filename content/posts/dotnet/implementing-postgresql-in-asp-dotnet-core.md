@@ -18,3 +18,9 @@ PostgreSQL is an open-source object-relational database system (ORDBMS) with a s
 - **Extensibility**: It supports custom data types, functions, and operators, allowing developers to build more complex and domain-specific logic directly in the database.
 - **Reliability**: PostgreSQL is known for ACID compliance (Atomicity, Consistency, Isolation, Durability), ensuring data integrity and reliable transactions.
 - **Performance**: With features like advanced indexing techniques (e.g., GiST, GIN), parallel query processing, and robust optimization strategies, PostgreSQL is a performant choice for many applications.
+
+# Problems PostgreSQL Solves
+
+- **Complex data relationships**: PostgreSQL is ideal for applications with intricate data relationships, such as e-commerce, financial systems, and social networks.
+- **High availability and replication**: It supports various replication methods, including streaming replication and logical replication, for fault tolerance and load balancing.
+- **Full-text search**: PostgreSQL offers built-in support for full-text search, eliminating the need for external systems for indexing and searching text data.
