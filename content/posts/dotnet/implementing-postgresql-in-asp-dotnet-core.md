@@ -24,3 +24,14 @@ PostgreSQL is an open-source object-relational database system (ORDBMS) with a s
 - **Complex data relationships**: PostgreSQL is ideal for applications with intricate data relationships, such as e-commerce, financial systems, and social networks.
 - **High availability and replication**: It supports various replication methods, including streaming replication and logical replication, for fault tolerance and load balancing.
 - **Full-text search**: PostgreSQL offers built-in support for full-text search, eliminating the need for external systems for indexing and searching text data.
+
+# Comparing PostgreSQL, SQL Server, and MongoDB
+
+| Feature            | PostgreSQL                                       | SQL Server              | MongoDB                         |
+| ------------------ | ------------------------------------------------ | ----------------------- | ------------------------------- |
+| Type               | Relational, Object-Relational                    | Relational              | NoSQL (Document-Oriented)       |
+| Transactions       | ACID-compliant                                   | ACID-compliant          | Not natively ACID (uses BASE)   |
+| Schema             | Flexible with support for NoSQL                  | Schema-bound            | Schema-less                     |
+| JSON Support       | Native JSONB storage & querying                  | Limited JSON support    | Native JSON support             |
+| Horizontal Scaling | Limited (but improving with sharding)            | Limited                 | Designed for horizontal scaling |
+| Use Case           | Complex data relationships, hybrid (SQL & NoSQL) | Enterprise applications | Big data, real-time analytics   |
