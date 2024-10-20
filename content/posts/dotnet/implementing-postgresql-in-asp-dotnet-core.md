@@ -35,3 +35,7 @@ PostgreSQL is an open-source object-relational database system (ORDBMS) with a s
 | JSON Support       | Native JSONB storage & querying                  | Limited JSON support    | Native JSON support             |
 | Horizontal Scaling | Limited (but improving with sharding)            | Limited                 | Designed for horizontal scaling |
 | Use Case           | Complex data relationships, hybrid (SQL & NoSQL) | Enterprise applications | Big data, real-time analytics   |
+
+# Implementing PostgreSQL with ASP.NET Core 8
+
+Now that we understand PostgreSQL and its advantages, let's integrate it into an ASP.NET Core 8 API project. We will implement a CRUD (Create, Read, Update, Delete) API using the Repository Pattern, CQRS (Command Query Responsibility Segregation) pattern, MediatR for handling requests, and AutoMapper for mapping between data models and DTOs.
