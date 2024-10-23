@@ -39,3 +39,7 @@ PostgreSQL is an open-source object-relational database system (ORDBMS) with a s
 # Implementing PostgreSQL with ASP.NET Core 8
 
 Now that we understand PostgreSQL and its advantages, let's integrate it into an ASP.NET Core 8 API project. We will implement a CRUD (Create, Read, Update, Delete) API using the Repository Pattern, CQRS (Command Query Responsibility Segregation) pattern, MediatR for handling requests, and AutoMapper for mapping between data models and DTOs.
+
+## Setting Up the Environment
+
+- **Install PostgreSQL**: Make sure you have PostgreSQL installed on your machine or use a cloud provider like Amazon RDS or Azure PostgreSQL.
