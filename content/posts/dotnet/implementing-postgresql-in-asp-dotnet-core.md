@@ -43,3 +43,9 @@ Now that we understand PostgreSQL and its advantages, let's integrate it into an
 ## Setting Up the Environment
 
 - **Install PostgreSQL**: Make sure you have PostgreSQL installed on your machine or use a cloud provider like Amazon RDS or Azure PostgreSQL.
+
+- **Create a New ASP.NET Core Project**:
+
+```bash
+dotnet new webapi -n PostgresDemoAPI
+```
