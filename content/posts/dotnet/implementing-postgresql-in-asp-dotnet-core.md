@@ -49,3 +49,5 @@ Now that we understand PostgreSQL and its advantages, let's integrate it into an
 ```bash
 dotnet new webapi -n PostgresDemoAPI
 ```
+
+- **Install NuGet Packages**: Install the required packages using the following commands:
