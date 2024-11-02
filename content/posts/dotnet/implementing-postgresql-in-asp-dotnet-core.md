@@ -57,3 +57,6 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 dotnet add package MediatR
 dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
 ```
+
+- **Configuring PostgreSQL in ASP.NET Core**
+  In the `appsettings.json`, configure the PostgreSQL connection string:
