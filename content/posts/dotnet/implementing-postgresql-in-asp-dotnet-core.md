@@ -51,3 +51,9 @@ dotnet new webapi -n PostgresDemoAPI
 ```
 
 - **Install NuGet Packages**: Install the required packages using the following commands:
+
+```bash
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+dotnet add package MediatR
+dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
+```
