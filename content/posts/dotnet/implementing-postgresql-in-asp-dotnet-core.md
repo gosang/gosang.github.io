@@ -60,3 +60,11 @@ dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
 
 - **Configuring PostgreSQL in ASP.NET Core**
   In the `appsettings.json`, configure the PostgreSQL connection string:
+
+```json
+{
+  "ConnectionStrings": {
+    "PostgresConnection": "Host=localhost;Database=PostgresDemoDB;Username=postgres;Password=yourpassword"
+  }
+}
+```
