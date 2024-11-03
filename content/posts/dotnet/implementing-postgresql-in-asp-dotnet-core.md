@@ -68,3 +68,5 @@ dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
   }
 }
 ```
+
+In `Program.cs` or `Startup.cs`, add the PostgreSQL context configuration:
