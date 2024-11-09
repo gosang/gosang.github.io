@@ -91,3 +91,7 @@ public class Startup
     }
 }
 ```
+
+## Creating the Models and DbContext
+
+Create an entity model Product and configure the `AppDbContext`:
