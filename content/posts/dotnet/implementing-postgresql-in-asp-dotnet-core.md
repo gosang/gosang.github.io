@@ -70,3 +70,24 @@ dotnet add package AutoMapper.Extensions.Microsoft.DependencyInjection
 ```
 
 In `Program.cs` or `Startup.cs`, add the PostgreSQL context configuration:
+
+```csharp
+public class Startup
+{
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddDbContext<AppDbContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("PostgresConnection")));
+
+        services.AddMediatR(typeof(Startup));  // Register MediatR
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());  // Register AutoMapper
+        services.AddControllers();
+    }
+
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+        app.UseRouting();
+        app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+    }
+}
+```
