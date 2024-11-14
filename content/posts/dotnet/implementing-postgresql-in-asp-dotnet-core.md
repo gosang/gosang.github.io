@@ -115,3 +115,14 @@ public class AppDbContext : DbContext
 ## Implementing the Repository Pattern
 
 Create an interface for the repository:
+
+```csharp
+public interface IProductRepository
+{
+    Task<IEnumerable<Product>> GetAllAsync();
+    Task<Product> GetByIdAsync(int id);
+    Task<Product> AddAsync(Product product);
+    Task<Product> UpdateAsync(Product product);
+    Task DeleteAsync(int id);
+}
+```
