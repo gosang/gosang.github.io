@@ -111,3 +111,7 @@ public class AppDbContext : DbContext
     public DbSet<Product> Products { get; set; }
 }
 ```
+
+## Implementing the Repository Pattern
+
+Create an interface for the repository:
