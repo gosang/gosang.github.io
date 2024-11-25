@@ -174,3 +174,7 @@ public class ProductRepository : IProductRepository
     }
 }
 ```
+
+### Implementing CQRS with MediatR
+
+Define the query and command models using MediatR:
