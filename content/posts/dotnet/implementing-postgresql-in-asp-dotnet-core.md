@@ -178,3 +178,15 @@ public class ProductRepository : IProductRepository
 ### Implementing CQRS with MediatR
 
 Define the query and command models using MediatR:
+
+```csharp
+// Query to get all products
+public class GetAllProductsQuery : IRequest<IEnumerable<ProductDto>> { }
+
+// Command to create a new product
+public class CreateProductCommand : IRequest<ProductDto>
+{
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
+```
