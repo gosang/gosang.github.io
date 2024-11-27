@@ -190,3 +190,5 @@ public class CreateProductCommand : IRequest<ProductDto>
     public decimal Price { get; set; }
 }
 ```
+
+Handle the queries and commands in MediatR Handlers:
