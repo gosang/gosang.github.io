@@ -192,3 +192,44 @@ public class CreateProductCommand : IRequest<ProductDto>
 ```
 
 Handle the queries and commands in MediatR Handlers:
+
+```csharp
+public class ProductQueryHandler :
+    IRequestHandler<GetAllProductsQuery, IEnumerable<ProductDto>>
+{
+    private readonly IProductRepository _repository;
+    private readonly IMapper _mapper;
+
+    public ProductQueryHandler(IProductRepository repository, IMapper mapper)
+    {
+        _repository = repository;
+        _mapper = mapper;
+    }
+
+    public async Task<IEnumerable<ProductDto>> Handle(GetAllProductsQuery request, CancellationToken cancellationToken)
+    {
+        var products = await _repository.GetAllAsync();
+        return _mapper.Map<IEnumerable<ProductDto>>(products);
+    }
+}
+
+public class ProductCommandHandler :
+    IRequestHandler<CreateProductCommand, ProductDto>
+{
+    private readonly IProductRepository _repository;
+    private readonly IMapper _mapper;
+
+    public ProductCommandHandler(IProductRepository repository, IMapper mapper)
+    {
+        _repository = repository;
+        _mapper = mapper;
+    }
+
+    public async Task<ProductDto> Handle(CreateProductCommand request, CancellationToken cancellationToken)
+    {
+        var product = new Product { Name = request.Name, Price = request.Price };
+        var createdProduct = await _repository.AddAsync(product);
+        return _mapper.Map<ProductDto>(createdProduct);
+    }
+}
+```
