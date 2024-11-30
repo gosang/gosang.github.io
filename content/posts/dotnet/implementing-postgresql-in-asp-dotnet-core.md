@@ -233,3 +233,5 @@ public class ProductCommandHandler :
     }
 }
 ```
+
+### AutoMapper Configuration
