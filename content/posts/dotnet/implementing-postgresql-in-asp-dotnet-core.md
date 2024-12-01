@@ -235,3 +235,5 @@ public class ProductCommandHandler :
 ```
 
 ### AutoMapper Configuration
+
+Create the AutoMapper profile to map between the Product entity and the `ProductDto`:
