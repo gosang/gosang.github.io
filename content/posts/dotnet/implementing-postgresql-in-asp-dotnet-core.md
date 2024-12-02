@@ -237,3 +237,14 @@ public class ProductCommandHandler :
 ### AutoMapper Configuration
 
 Create the AutoMapper profile to map between the Product entity and the `ProductDto`:
+
+```csharp
+public class ProductProfile : Profile
+{
+    public ProductProfile()
+    {
+        CreateMap<Product, ProductDto>();
+        CreateMap<ProductDto, Product>();
+    }
+}
+```
