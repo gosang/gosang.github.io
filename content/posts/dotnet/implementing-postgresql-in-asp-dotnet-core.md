@@ -255,3 +255,7 @@ public class ProductDto
     public decimal Price { get; set; }
 }
 ```
+
+### Creating the Controller
+
+Finally, create the ProductsController to handle the API requests:
