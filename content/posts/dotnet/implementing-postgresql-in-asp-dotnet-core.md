@@ -258,4 +258,4 @@ public class ProductDto
 
 ### Creating the Controller
 
-Finally, create the ProductsController to handle the API requests:
+Finally, create the `ProductsController` to handle the API requests:
