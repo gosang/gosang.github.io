@@ -291,3 +291,5 @@ public class ProductsController : ControllerBase
 ### Testing the API
 
 Now that everything is set up, you can test the API using tools like Postman or cURL. Here are some sample endpoints:
+
+- `GET /api/products`: Get all products.
