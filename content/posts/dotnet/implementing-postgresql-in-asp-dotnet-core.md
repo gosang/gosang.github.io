@@ -295,3 +295,8 @@ Now that everything is set up, you can test the API using tools like Postman or 
 - `GET /api/products`: Get all products.
 
 # Advantages of PostgreSQL
+
+- **Open-source**: Free to use, with a large community and regular updates.
+- **Rich Feature Set**: Supports complex queries, custom types, and advanced indexing.
+- **ACID Compliance**: Ensures data integrity and reliability.
+- **Extensibility**: You can create custom types, operators, and even extensions.
