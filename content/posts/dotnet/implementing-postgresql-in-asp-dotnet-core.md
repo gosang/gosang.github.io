@@ -300,3 +300,7 @@ Now that everything is set up, you can test the API using tools like Postman or 
 - **Rich Feature Set**: Supports complex queries, custom types, and advanced indexing.
 - **ACID Compliance**: Ensures data integrity and reliability.
 - **Extensibility**: You can create custom types, operators, and even extensions.
+
+### Disadvantages of PostgreSQL
+
+- **Performance on very large datasets**: It may not scale as efficiently as
