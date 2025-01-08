@@ -304,3 +304,4 @@ Now that everything is set up, you can test the API using tools like Postman or 
 ### Disadvantages of PostgreSQL
 
 - **Performance on very large datasets**: It may not scale as efficiently as
+- **Complexity**: More features can mean more complexity, which may require skilled management.
