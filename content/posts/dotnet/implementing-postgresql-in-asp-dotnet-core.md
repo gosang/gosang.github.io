@@ -308,3 +308,7 @@ Now that everything is set up, you can test the API using tools like Postman or 
 - **ACID Compliance**: Ensures data integrity and reliability.
 - **Extensibility**: You can create custom types, operators, and even extensions.
 - **Horizontal Scaling**: Limited compared to NoSQL options like MongoDB, though features like partitioning and replication help mitigate this.
+
+# When to Use PostgreSQL
+
+PostgreSQL is an excellent choice for the following scenarios:
