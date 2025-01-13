@@ -312,3 +312,5 @@ Now that everything is set up, you can test the API using tools like Postman or 
 # When to Use PostgreSQL
 
 PostgreSQL is an excellent choice for the following scenarios:
+
+- **Data Integrity**: Applications where ACID transactions are essential (e.g., banking, finance).
