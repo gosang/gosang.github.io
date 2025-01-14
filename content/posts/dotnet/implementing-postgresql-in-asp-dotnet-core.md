@@ -314,3 +314,4 @@ Now that everything is set up, you can test the API using tools like Postman or 
 PostgreSQL is an excellent choice for the following scenarios:
 
 - **Data Integrity**: Applications where ACID transactions are essential (e.g., banking, finance).
+- **Complex Queries**: When you need to handle complex SQL queries with relational data.
