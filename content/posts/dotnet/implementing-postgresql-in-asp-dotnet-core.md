@@ -315,3 +315,4 @@ PostgreSQL is an excellent choice for the following scenarios:
 
 - **Data Integrity**: Applications where ACID transactions are essential (e.g., banking, finance).
 - **Complex Queries**: When you need to handle complex SQL queries with relational data.
+- **Hybrid Applications**: Applications that need to manage both relational and JSON-based data.
