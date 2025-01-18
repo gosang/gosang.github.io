@@ -320,3 +320,4 @@ PostgreSQL is an excellent choice for the following scenarios:
 # Best Practices and Recommendations
 
 - **Connection Pooling**: Use connection pooling to manage database connections efficiently.
+- **Migrations**: Use EF Core migrations to manage database schema changes.
