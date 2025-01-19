@@ -321,3 +321,4 @@ PostgreSQL is an excellent choice for the following scenarios:
 
 - **Connection Pooling**: Use connection pooling to manage database connections efficiently.
 - **Migrations**: Use EF Core migrations to manage database schema changes.
+- **Indexes**: Leverage advanced indexing techniques like B-trees, GiST, and GIN for improved query performance.
