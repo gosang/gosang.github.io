@@ -323,3 +323,4 @@ PostgreSQL is an excellent choice for the following scenarios:
 - **Migrations**: Use EF Core migrations to manage database schema changes.
 - **Indexes**: Leverage advanced indexing techniques like B-trees, GiST, and GIN for improved query performance.
 - **Backups and Replication**: Regularly back up your database and use replication for high availability.
+- **Avoid N+1 Query Issues**: Use techniques like eager loading in EF Core to prevent excessive database queries.
