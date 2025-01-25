@@ -329,3 +329,4 @@ PostgreSQL is an excellent choice for the following scenarios:
 
 PostgreSQL, combined with ASP.NET Core 8, provides a powerful and scalable solution for building modern web applications.
 By implementing patterns like CQRS, leveraging MediatR for request handling, and using tools like AutoMapper for object mapping, developers can build clean, maintainable APIs that can handle complex business logic.
+By following best practices such as proper indexing, connection pooling, and regular backups, PostgreSQL can be a cornerstone of high-performing applications.
