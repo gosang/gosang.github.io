@@ -332,3 +332,5 @@ By implementing patterns like CQRS, leveraging MediatR for request handling, and
 
 By following best practices such as proper indexing, connection pooling, and regular backups, PostgreSQL can be a cornerstone of high-performing applications.
 With its flexibility, reliability, and rich feature set, PostgreSQL is a strong contender for any enterprise application needing robust data management.
+
+# References
