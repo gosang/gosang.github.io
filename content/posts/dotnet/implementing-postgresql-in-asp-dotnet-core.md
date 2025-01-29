@@ -334,3 +334,5 @@ By following best practices such as proper indexing, connection pooling, and reg
 With its flexibility, reliability, and rich feature set, PostgreSQL is a strong contender for any enterprise application needing robust data management.
 
 # References
+
+- [PostgreSQL Official Documentation](https://www.postgresql.org/docs/)
