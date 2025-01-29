@@ -336,3 +336,4 @@ With its flexibility, reliability, and rich feature set, PostgreSQL is a strong 
 # References
 
 - [PostgreSQL Official Documentation](https://www.postgresql.org/docs/)
+- [ASP.NET Core Documentation](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-8.0)
