@@ -2,7 +2,7 @@
 title = 'Implementing PostgreSQL with ASP.NET Core'
 date = 2024-10-13T18:01:09+01:00
 draft = true
-tags = ["ASP.NET Core"]
+tags = ["ASP.NET Core", "Database"]
 +++
 
 PostgreSQL is a robust, open-source relational database management system (RDBMS) that has gained significant traction in modern web applications. It is known for its powerful features, high compliance with SQL standards, and flexibility in handling complex queries and data types. With ASP.NET Core 8, developers can integrate PostgreSQL seamlessly into their web applications, leveraging its performance and reliability to build scalable, high-performing systems.
