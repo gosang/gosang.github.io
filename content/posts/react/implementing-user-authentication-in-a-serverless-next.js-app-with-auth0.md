@@ -5,3 +5,5 @@ draft = true
 +++
 
 User authentication is a critical part of modern web applications. It ensures secure access to resources and data by verifying the identity of users. In this blog, we will explore how to integrate user authentication into a serverless Next.js application using Auth0. We will cover the rationale behind using Auth0, its main concepts, and provide a detailed, TypeScript-based implementation guide. Additionally, we’ll examine the advantages, disadvantages, and best practices for this integration.
+
+# What is Auth0?
