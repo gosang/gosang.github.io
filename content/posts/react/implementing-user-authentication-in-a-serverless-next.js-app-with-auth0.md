@@ -9,3 +9,5 @@ User authentication is a critical part of modern web applications. It ensures se
 # What is Auth0?
 
 Auth0 is a flexible, easy-to-implement authentication and authorization platform. It allows developers to add secure login, logout, and access control features to applications without having to manage user credentials manually.
+
+# Why Next.js?
