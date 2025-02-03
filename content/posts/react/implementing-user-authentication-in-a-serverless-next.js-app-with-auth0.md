@@ -11,3 +11,5 @@ User authentication is a critical part of modern web applications. It ensures se
 Auth0 is a flexible, easy-to-implement authentication and authorization platform. It allows developers to add secure login, logout, and access control features to applications without having to manage user credentials manually.
 
 # Why Next.js?
+
+Next.js is a React-based framework that supports server-side rendering (SSR) and static site generation (SSG).
