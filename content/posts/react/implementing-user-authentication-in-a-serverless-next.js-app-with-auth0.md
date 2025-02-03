@@ -12,4 +12,4 @@ Auth0 is a flexible, easy-to-implement authentication and authorization platform
 
 # Why Next.js?
 
-Next.js is a React-based framework that supports server-side rendering (SSR) and static site generation (SSG).
+Next.js is a React-based framework that supports server-side rendering (SSR) and static site generation (SSG). Its serverless architecture aligns well with modern cloud-based application design, making it an ideal choice for integrating with Auth0.
