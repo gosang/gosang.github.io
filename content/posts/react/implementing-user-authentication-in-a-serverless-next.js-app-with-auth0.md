@@ -18,3 +18,4 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 
 **Security**: Auth0 provides robust security features like password hashing, multi-factor authentication, and compliance with industry standards.
 **Ease of Integration**: SDKs and documentation make it straightforward to implement.
+**Scalability**: Auth0 handles millions of users efficiently.
