@@ -24,3 +24,4 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 # Key Concepts in Auth0
 
 **Application**: A representation of your Next.js app in Auth0.
+**Client ID & Secret**: Credentials used for authenticating the app.
