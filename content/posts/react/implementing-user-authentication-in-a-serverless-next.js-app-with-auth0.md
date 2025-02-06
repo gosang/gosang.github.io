@@ -22,3 +22,5 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 **Serverless Compatibility**: Its APIs are serverless-friendly and well-suited for Next.js apps.
 
 # Key Concepts in Auth0
+
+**Application**: A representation of your Next.js app in Auth0.
