@@ -26,3 +26,4 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 **Application**: A representation of your Next.js app in Auth0.
 **Client ID & Secret**: Credentials used for authenticating the app.
 **Connections**: Define how users authenticate (e.g., email/password, social login).
+**Tokens**: JSON Web Tokens (JWTs) used for securely transferring authentication information.
