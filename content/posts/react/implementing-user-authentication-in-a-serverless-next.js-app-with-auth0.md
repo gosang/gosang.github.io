@@ -27,3 +27,5 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 **Client ID & Secret**: Credentials used for authenticating the app.
 **Connections**: Define how users authenticate (e.g., email/password, social login).
 **Tokens**: JSON Web Tokens (JWTs) used for securely transferring authentication information.
+
+# Key Features in Auth0 Integration
