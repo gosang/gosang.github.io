@@ -33,3 +33,11 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 **Authentication**: Validates user credentials and issues tokens.
 **Authorization**: Grants or denies access based on user roles or permissions.
 **Session Management**: Maintains logged-in user states across sessions.
+
+# Step-by-Step Implementation
+
+## Prerequisites
+
+- Node.js installed.
+- A Next.js app set up.
+- An Auth0 account.
