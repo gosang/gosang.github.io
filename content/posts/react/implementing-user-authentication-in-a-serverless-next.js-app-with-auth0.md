@@ -48,3 +48,21 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 npm install @auth0/nextjs-auth0
 npm install --save-dev @types/auth0
 ```
+
+## 2. Configure Auth0
+
+Create a new application in Auth0 and obtain:
+
+- Domain (e.g., your-domain.us.auth0.com)
+- Client ID
+- Client Secret
+
+Update your `.env.local` file:
+
+```typescript
+AUTH0_SECRET=<RANDOM_SECRET>
+AUTH0_BASE_URL=http://localhost:3000
+AUTH0_ISSUER_BASE_URL=https://your-domain.us.auth0.com
+AUTH0_CLIENT_ID=<YOUR_CLIENT_ID>
+AUTH0_CLIENT_SECRET=<YOUR_CLIENT_SECRET>
+```
