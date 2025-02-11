@@ -41,3 +41,10 @@ Next.js is a React-based framework that supports server-side rendering (SSR) and
 - Node.js installed.
 - A Next.js app set up.
 - An Auth0 account.
+
+## 1. Install Required Packages
+
+```bash
+npm install @auth0/nextjs-auth0
+npm install --save-dev @types/auth0
+```
