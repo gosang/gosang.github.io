@@ -66,3 +66,15 @@ AUTH0_ISSUER_BASE_URL=https://your-domain.us.auth0.com
 AUTH0_CLIENT_ID=<YOUR_CLIENT_ID>
 AUTH0_CLIENT_SECRET=<YOUR_CLIENT_SECRET>
 ```
+
+## 3. Set Up Auth0 Middleware
+
+Create a `pages/api/auth/[...auth0].ts` file:
+
+```typescript
+import { handleAuth } from "@auth0/nextjs-auth0";
+
+export default handleAuth();
+```
+
+This middleware handles all Auth0 routes (e.g., login, logout, callback).
