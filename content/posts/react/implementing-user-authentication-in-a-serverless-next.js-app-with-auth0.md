@@ -78,3 +78,5 @@ export default handleAuth();
 ```
 
 This middleware handles all Auth0 routes (e.g., login, logout, callback).
+
+## 4. Protect Pages with Auth0
