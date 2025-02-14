@@ -80,3 +80,21 @@ export default handleAuth();
 This middleware handles all Auth0 routes (e.g., login, logout, callback).
 
 ## 4. Protect Pages with Auth0
+
+Use server-side rendering (SSR) to protect pages:
+
+```typescript
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
+
+const ProtectedPage = ({ user }: { user: any }) => {
+  return (
+    <div>
+      <h1>Welcome, {user.name}</h1>
+    </div>
+  );
+};
+
+export const getServerSideProps = withPageAuthRequired();
+
+export default ProtectedPage;
+```
