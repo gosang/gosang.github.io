@@ -98,3 +98,24 @@ export const getServerSideProps = withPageAuthRequired();
 
 export default ProtectedPage;
 ```
+
+This ensures that only authenticated users can access the page.
+
+## 5. Add Login and Logout Buttons
+
+Add login/logout functionality to your app:
+
+```typescript
+import Link from "next/link";
+
+const NavBar = () => {
+  return (
+    <nav>
+      <Link href="/api/auth/login">Login</Link>
+      <Link href="/api/auth/logout">Logout</Link>
+    </nav>
+  );
+};
+
+export default NavBar;
+```
