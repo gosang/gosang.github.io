@@ -26,3 +26,4 @@ go.work
 /public/
 /resources/
 .hugo_build.lock
+.qodo
