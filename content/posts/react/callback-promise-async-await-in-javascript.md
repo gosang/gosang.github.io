@@ -157,7 +157,10 @@ fetchData();
 
 ## Callback
 
-- **Issues**: Prone to callback hell, difficult error management. -** Best Practices**: - Avoid deeply nested callbacks by splitting logic into smaller functions or using Promises. - Use named functions instead of inline callbacks for better readability.
+- **Issues**: Prone to callback hell, difficult error management.
+- **Best Practices**:
+  - Avoid deeply nested callbacks by splitting logic into smaller functions or using Promises.
+  - Use named functions instead of inline callbacks for better readability.
 
 ## Promise
 
@@ -178,11 +181,11 @@ fetchData();
 ## When deciding which to use:
 
 - Use Promises or Async/Await instead of callbacks for better maintainability.
-- Always handle errors to avoid unhandled rejections or exceptions.
-- Use tools like linters or debuggers to maintain clean and efficient code.
 - Opt for Callbacks for very simple asynchronous operations.
 - Use Promises for complex workflows or when transitioning legacy code.
 - Leverage Async/Await for clean, readable, and modern JavaScript applications.
+- Always handle errors to avoid unhandled rejections or exceptions.
+- Use tools like linters or debuggers to maintain clean and efficient code.
 
 # Conclusion
 
