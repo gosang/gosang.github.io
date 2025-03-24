@@ -1,6 +1,6 @@
 +++
 title = 'Error Handling in Next.js With TypeScript'
-date = 2025-01-20T28:34:35Z
+date = 2025-01-26T20:34:35Z
 draft = false
 tags = ["Error handling", "Next.js"]
 +++
