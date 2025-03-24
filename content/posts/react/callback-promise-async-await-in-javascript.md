@@ -189,7 +189,7 @@ fetchData();
 
 # Conclusion
 
-Each method—Callback, Promise, and Async/Await—has its place in JavaScript. While Callbacks are simple and foundational, Promises bring clarity, and Async/Await offers the best readability and error handling. For modern applications, Async/Await is often the preferred choice due to its simplicity and maintainability.
+Each method, Callback, Promise, and Async/Await has its place in JavaScript. While Callbacks are simple and foundational, Promises bring clarity, and Async/Await offers the best readability and error handling. For modern applications, Async/Await is often the preferred choice due to its simplicity and maintainability.
 
 # References
 
