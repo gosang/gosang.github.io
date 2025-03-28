@@ -70,7 +70,7 @@ export default function BearCounter() {
 }
 ```
 
-# 2. Redux
+# Redux
 
 Redux is a predictable state container for JavaScript applications. It is one of the most popular state management libraries in the React ecosystem.
 
@@ -151,7 +151,7 @@ export default function Counter() {
 }
 ```
 
-# 3. React Context API
+# React Context API
 
 React Context API provides a way to share values between components without explicitly passing props through every level of the component tree.
 
