@@ -13,11 +13,11 @@ State management is a critical aspect of building scalable and maintainable Reac
 
 Zustand is a small, fast, and scalable state management library for React. It provides a lightweight alternative to Redux with a simplified API and no boilerplate.
 
-### Why Zustand
+**Why Zustand**
 
 Zustand focuses on simplicity, minimalism, and performance. It is ideal for projects that require a simple yet powerful state management solution without the overhead of Redux.
 
-### Key Concepts
+**Key Concepts**
 
 - **Global State**: Zustand uses a global store to manage application state.
 
@@ -25,7 +25,7 @@ Zustand focuses on simplicity, minimalism, and performance. It is ideal for proj
 
 - **Mutators**: Define functions to modify the state.
 
-### Key Features
+**Key Features**
 
 - Lightweight: ~1kB gzipped.
 
@@ -33,7 +33,7 @@ Zustand focuses on simplicity, minimalism, and performance. It is ideal for proj
 
 - Supports multiple stores.
 
-### Zustand Implementation Example
+**Zustand Implementation Example**
 
 ```javascript
 import create from "zustand";
