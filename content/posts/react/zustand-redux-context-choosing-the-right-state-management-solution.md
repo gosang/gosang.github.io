@@ -259,7 +259,7 @@ export default function App() {
 ❌ Performance issues with frequent re-renders
 ❌ Not suitable for large or complex states.
 
-#Issues, Considerations, and Best Practices
+# Issues, Considerations, and Best Practices
 
 ## Issues
 
