@@ -298,7 +298,5 @@ Choosing the right state management solution depends on the complexity of your R
 # References
 
 - [Zustand Documentation](https://github.com/pmndrs/zustand)
-
--[Redux Documentation](https://redux.js.org/)
-
--[React Context API](https://react.dev/reference/react/createContext)
+- [Redux Documentation](https://redux.js.org/)
+- [React Context API](https://react.dev/reference/react/createContext)
