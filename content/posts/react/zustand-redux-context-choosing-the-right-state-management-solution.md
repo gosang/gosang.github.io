@@ -70,28 +70,28 @@ export default function BearCounter() {
 }
 ```
 
-# Redux
+## Redux
 
 Redux is a predictable state container for JavaScript applications. It is one of the most popular state management libraries in the React ecosystem.
 
-## Why Redux
+**Why Redux**
 
 Redux excels in managing complex application states and ensuring predictable state transitions through a single source of truth.
 
-## Key Concepts
+**Key Concepts**
 
 - **Store**: A single state object.
 - **Actions**: Plain JavaScript objects describing state changes.
 - **Reducers**: Pure functions that handle state transitions based on actions.
 - **Middleware**: Extend Redux with custom behavior (e.g., async actions).
 
-## Key Features
+**Key Features**
 
 - Centralized state management.
 - Debugging with Redux DevTools.
 - Middleware ecosystem (e.g., Redux Thunk, Redux Saga).
 
-## Redux Implementation
+**Redux Implementation Example**
 
 Store Configuration
 
