@@ -155,23 +155,23 @@ export default function Counter() {
 
 React Context API provides a way to share values between components without explicitly passing props through every level of the component tree.
 
-## Why Context API
+**Why Context API**
 
 Context API is part of React itself and is suited for simple state management tasks, such as theme or language toggling.
 
-## Key Concepts
+**Key Concepts**
 
 - **Provider**: Wraps the component tree and provides the context value.
 - **Consumer**: Accesses the value from the nearest Provider.
 - **useContext Hook**: Simplifies consuming context values.
 
-## Key Features
+**Key Features**
 
 - Built into React (no extra library required).
 - Suitable for small-scale state management needs.
 - TypeScript-Based Implementation Examples
 
-## React Context API Implementation
+**React Context API Implementation Example**
 
 Context Definition
 
