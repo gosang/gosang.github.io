@@ -25,3 +25,7 @@ In MongoDB, pagination is commonly implemented using a combination of the `skip`
 ## 1. `skip`:
 
 The `skip` function is used to skip a certain number of records in a dataset. This is helpful when moving to subsequent pages.
+
+## 2. `limit`:
+
+The `limit` function is used to specify the maximum number of records to return in a query result. It defines the size of the page.
