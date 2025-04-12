@@ -19,3 +19,9 @@ In MongoDB, pagination is commonly implemented using a combination of the `skip`
 - **Usability**: Returning large amounts of data in a single response can overwhelm the user interface. Pagination enhances user experience by showing data in smaller, manageable chunks.
 
 - **Scalability**: As datasets grow, pagination helps scale the system efficiently by controlling resource utilization.
+
+# Key Concepts of Pagination with MongoDB C\# Driver
+
+## 1. `skip`:
+
+The `skip` function is used to skip a certain number of records in a dataset. This is helpful when moving to subsequent pages.
