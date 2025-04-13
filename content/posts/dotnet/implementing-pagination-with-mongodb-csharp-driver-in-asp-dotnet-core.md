@@ -29,3 +29,7 @@ The `skip` function is used to skip a certain number of records in a dataset. Th
 ## 2. `limit`:
 
 The `limit` function is used to specify the maximum number of records to return in a query result. It defines the size of the page.
+
+## 3. Sorting:
+
+Pagination often requires a stable sort order to ensure consistency across pages. Without sorting, records may be returned in arbitrary order, which can lead to inconsistencies when paginating.
