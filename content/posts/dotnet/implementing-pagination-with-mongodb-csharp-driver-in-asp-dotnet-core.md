@@ -33,3 +33,7 @@ The `limit` function is used to specify the maximum number of records to return 
 ## 3. Sorting:
 
 Pagination often requires a stable sort order to ensure consistency across pages. Without sorting, records may be returned in arbitrary order, which can lead to inconsistencies when paginating.
+
+## 4. Filters:
+
+You can apply filtering conditions to ensure that the paginated results meet specific criteria before being returned.
