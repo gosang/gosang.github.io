@@ -37,3 +37,7 @@ Pagination often requires a stable sort order to ensure consistency across pages
 ## 4. Filters:
 
 You can apply filtering conditions to ensure that the paginated results meet specific criteria before being returned.
+
+## 5. Page Number and Page Size:
+
+These parameters dictate which page of the data is returned and how many records should be included on each page.
