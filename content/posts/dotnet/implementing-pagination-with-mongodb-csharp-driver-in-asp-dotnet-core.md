@@ -43,3 +43,5 @@ You can apply filtering conditions to ensure that the paginated results meet spe
 These parameters dictate which page of the data is returned and how many records should be included on each page.
 
 # Implementing Pagination in ASP.NET Core with MongoDB C\# Driver
+
+Let’s walk through a step-by-step implementation of pagination in a sample ASP.NET Core 8 API project that uses MongoDB as the data store.
