@@ -47,3 +47,7 @@ These parameters dictate which page of the data is returned and how many records
 Let’s walk through a step-by-step implementation of pagination in a sample ASP.NET Core 8 API project that uses MongoDB as the data store.
 
 ## Setting up MongoDB and ASP.NET Core 8
+
+### Step 1: Install Dependencies
+
+First, install the necessary NuGet packages:
