@@ -51,3 +51,8 @@ Let’s walk through a step-by-step implementation of pagination in a sample ASP
 ### Step 1: Install Dependencies
 
 First, install the necessary NuGet packages:
+
+```bash
+dotnet add package MongoDB.Driver
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+```
