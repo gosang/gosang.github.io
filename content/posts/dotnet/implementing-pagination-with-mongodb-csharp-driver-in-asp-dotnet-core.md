@@ -56,3 +56,5 @@ First, install the necessary NuGet packages:
 dotnet add package MongoDB.Driver
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ```
+
+### Step 2: Set Up MongoDB in ASP.NET Core
