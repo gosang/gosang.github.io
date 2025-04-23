@@ -60,3 +60,14 @@ dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ### Step 2: Set Up MongoDB in ASP.NET Core
 
 You’ll need to configure MongoDB in your `appsettings.json` and register the MongoDB client in the `Program.cs` file.
+
+**appsettings.json**
+
+```json
+{
+  "MongoDBSettings": {
+    "ConnectionString": "mongodb://localhost:27017",
+    "DatabaseName": "SampleDB"
+  }
+}
+```
