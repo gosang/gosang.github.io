@@ -71,3 +71,27 @@ You’ll need to configure MongoDB in your `appsettings.json` and register the M
   }
 }
 ```
+
+**Program.cs**
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MongoDBSettings>(
+    builder.Configuration.GetSection("MongoDBSettings"));
+
+builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
+{
+    var settings = sp.GetRequiredService<IOptions<MongoDBSettings>>().Value;
+    return new MongoClient(settings.ConnectionString);
+});
+
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+var app = builder.Build();
+
+app.MapControllers();
+app.Run();
+```
