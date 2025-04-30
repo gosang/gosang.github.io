@@ -99,3 +99,42 @@ app.Run();
 ### Step 3: Create the MongoDB Repository
 
 Create a repository to handle the MongoDB interaction logic, including paginated queries.
+
+**MongoDBRepository.cs**:
+
+```csharp
+public class MongoDBRepository<T>
+{
+    private readonly IMongoCollection<T> _collection;
+
+    public MongoDBRepository(IMongoClient client, string dbName, string collectionName)
+    {
+        var database = client.GetDatabase(dbName);
+        _collection = database.GetCollection<T>(collectionName);
+    }
+
+    public async Task<List<T>> GetPaginatedAsync(int pageNumber, int pageSize, FilterDefinition<T>? filter = null, SortDefinition<T>? sort = null)
+    {
+        if (filter == null)
+            filter = Builders<T>.Filter.Empty;
+
+        if (sort == null)
+            sort = Builders<T>.Sort.Ascending("_id"); // Ensure a stable sort order
+
+        return await _collection
+            .Find(filter)
+            .Sort(sort)
+            .Skip((pageNumber - 1) * pageSize)
+            .Limit(pageSize)
+            .ToListAsync();
+    }
+
+    public async Task<long> GetTotalCountAsync(FilterDefinition<T>? filter = null)
+    {
+        if (filter == null)
+            filter = Builders<T>.Filter.Empty;
+
+        return await _collection.CountDocumentsAsync(filter);
+    }
+}
+```
