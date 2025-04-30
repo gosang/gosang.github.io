@@ -97,3 +97,5 @@ app.Run();
 ```
 
 ### Step 3: Create the MongoDB Repository
+
+Create a repository to handle the MongoDB interaction logic, including paginated queries.
