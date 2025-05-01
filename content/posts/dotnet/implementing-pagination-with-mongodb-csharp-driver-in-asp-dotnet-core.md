@@ -142,3 +142,41 @@ public class MongoDBRepository<T>
 ### Step 4: Create an API Controller for Pagination
 
 Now, let's create a controller that exposes an API endpoint for paginated data retrieval.
+
+**SampleController.cs**:
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class SampleController : ControllerBase
+{
+    private readonly MongoDBRepository<MyDataModel> _repository;
+
+    public SampleController(MongoDBRepository<MyDataModel> repository)
+    {
+        _repository = repository;
+    }
+
+    [HttpGet("paginated")]
+    public async Task<IActionResult> GetPaginatedData([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+    {
+        if (pageNumber <= 0 || pageSize <= 0)
+        {
+            return BadRequest("Page number and page size must be greater than 0.");
+        }
+
+        var data = await _repository.GetPaginatedAsync(pageNumber, pageSize);
+        var totalRecords = await _repository.GetTotalCountAsync();
+
+        var response = new
+        {
+            TotalRecords = totalRecords,
+            PageNumber = pageNumber,
+            PageSize = pageSize,
+            Data = data
+        };
+
+        return Ok(response);
+    }
+}
+```
