@@ -180,3 +180,5 @@ public class SampleController : ControllerBase
     }
 }
 ```
+
+In this controller, we expose a GET endpoint /api/sample/paginated that accepts two query parameters: pageNumber and pageSize. The response includes the total number of records, the current page, the page size, and the actual data returned by MongoDB.
