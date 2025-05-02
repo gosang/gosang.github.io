@@ -185,4 +185,13 @@ In this controller, we expose a GET endpoint /api/sample/paginated that accepts 
 
 ### Step 5: Run the Application
 
-Now that the implementation is complete, you can run the application and query the paginated data.
+Now that the implementation is complete, we can run the application and query the paginated data.
+
+**Example query**:
+
+```bash
+GET http://localhost:5000/api/sample/paginated?pageNumber=2&pageSize=5
+
+```
+
+This would return the second page of data with 5 records per page.
