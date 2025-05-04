@@ -219,3 +219,17 @@ This would return the second page of data with 5 records per page.
 - **Small Datasets**: If your dataset is small, pagination may introduce unnecessary complexity.
 
 - **Real-Time Data**: When working with real-time systems where data is frequently updated, pagination may lead to inconsistent results.
+
+# Issues, Considerations, and Best Practices
+
+- **Use Indexing**: Indexing improves query performance.
+
+- **Efficient Pagination**: Use skip and limit for small to moderate datasets. For larger datasets, consider alternatives like range queries using indexed fields (e.g., \_id or date ranges) to avoid the performance cost of skip.
+
+- **Sort Consistency**: Always ensure your query is sorted by a unique field (e.g., \_id). Without sorting, pages can yield inconsistent results, especially if records are inserted or deleted during navigation.
+
+- **Page Size Limits**: Set reasonable limits for the pageSize to avoid fetching too much data at once. For example, limit pageSize to 100 records per page.
+
+- **Caching**: Consider caching frequent queries to reduce the load on your MongoDB instance, especially for high-traffic applications.
+
+- **Handling Changes**: If your dataset changes frequently, consider implementing mechanisms to track consistency (e.g., using timestamps) or use snapshotting techniques to avoid inconsistent pagination.
