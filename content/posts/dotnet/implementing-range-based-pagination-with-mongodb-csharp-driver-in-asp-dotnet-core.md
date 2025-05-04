@@ -141,3 +141,30 @@ public class SampleController : ControllerBase
     }
 }
 ```
+
+# Advantages and Disadvantage of Range-Based Pagination
+
+| Advantage                                                                           | Disadvantage                                                                                        |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| ✅ High Performance: Uses indexed queries instead of costly skip operations.        | ❌ No Random Access: Cannot jump to arbitrary pages like offset-based pagination.                   |
+| ✅ Consistency: Data order remains stable, even when new records are added.         | ❌ Complex Implementation: Requires careful handling of continuation tokens.                        |
+| ✅ Scalability: Handles large datasets efficiently without performance degradation. | ❌ Strict Sorting Requirement: Data must always be sorted by the indexed field used for pagination. |
+
+# When to Use Range-Based Pagination
+
+- **Large Datasets**: Suitable for applications dealing with massive collections.
+- **Real-Time Data Feeds**: Ensures consistent and performant updates in applications like social media feeds.
+- **APIs with Infinite Scrolling**: Ideal for endless scrolling interfaces, as seen in mobile apps.
+
+# When Not to Use Range-Based Pagination
+
+- **Small Datasets**: Offset-based pagination may be simpler and sufficient.
+- **Random Page Access Required**: If users need to jump to arbitrary pages, offset-based pagination is a better fit.
+
+# Best Practices and Considerations
+
+- **Use Indexed Fields**: Ensure the cursor field (e.g., CreatedAt) is indexed for optimal performance.
+- **Consistent Sorting**: Always sort results to maintain consistent pagination.
+- **Limit Page Size**: Set reasonable page size limits to avoid overwhelming the server.
+- **Handle Edge Cases**: Ensure robust handling when reaching the last page.
+- **Cache Results**: Consider caching frequently accessed data for further optimization.
