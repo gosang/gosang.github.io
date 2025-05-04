@@ -23,25 +23,11 @@ In MongoDB, pagination is commonly implemented using a combination of the `skip`
 
 # Key Concepts of Pagination with MongoDB C\# Driver
 
-## 1. `skip`:
-
-The `skip` function is used to skip a certain number of records in a dataset. This is helpful when moving to subsequent pages.
-
-## 2. `limit`:
-
-The `limit` function is used to specify the maximum number of records to return in a query result. It defines the size of the page.
-
-## 3. Sorting:
-
-Pagination often requires a stable sort order to ensure consistency across pages. Without sorting, records may be returned in arbitrary order, which can lead to inconsistencies when paginating.
-
-## 4. Filters:
-
-You can apply filtering conditions to ensure that the paginated results meet specific criteria before being returned.
-
-## 5. Page Number and Page Size:
-
-These parameters dictate which page of the data is returned and how many records should be included on each page.
+- **`skip`**: The `skip` function is used to skip a certain number of records in a dataset. This is helpful when moving to subsequent pages.
+- **`limit`**: The `limit` function is used to specify the maximum number of records to return in a query result. It defines the size of the page.
+- **Sorting**: Pagination often requires a stable sort order to ensure consistency across pages. Without sorting, records may be returned in arbitrary order, which can lead to inconsistencies when paginating.
+- **Filters**: You can apply filtering conditions to ensure that the paginated results meet specific criteria before being returned.
+- **Page Number and Page Size**: These parameters dictate which page of the data is returned and how many records should be included on each page.
 
 # Implementing Pagination in ASP.NET Core with MongoDB C\# Driver
 
