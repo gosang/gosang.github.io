@@ -168,3 +168,9 @@ public class SampleController : ControllerBase
 - **Limit Page Size**: Set reasonable page size limits to avoid overwhelming the server.
 - **Handle Edge Cases**: Ensure robust handling when reaching the last page.
 - **Cache Results**: Consider caching frequently accessed data for further optimization.
+
+# Conclusion
+
+Range-Based Pagination offers a highly efficient way to retrieve large datasets while maintaining performance and consistency. By leveraging indexed queries and continuation tokens, it eliminates the inefficiencies of offset-based pagination. However, it requires careful implementation, particularly in sorting and token management.
+
+For large-scale applications and real-time data feeds, range-based pagination is the preferred choice, ensuring smooth data retrieval and seamless user experience.
