@@ -213,3 +213,9 @@ This would return the second page of data with 5 records per page.
 - **User Interfaces**: For interfaces where users browse data in lists or tables and need the ability to navigate through pages.
 
 - **APIs Serving Multiple Clients**: In situations where different clients may need different subsets of data (e.g., mobile apps, web apps).
+
+# When Not to Use Pagination
+
+- **Small Datasets**: If your dataset is small, pagination may introduce unnecessary complexity.
+
+- **Real-Time Data**: When working with real-time systems where data is frequently updated, pagination may lead to inconsistent results.
