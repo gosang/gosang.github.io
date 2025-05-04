@@ -34,3 +34,110 @@ Range-Based Pagination retrieves a limited number of records based on a range co
 **Filtering and Ordering**: Results are filtered based on the cursor, ensuring only newer (or older) records are retrieved.
 
 - **Page Size**: Specifies the number of records retrieved per request.
+
+# Implementing Range-Based Pagination in ASP.NET Core 8
+
+## Step 1: Install Dependencies
+
+Ensure you have the required NuGet packages:
+
+```bash
+dotnet add package MongoDB.Driver
+dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
+```
+
+## Step 2: Configure MongoDB in ASP.NET Core
+
+**appsettings.json**
+
+```json
+{
+  "MongoDBSettings": {
+    "ConnectionString": "mongodb://localhost:27017",
+    "DatabaseName": "SampleDB"
+  }
+}
+```
+
+**Program.cs**
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<MongoDBSettings>(
+    builder.Configuration.GetSection("MongoDBSettings"));
+
+builder.Services.AddSingleton<IMongoClient, MongoClient>(sp =>
+{
+    var settings = sp.GetRequiredService<IOptions<MongoDBSettings>>().Value;
+    return new MongoClient(settings.ConnectionString);
+});
+
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(options =>
+        options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+var app = builder.Build();
+app.MapControllers();
+app.Run();
+```
+
+## Step 3: Create MongoDB Repository
+
+```csharp
+public class MongoDBRepository<T>
+{
+    private readonly IMongoCollection<T> _collection;
+
+    public MongoDBRepository(IMongoClient client, string dbName, string collectionName)
+    {
+        var database = client.GetDatabase(dbName);
+        _collection = database.GetCollection<T>(collectionName);
+    }
+
+    public async Task<List<T>> GetPaginatedAsync(DateTime? lastSeen, int pageSize, SortDefinition<T> sort)
+    {
+        var filter = lastSeen == null ? Builders<T>.Filter.Empty : Builders<T>.Filter.Gt("CreatedAt", lastSeen);
+
+        return await _collection
+            .Find(filter)
+            .Sort(sort)
+            .Limit(pageSize)
+            .ToListAsync();
+    }
+}
+```
+
+## Step 4: Create API Controller
+
+```csharp
+[ApiController]
+[Route("api/[controller]")]
+public class SampleController : ControllerBase
+{
+    private readonly MongoDBRepository<MyDataModel> _repository;
+
+    public SampleController(MongoDBRepository<MyDataModel> repository)
+    {
+        _repository = repository;
+    }
+
+    [HttpGet("paginated")]
+    public async Task<IActionResult> GetPaginatedData([FromQuery] DateTime? lastSeen, [FromQuery] int pageSize = 10)
+    {
+        if (pageSize <= 0)
+        {
+            return BadRequest("Page size must be greater than 0.");
+        }
+
+        var sort = Builders<MyDataModel>.Sort.Ascending("CreatedAt");
+        var data = await _repository.GetPaginatedAsync(lastSeen, pageSize, sort);
+
+        return Ok(new
+        {
+            NextCursor = data.Any() ? data.Last().CreatedAt : null,
+            Data = data
+        });
+    }
+}
+```
