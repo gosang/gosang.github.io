@@ -1,7 +1,8 @@
 +++
 title = 'Implementing Pagination with MongoDB C# Driver in ASP.NET Core 8'
 date = 2025-03-02T12:27:06+01:00
-draft = true
+draft = false
+tags = ["Pagination", "MongoDB", "ASP.NET Core"]
 +++
 
 Pagination is a crucial aspect of application development, especially when dealing with large datasets in databases. It ensures that data is fetched in manageable chunks, improving performance and user experience. In this blog, we’ll explore how to implement pagination using the MongoDB C# driver in an ASP.NET Core 8 API project. We’ll cover the key concepts, functions, and best practices while discussing when and when not to use pagination.
