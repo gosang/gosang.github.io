@@ -183,15 +183,13 @@ GET http://localhost:5000/api/sample/paginated?pageNumber=2&pageSize=5
 
 This would return the second page of data with 5 records per page.
 
-# Advantage and Disadvantage of Implementing Pagination with MongoDB C# Driver
+# Advantage and Disadvantage
 
-## Advantage
-
-| Advantage                                                                                                                             | Disadvantage                                                                                                                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ✅ Performance Optimization\*: Fetching a limited number of records at a time reduces the load on both the server and the client.     | ❌ Complexity: Pagination introduces additional complexity into your queries, requiring careful management of page numbers and sizes.                                                              |
-| ✅ Memory Efficiency: By avoiding large result sets, you minimize memory consumption, improving the efficiency of your API.           | ❌ Inconsistent Data: When working with dynamic datasets (frequent inserts/updates), pages can become inconsistent as new records might shift previously retrieved pages.                          |
-| ✅ Improved User Experience\*\*: End-users get a faster, more responsive experience, with data presented in small, manageable chunks. | ❌ Performance with Skip : MongoDB’s skip function can be inefficient for large offsets, especially as the number of skipped documents increases, since MongoDB must walk through skipped records. |
+| Advantage                                                                                                                         | Disadvantage                                                                                                                                                                                       |
+| --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ✅ Performance Optimization: Fetching a limited number of records at a time reduces the load on both the server and the client.   | ❌ Complexity: Pagination introduces additional complexity into your queries, requiring careful management of page numbers and sizes.                                                              |
+| ✅ Memory Efficiency: By avoiding large result sets, you minimize memory consumption, improving the efficiency of your API.       | ❌ Inconsistent Data: When working with dynamic datasets (frequent inserts/updates), pages can become inconsistent as new records might shift previously retrieved pages.                          |
+| ✅ Improved User Experience: End-users get a faster, more responsive experience, with data presented in small, manageable chunks. | ❌ Performance with Skip : MongoDB’s skip function can be inefficient for large offsets, especially as the number of skipped documents increases, since MongoDB must walk through skipped records. |
 
 # When to Use Pagination
 
