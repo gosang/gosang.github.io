@@ -1,5 +1,5 @@
 +++
-title = 'Implementing Range-Based Pagination With MongoDB C# Driver in ASP.NET Core 8'
+title = 'Implementing Range-Based Pagination with MongoDB C# Driver in ASP.NET Core 8'
 date = 2025-03-08T12:27:06+01:00
 draft = false
 tags = ["Pagination", "MongoDB", "ASP.NET Core"]
@@ -16,12 +16,12 @@ This blog post will explain how to implement Range-Based Pagination with the Mon
 
 # What is Range-Based Pagination?
 
-Range-Based Pagination retrieves a limited number of records based on a range condition rather than skipping a certain number of records. Instead of using skip, we use a continuation token (e.g., a timestamp or an ID from the last retrieved document) to get the next batch.
+Range-Based Pagination retrieves a limited number of records based on a range condition rather than skipping a certain number of records. Instead of using `skip`, we use a continuation token (e.g., a timestamp or an ID from the last retrieved document) to get the next batch.
 
 ## Why Range-Based Pagination
 
 - **Performance Optimization**: Unlike offset-based pagination, range queries use indexes efficiently, making queries faster.
-- **Scalability**: Works well with large datasets by avoiding costly skip operations.
+- **Scalability**: Works well with large datasets by avoiding costly `skip` operations.
 - **Consistent Ordering**: Prevents inconsistencies when new records are inserted or removed.
 - **Reduced Latency**: Provides faster response times for paginated queries.
 
@@ -146,7 +146,7 @@ public class SampleController : ControllerBase
 
 | Advantage                                                                           | Disadvantage                                                                                        |
 | ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| ✅ High Performance: Uses indexed queries instead of costly skip operations.        | ❌ No Random Access: Cannot jump to arbitrary pages like offset-based pagination.                   |
+| ✅ High Performance: Uses indexed queries instead of costly `skip` operations.      | ❌ No Random Access: Cannot jump to arbitrary pages like offset-based pagination.                   |
 | ✅ Consistency: Data order remains stable, even when new records are added.         | ❌ Complex Implementation: Requires careful handling of continuation tokens.                        |
 | ✅ Scalability: Handles large datasets efficiently without performance degradation. | ❌ Strict Sorting Requirement: Data must always be sorted by the indexed field used for pagination. |
 
