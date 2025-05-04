@@ -35,8 +35,7 @@ Let’s walk through a step-by-step implementation of pagination in a sample ASP
 
 ## Setting up MongoDB and ASP.NET Core 8
 
-### Step 1: Install Dependencies
-
+**Step 1: Install Dependencies**
 First, install the necessary NuGet packages:
 
 ```bash
@@ -44,8 +43,7 @@ dotnet add package MongoDB.Driver
 dotnet add package Microsoft.AspNetCore.Mvc.NewtonsoftJson
 ```
 
-### Step 2: Set Up MongoDB in ASP.NET Core
-
+**Step 2: Set Up MongoDB in ASP.NET Core**
 You’ll need to configure MongoDB in your `appsettings.json` and register the MongoDB client in the `Program.cs` file.
 
 **appsettings.json**
@@ -83,11 +81,10 @@ app.MapControllers();
 app.Run();
 ```
 
-### Step 3: Create the MongoDB Repository
-
+**Step 3: Create the MongoDB Repository**
 Create a repository to handle the MongoDB interaction logic, including paginated queries.
 
-**MongoDBRepository.cs**:
+**MongoDBRepository.cs:**
 
 ```csharp
 public class MongoDBRepository<T>
@@ -126,11 +123,10 @@ public class MongoDBRepository<T>
 }
 ```
 
-### Step 4: Create an API Controller for Pagination
-
+**Step 4: Create an API Controller for Pagination**
 Now, let's create a controller that exposes an API endpoint for paginated data retrieval.
 
-**SampleController.cs**:
+**SampleController.cs:**
 
 ```csharp
 [ApiController]
@@ -170,11 +166,10 @@ public class SampleController : ControllerBase
 
 In this controller, we expose a GET endpoint /api/sample/paginated that accepts two query parameters: pageNumber and pageSize. The response includes the total number of records, the current page, the page size, and the actual data returned by MongoDB.
 
-### Step 5: Run the Application
+**Step 5: Run the Application**
+Now that the implementation is complete, you can run the application and query the paginated data.
 
-Now that the implementation is complete, we can run the application and query the paginated data.
-
-**Example query**:
+**Example query:**
 
 ```bash
 GET http://localhost:5000/api/sample/paginated?pageNumber=2&pageSize=5
