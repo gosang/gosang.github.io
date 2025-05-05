@@ -43,3 +43,9 @@ Install-Package Microsoft.Extensions.Caching.StackExchangeRedis
 ```
 
 ### Step 2: Running Redis with Docker for Local Development
+
+If you don’t want to install Redis directly on your system, you can use Docker to run a Redis container. Ensure that you have Docker installed, then execute the following command to pull and run a Redis instance:
+
+```bash
+docker run --name redis -d -p 6379:6379 redis
+```
