@@ -55,3 +55,9 @@ This command will:
 - Download the latest Redis image (if not already downloaded).
 - Run Redis in a detached mode.
 - Map port 6379 from the container to the local machine.
+
+To verify if Redis is running, use:
+
+```bash
+docker ps
+```
