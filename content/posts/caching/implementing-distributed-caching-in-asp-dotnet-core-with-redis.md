@@ -18,3 +18,5 @@ Distributed caching is a technique that stores cached data across multiple serve
 - **Data Consistency** – Cached data remains consistent across all servers.
 - **Better Performance** – Reduces database load and improves response times.
 - **Fault Tolerance** – Data can be persisted and recovered after restarts.
+
+## Why Use Redis for Distributed Caching in ASP.NET Core?
