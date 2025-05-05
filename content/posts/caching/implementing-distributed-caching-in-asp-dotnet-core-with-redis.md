@@ -22,3 +22,5 @@ Distributed caching is a technique that stores cached data across multiple serve
 ## Why Use Redis for Distributed Caching in ASP.NET Core?
 
 Redis (Remote Dictionary Server) is an open-source, high-performance, in-memory data store. It supports various data structures (strings, hashes, lists, sets, etc.) and provides features like persistence, replication, eviction policies, and high availability, making it an excellent choice for caching.
+
+### Key Features of Redis for Caching:
