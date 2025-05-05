@@ -74,7 +74,7 @@ Advantages and Disadvantages of RAG
 | ✅ Flexibility: Works across domains without retraining. | ❌ Complexity: More moving parts than standalone LLMs. |
 | ✅ Transparency: Easier to trace output back to source documents. | ❌ Maintenance: Requires continuous data updates and index tuning. |
 
-# Use Cases
+# 🧰 Use Cases
 
 - **Customer Support**: Real-time access to product manuals and policies.
 - **Healthcare**: Evidence-based decision support from medical journals.
