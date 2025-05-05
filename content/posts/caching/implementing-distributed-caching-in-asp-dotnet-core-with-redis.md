@@ -29,3 +29,5 @@ Redis (Remote Dictionary Server) is an open-source, high-performance, in-memory 
 - **Persistence** – Data can be saved to disk for durability.
 - **Expiration Policies** – Supports TTL (Time-To-Live) for cache expiration.
 - **Support for Clustering** – Ensures scalability and high availability.
+
+# Implementing Distributed Caching with Redis in ASP.NET Core
