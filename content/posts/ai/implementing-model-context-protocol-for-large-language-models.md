@@ -18,3 +18,5 @@ In this blog post, we’ll explore:
 # 📌 What is Model Context Protocol (MCP)?
 
 Model Context Protocol (MCP) is a structured framework or protocol designed to manage the contextual memory and state of a conversation or task handled by a large language model. It defines how context (e.g., history, goals, user preferences, task progress) is structured, stored, retrieved, and injected into interactions with the model.
+
+MCP is not a single library or tool — it’s a design pattern or architecture that can be implemented using various tools (e.g., vector databases, metadata tagging, session management).
