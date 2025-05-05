@@ -49,3 +49,9 @@ If you don’t want to install Redis directly on your system, you can use Docker
 ```bash
 docker run --name redis -d -p 6379:6379 redis
 ```
+
+This command will:
+
+- Download the latest Redis image (if not already downloaded).
+- Run Redis in a detached mode.
+- Map port 6379 from the container to the local machine.
