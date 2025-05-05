@@ -37,3 +37,9 @@ Redis (Remote Dictionary Server) is an open-source, high-performance, in-memory 
 First, install Redis on your local machine or use a cloud-based service like Azure Redis Cache or AWS ElastiCache.
 
 To integrate Redis into an ASP.NET Core application, install the required NuGet package:
+
+```bash
+Install-Package Microsoft.Extensions.Caching.StackExchangeRedis
+```
+
+### Step 2: Running Redis with Docker for Local Development
