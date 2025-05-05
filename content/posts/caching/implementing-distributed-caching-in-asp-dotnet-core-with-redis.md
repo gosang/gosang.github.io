@@ -5,3 +5,9 @@ draft = true
 +++
 
 Caching is a critical performance optimization technique in web applications. It reduces database load, improves response times, and enhances scalability. In ASP.NET Core, distributed caching is a powerful way to store and share cached data across multiple instances of an application. Redis, an in-memory data store, is a popular choice for distributed caching.
+
+This blog explores distributed caching in ASP.NET Core with Redis, explaining its concepts, implementation, advantages, disadvantages, best practices, and real-world use cases.
+
+# What is Distributed Caching?
+
+Distributed caching is a technique that stores cached data across multiple servers or nodes, making it accessible to all instances of an application. Unlike in-memory caching (which is local to a single instance), distributed caching allows multiple application servers to share the same cache, ensuring data consistency and high availability.
