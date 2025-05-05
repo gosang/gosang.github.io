@@ -24,3 +24,8 @@ Distributed caching is a technique that stores cached data across multiple serve
 Redis (Remote Dictionary Server) is an open-source, high-performance, in-memory data store. It supports various data structures (strings, hashes, lists, sets, etc.) and provides features like persistence, replication, eviction policies, and high availability, making it an excellent choice for caching.
 
 ### Key Features of Redis for Caching:
+
+- **Fast Read/Write** – Redis stores data in memory, enabling ultra-fast retrieval.
+- **Persistence** – Data can be saved to disk for durability.
+- **Expiration Policies** – Supports TTL (Time-To-Live) for cache expiration.
+- **Support for Clustering** – Ensures scalability and high availability.
