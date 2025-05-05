@@ -1,7 +1,7 @@
 +++
 title = 'Retrieval Augmented Generation Architecture Patterns'
 date = 2025-03-16T12:27:06+01:00
-draft = true
+draft = false
 +++
 
 Retrieval-Augmented Generation (RAG) is a cutting-edge AI architecture that combines the capabilities of large language models (LLMs) with real-time access to external knowledge sources. This blog will provide a thorough yet accessible explanation of RAG, including its rationale, architectural patterns, implementations, pros and cons, use cases, issues, and best practices.
