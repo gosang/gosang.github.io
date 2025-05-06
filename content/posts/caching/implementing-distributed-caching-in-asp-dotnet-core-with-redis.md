@@ -81,3 +81,17 @@ Modify appsettings.json to add the Redis connection string:
 ```
 
 In `Program.cs`, configure Redis as the distributed cache provider:
+
+```csharp
+var builder = WebApplication.CreateBuilder(args);
+
+// Add Redis distributed cache
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration["Redis:ConnectionString"];
+});
+
+var app = builder.Build();
+app.Run();
+
+```
