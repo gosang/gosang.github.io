@@ -79,3 +79,5 @@ Modify appsettings.json to add the Redis connection string:
   }
 }
 ```
+
+In `Program.cs`, configure Redis as the distributed cache provider:
