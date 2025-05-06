@@ -67,3 +67,15 @@ or connect to Redis CLI inside the running container:
 ```bash
 docker exec -it redis redis-cli
 ```
+
+### Step 3: Configure Redis in ASP.NET Core
+
+Modify appsettings.json to add the Redis connection string:
+
+```json
+{
+  "Redis": {
+    "ConnectionString": "localhost:6379"
+  }
+}
+```
