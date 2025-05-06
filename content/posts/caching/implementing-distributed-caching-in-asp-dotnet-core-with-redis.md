@@ -61,3 +61,9 @@ To verify if Redis is running, use:
 ```bash
 docker ps
 ```
+
+or connect to Redis CLI inside the running container:
+
+```bash
+docker exec -it redis redis-cli
+```
