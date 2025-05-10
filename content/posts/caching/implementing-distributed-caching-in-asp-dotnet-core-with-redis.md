@@ -157,3 +157,18 @@ curl -X POST http://localhost:5000/api/cache/set -H "Content-Type: application/j
 # Retrieve cached data
 curl -X GET http://localhost:5000/api/cache/get/username
 ```
+
+# Advantages of Using Redis for Distributed Caching
+
+✅ High Performance – Fast data retrieval with low latency.
+✅ Scalability – Can handle large amounts of cached data across instances.
+✅ Persistence Options – Data can be stored in memory or persisted to disk.
+✅ Expiration Policies – Set expiration time for cached data.
+✅ Multi-Language Support – Works with various programming languages.
+
+# Disadvantages of Using Redis for Distributed Caching
+
+❌ Memory Limitations – As an in-memory store, it requires sufficient RAM.
+❌ Complex Setup – Requires configuration and maintenance.
+❌ Data Loss Risks – If persistence is not configured, data may be lost on a crash.
+❌ Network Latency – Accessing a remote cache server can introduce slight latency.
