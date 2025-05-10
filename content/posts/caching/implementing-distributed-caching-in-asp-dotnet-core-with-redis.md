@@ -172,3 +172,12 @@ curl -X GET http://localhost:5000/api/cache/get/username
 ❌ Complex Setup – Requires configuration and maintenance.
 ❌ Data Loss Risks – If persistence is not configured, data may be lost on a crash.
 ❌ Network Latency – Accessing a remote cache server can introduce slight latency.
+
+# Issues and Considerations
+
+- **Cache Invalidation** – Determining when to invalidate or update stale cache entries is crucial.
+- **Cache Misses** – Application should be resilient to cache misses and gracefully fall back to the data source.
+- **Consistency** – Ensure synchronization between cache and the database.
+- **Security** – Secure Redis with passwords and TLS, especially in production.
+- **Availability** – Redis should be hosted on a reliable and highly available infrastructure.
+- **Monitoring** – Use monitoring tools to track hit/miss ratios, memory usage, and key expiration.
