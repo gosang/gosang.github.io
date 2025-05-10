@@ -42,3 +42,10 @@ By applying MCP, developers can:
 ## 🧠 Key Concepts
 
 Here are the essential building blocks of MCP:
+| Component | Description |
+|------|-----|
+|Session Context |A data object representing the current interaction scope|
+|Context Store |Persistent memory (DB/vector store) for storing prior interactions/data|
+|Retriever|A function to fetch relevant context snippets dynamically|
+|Injector|Merges retrieved context with the new prompt in a structured format|
+|Context Policy| Rules defining what gets stored, for how long, and when it should be used|
