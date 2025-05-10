@@ -99,3 +99,47 @@ app.Run();
 ### Step 4: Using Redis in a Controller
 
 The following example demonstrates how to cache and retrieve data using Redis in an ASP.NET Core controller:
+
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
+
+[Route("api/cache")]
+[ApiController]
+public class CacheController : ControllerBase
+{
+    private readonly IDistributedCache _cache;
+
+    public CacheController(IDistributedCache cache)
+    {
+        _cache = cache;
+    }
+
+    [HttpGet("get/{key}")]
+    public async Task<IActionResult> GetCache(string key)
+    {
+        var cachedData = await _cache.GetStringAsync(key);
+        return cachedData != null ? Ok(cachedData) : NotFound("Key not found");
+    }
+
+    [HttpPost("set")]
+    public async Task<IActionResult> SetCache([FromBody] CacheRequest request)
+    {
+        var serializedData = JsonSerializer.Serialize(request.Value);
+        await _cache.SetStringAsync(request.Key, serializedData, new DistributedCacheEntryOptions
+        {
+            AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(10)
+        });
+        return Ok("Data cached successfully");
+    }
+
+    public class CacheRequest
+    {
+        public string Key { get; set; }
+        public object Value { get; set; }
+    }
+}
+```
