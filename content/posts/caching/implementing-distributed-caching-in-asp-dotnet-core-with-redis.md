@@ -95,3 +95,7 @@ var app = builder.Build();
 app.Run();
 
 ```
+
+### Step 4: Using Redis in a Controller
+
+The following example demonstrates how to cache and retrieve data using Redis in an ASP.NET Core controller:
