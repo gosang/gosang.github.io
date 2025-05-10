@@ -149,3 +149,11 @@ public class CacheController : ControllerBase
 - Start Redis server (redis-server for local installations or via Docker as shown above).
 - Run your ASP.NET Core application.
 - Use tools like Postman or cURL to test the API endpoints.
+
+```bash
+# Store data in cache
+curl -X POST http://localhost:5000/api/cache/set -H "Content-Type: application/json" -d '{"key": "username", "value": "JohnDoe"}'
+
+# Retrieve cached data
+curl -X GET http://localhost:5000/api/cache/get/username
+```
