@@ -143,3 +143,9 @@ public class CacheController : ControllerBase
     }
 }
 ```
+
+### Step 5: Testing the Redis Cache
+
+- Start Redis server (redis-server for local installations or via Docker as shown above).
+- Run your ASP.NET Core application.
+- Use tools like Postman or cURL to test the API endpoints.
