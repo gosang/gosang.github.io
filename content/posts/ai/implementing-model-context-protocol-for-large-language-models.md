@@ -24,3 +24,10 @@ MCP is not a single library or tool — it’s a design pattern or architecture 
 ## ✅ Why MCP?
 
 LLMs, even advanced ones like GPT-4 or Claude, are stateless by design. They process inputs without any inherent memory of prior interactions unless context is passed manually.
+
+Without MCP, systems face:
+
+- Redundant prompts
+- Loss of task continuity
+- Higher token usage (more expensive)
+- Poor user experience
