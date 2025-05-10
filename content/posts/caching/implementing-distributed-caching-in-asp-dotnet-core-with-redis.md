@@ -194,3 +194,12 @@ curl -X GET http://localhost:5000/api/cache/get/username
 - **Use Dependency Injection** – Make the cache service testable and loosely coupled.
 - **Consider Data Volatility** – Frequently changing data might not benefit from caching.
 - **Use Caching Libraries** – Libraries like `CacheManager` can add layers of abstraction and policy handling.
+
+# Use Cases for Distributed Caching with Redis
+
+- **Session Storage** – Store session data for ASP.NET Core applications.
+- **API Response Caching** – Cache frequently requested API responses.
+- **Database Query Caching** – Reduce load by caching results from expensive database queries.
+- **Rate Limiting** – Prevent excessive API calls using Redis counters.
+- **Shopping Carts** – Temporarily store user cart data.
+- **Feature Flags** – Quickly toggle application features in real-time.
