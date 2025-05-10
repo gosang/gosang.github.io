@@ -209,3 +209,9 @@ curl -X GET http://localhost:5000/api/cache/get/username
 Implementing distributed caching in ASP.NET Core using Redis significantly improves application performance, scalability, and efficiency. By following best practices and considering potential challenges, developers can leverage Redis to enhance their application's caching strategy.
 
 Redis provides an easy-to-use, high-performance caching solution for ASP.NET Core applications. Whether you're caching API responses, session data, or database queries, Redis is a robust choice for building scalable and efficient applications.
+
+# References:
+
+- [Redis Official Documentation](https://redis.io/documentation)
+- [ASP.NET Core Caching Documentation](https://learn.microsoft.com/en-us/aspnet/core/performance/caching/response)
+- [StackExchange Redis GitHub](https://github.com/StackExchange/StackExchange.Redis)
