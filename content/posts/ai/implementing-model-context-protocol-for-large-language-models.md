@@ -38,3 +38,7 @@ By applying MCP, developers can:
 - Inject relevant prior knowledge
 - Minimize prompt engineering
 - Enable multi-turn, goal-oriented conversations
+
+## 🧠 Key Concepts
+
+Here are the essential building blocks of MCP:
