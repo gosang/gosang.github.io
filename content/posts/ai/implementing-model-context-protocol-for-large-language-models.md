@@ -51,3 +51,5 @@ Here are the essential building blocks of MCP:
 |Context Policy| Rules defining what gets stored, for how long, and when it should be used|
 
 # 🔧 Implementing MCP for LLMs (Step-by-Step)
+
+Here’s a simplified implementation example using Python and LangChain with a vector database (e.g., FAISS or Pinecone).
