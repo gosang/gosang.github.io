@@ -63,3 +63,14 @@ class SessionContext:
         self.metadata = {}
         self.history = []  # Can include user inputs, model responses, task metadata
 ```
+
+#### 2. Store Context in a Vector DB
+
+```python
+from langchain.vectorstores import FAISS
+from langchain.embeddings import OpenAIEmbeddings
+
+vector_store = FAISS(OpenAIEmbeddings())
+def store_context(session_ctx, text):
+    vector_store.add_texts([text], metadatas=[{"session": session_ctx.session_id}])
+```
