@@ -53,3 +53,13 @@ Here are the essential building blocks of MCP:
 # 🔧 Implementing MCP for LLMs (Step-by-Step)
 
 Here’s a simplified implementation example using Python and LangChain with a vector database (e.g., FAISS or Pinecone).
+
+#### 1. Define the Session Context
+
+```python
+class SessionContext:
+    def __init__(self, session_id):
+        self.session_id = session_id
+        self.metadata = {}
+        self.history = []  # Can include user inputs, model responses, task metadata
+```
