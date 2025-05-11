@@ -74,3 +74,10 @@ vector_store = FAISS(OpenAIEmbeddings())
 def store_context(session_ctx, text):
     vector_store.add_texts([text], metadatas=[{"session": session_ctx.session_id}])
 ```
+
+#### 3. Retrieve Relevant Context
+
+```python
+def retrieve_context(session_ctx, query, top_k=5):
+    return vector_store.similarity_search(query, k=top_k, filter={"session": session_ctx.session_id})
+```
