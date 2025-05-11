@@ -49,3 +49,5 @@ Here are the essential building blocks of MCP:
 |Retriever|A function to fetch relevant context snippets dynamically|
 |Injector|Merges retrieved context with the new prompt in a structured format|
 |Context Policy| Rules defining what gets stored, for how long, and when it should be used|
+
+# 🔧 Implementing MCP for LLMs (Step-by-Step)
