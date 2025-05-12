@@ -89,3 +89,14 @@ def create_prompt(context_snippets, user_input):
     context_block = "\n".join(["- " + snippet.page_content for snippet in context_snippets])
     return f"""Context:\n{context_block}\n\nUser Input:\n{user_input}\n\nResponse:"""
 ```
+
+#### 5. LLM Invocation
+
+```python
+from langchain.llms import OpenAI
+llm = OpenAI()
+
+context_snippets = retrieve_context(session_ctx, user_input)
+prompt = create_prompt(context_snippets, user_input)
+response = llm(prompt)
+```
