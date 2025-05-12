@@ -81,3 +81,11 @@ def store_context(session_ctx, text):
 def retrieve_context(session_ctx, query, top_k=5):
     return vector_store.similarity_search(query, k=top_k, filter={"session": session_ctx.session_id})
 ```
+
+#### 4. Inject Context into Prompt
+
+```python
+def create_prompt(context_snippets, user_input):
+    context_block = "\n".join(["- " + snippet.page_content for snippet in context_snippets])
+    return f"""Context:\n{context_block}\n\nUser Input:\n{user_input}\n\nResponse:"""
+```
