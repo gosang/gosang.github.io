@@ -100,3 +100,5 @@ context_snippets = retrieve_context(session_ctx, user_input)
 prompt = create_prompt(context_snippets, user_input)
 response = llm(prompt)
 ```
+
+This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for context storage.
