@@ -111,3 +111,5 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 | 💸 Efficiency  | Reduces prompt size by retrieving only relevant info           |
 | 🔒 Consistency | Ensures repeated interactions follow the same context rules    |
 | 🧱 Modularity  | Makes LLM applications composable and maintainable             |
+
+# ⚠️ Disadvantages of MCP
