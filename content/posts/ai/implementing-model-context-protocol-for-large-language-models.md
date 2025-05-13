@@ -102,3 +102,5 @@ response = llm(prompt)
 ```
 
 This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for context storage.
+
+# 📊 Advantages of MCP
