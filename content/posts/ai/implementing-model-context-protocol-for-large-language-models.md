@@ -113,3 +113,10 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 | 🧱 Modularity  | Makes LLM applications composable and maintainable             |
 
 # ⚠️ Disadvantages of MCP
+
+| Limitation             | Details                                                     |
+| ---------------------- | ----------------------------------------------------------- |
+| 🧠 Memory Overhead     | Requires extra infrastructure (vector DB, retrievers)       |
+| 🤖 Imperfect Retrieval | Irrelevant context may be retrieved if embeddings are noisy |
+| 🔄 State Drift         | Without periodic context cleanup, outdated info may persist |
+| 🕰️ Latency             | Real-time retrieval and merging can introduce delays        |
