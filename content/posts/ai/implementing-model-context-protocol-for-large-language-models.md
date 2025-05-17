@@ -151,3 +151,11 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 Model Context Protocol (MCP) is a crucial enabler for building intelligent, stateful, and scalable LLM-based applications. By formalizing how we manage context — what gets stored, retrieved, and injected — developers can achieve dramatically better performance, cost-efficiency, and user experience.
 
 Whether you're building a chatbot, tutoring system, or enterprise agent, implementing MCP is a powerful way to bring long-term memory and personalization to your AI systems.
+
+# 📚 References
+
+- [LangChain Documentation](https://python.langchain.com/docs/introduction/)
+- [OpenAI - Context and Memory](https://platform.openai.com/docs/guides/gpt-best-practices)
+- [FAISS - Facebook AI Similarity Search](https://github.com/facebookresearch/faiss)
+- [Pinecone Documentation]()
+- [Retrieval-Augmented Generation (RAG)](https://arxiv.org/abs/2005.11401)
