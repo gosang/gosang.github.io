@@ -128,3 +128,5 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 - **Code Assistants** retaining project-specific context
 - **Healthcare Assistants** tracking patient interactions over time
 - **Legal/Financial Analysis** referencing past casework or documents
+
+# 🚧 Issues and Considerations
