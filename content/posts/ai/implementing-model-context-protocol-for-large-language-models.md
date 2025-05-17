@@ -124,3 +124,7 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 # 🧰 Use Cases
 
 - **Conversational Agents** (e.g., customer support, AI companions)
+- **Educational Tutors** maintaining learning progress
+- **Code Assistants** retaining project-specific context
+- **Healthcare Assistants** tracking patient interactions over time
+- **Legal/Financial Analysis** referencing past casework or documents
