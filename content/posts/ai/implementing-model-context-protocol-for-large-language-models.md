@@ -120,3 +120,7 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 | 🤖 Imperfect Retrieval | Irrelevant context may be retrieved if embeddings are noisy |
 | 🔄 State Drift         | Without periodic context cleanup, outdated info may persist |
 | 🕰️ Latency             | Real-time retrieval and merging can introduce delays        |
+
+# 🧰 Use Cases
+
+- **Conversational Agents** (e.g., customer support, AI companions)
