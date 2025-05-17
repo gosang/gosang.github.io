@@ -134,3 +134,6 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 | Concern          | Mitigation                                                      |
 | ---------------- | --------------------------------------------------------------- |
 | **Data Privacy** | Use encryption and role-based access control in context storage |
+| **Scalability**  | Index sharding or hybrid retrieval (semantic + keyword)         |
+| **Token Limits** | Prioritize most relevant context only; consider summarization   |
+| **Relevance**    | Use metadata filters, time decay, and context weighting         |
