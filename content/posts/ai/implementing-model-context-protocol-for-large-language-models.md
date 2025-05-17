@@ -137,3 +137,11 @@ This approach can scale with Redis, Pinecone, Weaviate, or PostgreSQL for contex
 | **Scalability**  | Index sharding or hybrid retrieval (semantic + keyword)         |
 | **Token Limits** | Prioritize most relevant context only; consider summarization   |
 | **Relevance**    | Use metadata filters, time decay, and context weighting         |
+
+# 🧑‍🏫 Best Practices
+
+- Use **structured metadata** with each stored context chunk (e.g., timestamp, task, session).
+- Apply **embedding quality checks** (e.g., cosine similarity thresholds).
+- Set **retention policies** — discard stale or irrelevant data.
+- Combine **retrieval-augmented generation** (RAG) techniques.
+- Ensure **context interpretability** — clearly distinguish retrieved vs user content.
