@@ -14,3 +14,5 @@ Better Auth is an open-source authentication library built to simplify and secur
 - Simple, secure token management
 - First-class support for modern frameworks
 - Modular adapters for databases, OAuth, and custom strategies
+
+## Why Better Auth?
