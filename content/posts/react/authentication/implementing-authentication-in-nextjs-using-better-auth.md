@@ -5,3 +5,7 @@ draft = true
 +++
 
 Authentication is a foundational part of any modern web application. In this blog post, we'll explore how to implement robust, scalable authentication in Next.js using a modern and efficient library called Better Auth. We'll discuss what Better Auth is, its rationale, key concepts, and provide a complete guide on integrating it into a Next.js app. We'll also cover the pros and cons, use cases, potential issues, and best practices.
+
+# What is Better Auth?
+
+Better Auth is an open-source authentication library built to simplify and secure authentication for modern JavaScript frameworks like Next.js, React, and Node.js.
