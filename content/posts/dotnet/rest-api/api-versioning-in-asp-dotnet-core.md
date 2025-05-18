@@ -2,7 +2,7 @@
 title = 'API Versioning in ASP.NET Core'
 date = 2024-06-08T12:21:44+01:00
 draft = false
-tags = ["ASP.Net Core"]
+tags = ["ASP.Net Core", "API"]
 +++
 
 API Versioning is a critical aspect of building and maintaining robust and scalable APIs. It allows developers to introduce new features and improvements while maintaining backward compatibility for existing clients. We will look into the rationale behind API versioning, the problems it resolves, and the implementations of various versioning strategies in ASP.NET Core.
