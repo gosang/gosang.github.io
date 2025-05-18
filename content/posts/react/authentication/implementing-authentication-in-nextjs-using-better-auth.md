@@ -8,4 +8,4 @@ Authentication is a foundational part of any modern web application. In this blo
 
 # What is Better Auth?
 
-Better Auth is an open-source authentication library built to simplify and secure authentication for modern JavaScript frameworks like Next.js, React, and Node.js.
+Better Auth is an open-source authentication library built to simplify and secure authentication for modern JavaScript frameworks like Next.js, React, and Node.js. Inspired by the limitations and complexity of libraries like next-auth, Better Auth emphasizes:
