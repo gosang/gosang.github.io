@@ -27,3 +27,5 @@ Traditional auth solutions can become complex due to their tightly coupled compo
 ## Core Concepts of Better Auth
 
 Better Auth follows a clean, modern approach:
+| Concept | Description |
+| -------------- | ---------------------------------------------------------------- |
