@@ -29,7 +29,7 @@ Traditional auth solutions can become complex due to their tightly coupled compo
 Better Auth follows a clean, modern approach:
 | Concept | Description |
 | -------------- | ---------------------------------------------------------------- |
-| Session | JWT or cookie-based sessions for stateless auth |
+| Session | JWT or cookie-based sessions for stateless authentication |
 | Adapter | Interface for connecting to databases (e.g. PostgreSQL, MongoDB) |
 | Provider | OAuth providers or custom login flows |
 | Middleware | Protects API routes and pages |
