@@ -33,3 +33,4 @@ Better Auth follows a clean, modern approach:
 | Adapter | Interface for connecting to databases (e.g. PostgreSQL, MongoDB) |
 | Provider | OAuth providers or custom login flows |
 | Middleware | Protects API routes and pages |
+| Token Handling | JWT with automatic refresh and rotation |
