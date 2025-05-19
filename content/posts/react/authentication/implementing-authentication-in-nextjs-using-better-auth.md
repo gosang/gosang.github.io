@@ -23,3 +23,5 @@ Traditional auth solutions can become complex due to their tightly coupled compo
 - Secure defaults with extensibility
 - Better DX (developer experience)
 - Clear separation between frontend and backend logic
+
+## Core Concepts of Better Auth
