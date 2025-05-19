@@ -6,29 +6,29 @@ draft = true
 
 User authentication is a critical part of modern web applications. It ensures secure access to resources and data by verifying the identity of users. In this blog, we will explore how to integrate user authentication into a serverless Next.js application using Auth0. We will cover the rationale behind using Auth0, its main concepts, and provide a detailed, TypeScript-based implementation guide. Additionally, we’ll examine the advantages, disadvantages, and best practices for this integration.
 
-# What is Auth0?
-
-Auth0 is a flexible, easy-to-implement authentication and authorization platform. It allows developers to add secure login, logout, and access control features to applications without having to manage user credentials manually.
-
 # Why Next.js?
 
 Next.js is a React-based framework that supports server-side rendering (SSR) and static site generation (SSG). Its serverless architecture aligns well with modern cloud-based application design, making it an ideal choice for integrating with Auth0.
 
-# Why Auth0?
+# What is Auth0?
+
+Auth0 is a flexible, easy-to-implement authentication and authorization platform. It allows developers to add secure login, logout, and access control features to applications without having to manage user credentials manually.
+
+## Why Auth0?
 
 **Security**: Auth0 provides robust security features like password hashing, multi-factor authentication, and compliance with industry standards.
 **Ease of Integration**: SDKs and documentation make it straightforward to implement.
 **Scalability**: Auth0 handles millions of users efficiently.
 **Serverless Compatibility**: Its APIs are serverless-friendly and well-suited for Next.js apps.
 
-# Key Concepts in Auth0
+## Key Concepts in Auth0
 
 **Application**: A representation of your Next.js app in Auth0.
 **Client ID & Secret**: Credentials used for authenticating the app.
 **Connections**: Define how users authenticate (e.g., email/password, social login).
 **Tokens**: JSON Web Tokens (JWTs) used for securely transferring authentication information.
 
-# Key Features in Auth0 Integration
+## Key Features in Auth0 Integration
 
 **Authentication**: Validates user credentials and issues tokens.
 **Authorization**: Grants or denies access based on user roles or permissions.
