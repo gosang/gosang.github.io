@@ -31,3 +31,4 @@ Better Auth follows a clean, modern approach:
 | -------------- | ---------------------------------------------------------------- |
 | Session | JWT or cookie-based sessions for stateless auth |
 | Adapter | Interface for connecting to databases (e.g. PostgreSQL, MongoDB) |
+| Provider | OAuth providers or custom login flows |
