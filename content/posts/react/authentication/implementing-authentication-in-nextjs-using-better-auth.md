@@ -21,3 +21,4 @@ Traditional auth solutions can become complex due to their tightly coupled compo
 
 - Customization without boilerplate
 - Secure defaults with extensibility
+- Better DX (developer experience)
