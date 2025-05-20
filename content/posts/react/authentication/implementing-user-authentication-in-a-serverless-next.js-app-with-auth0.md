@@ -18,12 +18,12 @@ Auth0 handles identity management so you don’t have to build login/logout/sess
 
 ## ✅ Why Use Auth0 with Next.js?
 
-**Security**: Auth0 provides robust security features like password hashing, multi-factor authentication, and compliance with industry standards.
-**Ease of Integration**: SDKs and documentation make it straightforward to implement.
-**Scalability**: Auth0 handles millions of users efficiently.
-**Serverless Compatibility**: Its APIs are serverless-friendly and well-suited for Next.js apps.
+**Security**: Auth0 provides robust security features like password hashing, multi-factor authentication, and compliance with industry standards (secure & compliant out-of-the-box such as OAuth2.0, OIDC, PKCE, etc.).
+**Ease of Integration**: SDKs and documentation make it straightforward to implement. Supports social logins, passwordless, enterprise SSO, etc.
+**Scalability**: Scales easily, from small projects to enterprise apps, handles millions of users efficiently.
+**Serverless Compatibility**: Its APIs are serverless-friendly and well-suited for Next.js (serverless API routes and middleware) apps.
 
-## Key Concepts in Auth0
+## Core Concepts in Auth0
 
 **Application**: A representation of your Next.js app in Auth0.
 **Client ID & Secret**: Credentials used for authenticating the app.
