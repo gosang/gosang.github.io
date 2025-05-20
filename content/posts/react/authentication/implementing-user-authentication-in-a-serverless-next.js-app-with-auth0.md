@@ -4,6 +4,8 @@ date = 2025-01-25T12:43:49Z
 draft = true
 +++
 
+Securing modern web applications is essential—but building authentication from scratch is risky, time-consuming, and error-prone. With frameworks like Next.js embracing the serverless architecture, integrating secure user authentication becomes more nuanced. Auth0, a leading Identity-as-a-Service provider, offers a powerful, battle-tested solution.
+
 User authentication is a critical part of modern web applications. It ensures secure access to resources and data by verifying the identity of users. In this blog, we will explore how to integrate user authentication into a serverless Next.js application using Auth0. We will cover the rationale behind using Auth0, its main concepts, and provide a detailed, TypeScript-based implementation guide. Additionally, we’ll examine the advantages, disadvantages, and best practices for this integration.
 
 # Why Next.js?
