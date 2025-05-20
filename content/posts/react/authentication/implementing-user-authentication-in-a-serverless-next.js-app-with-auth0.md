@@ -8,9 +8,9 @@ Securing modern web applications is essential—but building authentication from
 
 In this blog, we’ll walk you through implementing user authentication in a serverless Next.js app using the latest Auth0 SDK, covering concepts, TypeScript code examples, common pitfalls, and best practices. This post reflects updates as of 2025, including Next.js 14+ and Auth0 SDK refinements.
 
-# Why Next.js?
+# 🧠 What Is Auth0 Authentication in Next.js?
 
-Next.js is a React-based framework that supports server-side rendering (SSR) and static site generation (SSG). Its serverless architecture aligns well with modern cloud-based application design, making it an ideal choice for integrating with Auth0.
+Auth0 handles identity management so you don’t have to build login/logout/session logic from scratch. In a serverless Next.js environment, user authentication is achieved via API routes and middleware that handle identity flow while keeping
 
 # What is Auth0?
 
