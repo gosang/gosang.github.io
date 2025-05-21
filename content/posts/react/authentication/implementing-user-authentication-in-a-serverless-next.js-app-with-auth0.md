@@ -23,7 +23,7 @@ Auth0 handles identity management so you don’t have to build login/logout/sess
 **Scalability**: Scales easily, from small projects to enterprise apps, handles millions of users efficiently.
 **Serverless Compatibility**: Its APIs are serverless-friendly and well-suited for Next.js (serverless API routes and middleware) apps.
 
-## Core Concepts in Auth0
+## 🧩 Core Concepts in Auth0
 
 **Application**: A representation of your Next.js app in Auth0.
 **Client ID & Secret**: Credentials used for authenticating the app.
