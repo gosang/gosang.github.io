@@ -49,3 +49,13 @@ better-auth-adapter-prisma @prisma/client
 #### 🧰 Step 2: Configure Prisma
 
 Better Auth works seamlessly with Prisma.
+
+```prisma
+// schema.prisma
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+}
+```
