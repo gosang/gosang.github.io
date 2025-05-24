@@ -75,4 +75,11 @@ Create an API route to handle login, register, and logout.
 import { BetterAuth } from "better-auth";
 import { PrismaAdapter } from "better-auth-adapter-prisma";
 import prisma from "../../../lib/prisma";
+export default BetterAuth({
+  adapter: PrismaAdapter(prisma),
+  session: {
+    strategy: "jwt",
+    maxAge: 60 * 60 * 24 * 7, // 7 days
+  },
+});
 ```
