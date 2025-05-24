@@ -36,3 +36,5 @@ Better Auth follows a clean, modern approach:
 | Token Handling | JWT with automatic refresh and rotation |
 
 # Setting Up Authentication in Next.js with Better Auth
+
+Let’s walk through a practical implementation.
