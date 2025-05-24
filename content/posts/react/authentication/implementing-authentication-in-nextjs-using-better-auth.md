@@ -45,3 +45,7 @@ Let’s walk through a practical implementation.
 npm install better-auth
 better-auth-adapter-prisma @prisma/client
 ```
+
+#### 🧰 Step 2: Configure Prisma
+
+Better Auth works seamlessly with Prisma.
