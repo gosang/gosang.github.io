@@ -38,3 +38,10 @@ Better Auth follows a clean, modern approach:
 # Setting Up Authentication in Next.js with Better Auth
 
 Let’s walk through a practical implementation.
+
+#### 🧱 Step 1: Install Dependencies
+
+```bash
+npm install better-auth
+better-auth-adapter-prisma @prisma/client
+```
