@@ -69,3 +69,10 @@ npx prisma generate
 #### ⚙️ Step 3: API Route for Auth
 
 Create an API route to handle login, register, and logout.
+
+```ts
+// pages/api/auth/[...auth].ts
+import { BetterAuth } from "better-auth";
+import { PrismaAdapter } from "better-auth-adapter-prisma";
+import prisma from "../../../lib/prisma";
+```
