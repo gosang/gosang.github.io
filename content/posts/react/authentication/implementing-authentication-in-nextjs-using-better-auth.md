@@ -59,3 +59,9 @@ model User {
   createdAt DateTime @default(now())
 }
 ```
+
+Then generate the client:
+
+```bash
+npx prisma generate
+```
