@@ -81,5 +81,21 @@ export default BetterAuth({
     strategy: "jwt",
     maxAge: 60 * 60 * 24 * 7, // 7 days
   },
+  providers: [
+    {
+      type: "credentials",
+      authorize: async (credentials) => {
+        const user = await prisma.user.findUnique({
+          where: { email: credentials.email },
+        });
+        if (!user || user.password !== credentials.password) {
+          throw new Error("Invalid login");
+        }
+        return user;
+      },
+    },
+  ],
 });
 ```
+
+#### 🧑‍💻 Step 4: Frontend Login Form
