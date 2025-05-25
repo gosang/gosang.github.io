@@ -132,3 +132,18 @@ export default function LoginForm() {
 ```
 
 #### 🔐 Step 5: Protecting Pages
+
+```ts
+// middleware.ts
+import { withAuth } from "better-auth/middleware";
+
+export default withAuth({
+  publicRoutes: ["/login", "/register"],
+  onUnauthenticated: () => {
+    return new Response("Redirecting...", {
+      status: 302,
+      headers: { Location: "/login" },
+    });
+  },
+});
+```
