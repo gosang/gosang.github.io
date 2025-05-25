@@ -114,6 +114,11 @@ export default function LoginForm() {
       method: "POST",
       body: JSON.stringify({ email, password }),
     });
+    if (res.ok) {
+      // redirect or update UI
+    } else {
+      alert("Login failed");
+    }
   };
 
   return (
