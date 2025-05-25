@@ -99,3 +99,21 @@ export default BetterAuth({
 ```
 
 #### 🧑‍💻 Step 4: Frontend Login Form
+
+```tsx
+// components/LoginForm.tsx
+import { useState } from "react";
+
+export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input type="email" onChange={(e) => setEmail(e.target.value)} />
+      <input type="password" onChange={(e) => setPassword(e.target.value)} />
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+```
