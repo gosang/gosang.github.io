@@ -108,6 +108,14 @@ export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      body: JSON.stringify({ email, password }),
+    });
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input type="email" onChange={(e) => setEmail(e.target.value)} />
