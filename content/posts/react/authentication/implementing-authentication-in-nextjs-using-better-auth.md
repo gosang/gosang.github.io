@@ -130,3 +130,5 @@ export default function LoginForm() {
   );
 }
 ```
+
+#### 🔐 Step 5: Protecting Pages
