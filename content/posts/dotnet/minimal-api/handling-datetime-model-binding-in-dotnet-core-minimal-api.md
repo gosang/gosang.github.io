@@ -50,6 +50,24 @@ Working with dates and times in APIs is deceptively complex. In .NET 8 Minimal A
 
 ## Implementation Walkthrough
 
+### 📂 Project Structure
+
+```Code
+
+src/
+ ├── Program.cs
+ ├── Models/
+ │     ├── AppointmentRequestDto.cs
+ │     └── Appointment.cs
+ ├── Validators/
+ │     └── AppointmentRequestDtoValidator.cs
+ ├── Filters/
+ │     └── ValidationFilter.cs
+ └── Converters/
+       └── DateOnlyJsonConverter.cs
+
+```
+
 ### Transport vs Domain Models
 
 ```csharp
