@@ -21,3 +21,29 @@ Working with dates and times in APIs is deceptively complex. In .NET 8 Minimal A
 
 - **Validation skipped**  
   If binding fails, FluentValidation never runs. You lose control over error messages and consistency.
+
+## Approaches to Handling Dates
+
+### 1. Native Binding (ISO 8601)
+
+- **Pros:** Simple, fast, no extra code.
+- **Cons:** Fails for non-ISO inputs, poor error messages.
+- **Use when:** You fully control client formats.
+
+### 2. Custom JSON Converters
+
+- **Pros:** Enables clean `DateOnly` usage with consistent format.
+- **Cons:** Still fails early if input doesn’t match expected format.
+- **Use when:** You want strict `yyyy-MM-dd` semantics.
+
+### 3. String DTO + FluentValidation (**Recommended**)
+
+- **Pros:** Binding always succeeds (strings), validation controls parsing and error messages.
+- **Cons:** Requires mapping to domain model after validation.
+- **Use when:** You need robust, user-friendly error handling.
+
+### 4. Endpoint Filters
+
+- **Pros:** Centralizes validation, keeps endpoints clean, adheres to SRP/OCP.
+- **Cons:** Requires validator registration and filter attachment.
+- **Use when:** You want reusable validation across endpoints.
