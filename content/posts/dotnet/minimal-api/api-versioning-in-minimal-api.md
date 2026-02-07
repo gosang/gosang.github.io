@@ -21,3 +21,10 @@ Example:
 
 - GET /api/v1/products → old behavior
 - GET /api/v2/products → new behavior
+
+## Why Version Your API?
+
+- Backward compatibility: Clients shouldn’t break when you ship new features.
+- Controlled evolution: You can introduce breaking changes safely.
+- Clear contracts: Each version represents a stable, documented contract.
+- Independent release cadence: You can improve v2 without touching v1 users.
