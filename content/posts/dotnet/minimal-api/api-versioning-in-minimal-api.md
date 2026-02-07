@@ -12,3 +12,12 @@ What API versioning is and why you need it
 - How to implement versioning in a Minimal API with concise C# samples
 - Pros, cons, and when to use (or avoid) versioning
 - Issues, considerations, and best practices
+
+## What Is API Versioning?
+
+API versioning is the practice of managing changes to your API in a way that doesn’t break existing clients. Instead of changing behavior silently, you introduce a new version of the API while continuing to support older ones for a period of time.
+
+Example:
+
+- GET /api/v1/products → old behavior
+- GET /api/v2/products → new behavior
