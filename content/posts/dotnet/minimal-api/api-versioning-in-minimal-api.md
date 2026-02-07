@@ -28,3 +28,16 @@ Example:
 - Controlled evolution: You can introduce breaking changes safely.
 - Clear contracts: Each version represents a stable, documented contract.
 - Independent release cadence: You can improve v2 without touching v1 users.
+
+## Key Versioning Approaches
+
+ASP.NET Core supports several versioning styles:
+
+| Approach     | Example                          | Notes                  |
+| ------------ | -------------------------------- | ---------------------- |
+| URL path     | `/api/v1/products`               | Most common & explicit |
+| Query string | `/api/products?api-version=1.0`  | Easy to implement      |
+| Header-based | `api-version: 1.0`               | Clean URLs             |
+| Media type   | `Accept: application/json;v=1.0` | Advanced, REST-pure    |
+
+In Minimal APIs, URL segment + API Versioning package is the most practical and readable choice.
