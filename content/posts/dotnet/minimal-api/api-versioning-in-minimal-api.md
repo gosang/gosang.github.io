@@ -43,3 +43,11 @@ ASP.NET Core supports several versioning styles:
 In Minimal APIs, URL segment + API Versioning package is the most practical and readable choice.
 
 ## Key Concepts in ASP.NET Core 10 Versioning
+
+Using the `Asp.Versioning.*` packages:
+
+- ApiVersion – Represents a version (e.g., 1.0, 2.0)
+- IApiVersionReader – Determines how the version is read (URL, header, etc.)
+- ApiVersionSet – Groups endpoints by version
+- MapToApiVersion – Maps a route to a specific version
+- ReportApiVersions – Adds version info to responses
