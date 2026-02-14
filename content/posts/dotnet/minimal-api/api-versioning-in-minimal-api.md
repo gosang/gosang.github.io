@@ -60,3 +60,10 @@ Using the `Asp.Versioning.*` packages:
 dotnet new web -n VersionedMinimalApi
 cd VersionedMinimalApi
 ```
+
+2. Install Versioning Packages
+
+```bash
+dotnet add package Asp.Versioning.Http
+dotnet add package Asp.Versioning.Mvc.ApiExplorer
+```
