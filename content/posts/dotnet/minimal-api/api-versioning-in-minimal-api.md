@@ -51,3 +51,12 @@ Using the `Asp.Versioning.*` packages:
 - ApiVersionSet – Groups endpoints by version
 - MapToApiVersion – Maps a route to a specific version
 - ReportApiVersions – Adds version info to responses
+
+## Implementing API Versioning in a Minimal API (ASP.NET Core 10)
+
+1. Create a Minimal API project
+
+```bash
+dotnet new web -n VersionedMinimalApi
+cd VersionedMinimalApi
+```
