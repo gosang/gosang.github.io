@@ -41,3 +41,5 @@ ASP.NET Core supports several versioning styles:
 | Media type   | `Accept: application/json;v=1.0` | Advanced, REST-pure    |
 
 In Minimal APIs, URL segment + API Versioning package is the most practical and readable choice.
+
+## Key Concepts in ASP.NET Core 10 Versioning
