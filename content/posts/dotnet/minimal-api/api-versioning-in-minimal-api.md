@@ -91,3 +91,38 @@ builder.Services.AddApiVersioning(options =>
 
 var app = builder.Build();
 ```
+
+4. Define Versioned Endpoints
+
+```csharp
+var apiVersionSet = app.NewApiVersionSet()
+    .HasApiVersion(new ApiVersion(1, 0))
+    .HasApiVersion(new ApiVersion(2, 0))
+    .ReportApiVersions()
+    .Build();
+
+// V1
+app.MapGet("/api/v{version:apiVersion}/products", (ApiVersion version) =>
+{
+    return Results.Ok(new[]
+    {
+        new { Id = 1, Name = "Laptop", Price = 1000 }
+    });
+})
+.WithApiVersionSet(apiVersionSet)
+.MapToApiVersion(1.0);
+
+// V2
+app.MapGet("/api/v{version:apiVersion}/products", (ApiVersion version) =>
+{
+    return Results.Ok(new[]
+    {
+        new { Id = 1, Name = "Laptop", Price = 1000, Currency = "USD", InStock = true }
+    });
+})
+.WithApiVersionSet(apiVersionSet)
+.MapToApiVersion(2.0);
+
+app.Run();
+
+```
