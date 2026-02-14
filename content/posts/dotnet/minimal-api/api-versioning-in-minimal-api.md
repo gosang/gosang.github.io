@@ -67,3 +67,27 @@ cd VersionedMinimalApi
 dotnet add package Asp.Versioning.Http
 dotnet add package Asp.Versioning.Mvc.ApiExplorer
 ```
+
+3. Configure Versioning in `Program.cs`
+
+```csharp
+using Asp.Versioning;
+using Asp.Versioning.Builder;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add API Versioning
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true; // adds headers: api-supported-versions
+})
+.AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV";
+    options.SubstituteApiVersionInUrl = true;
+});
+
+var app = builder.Build();
+```
