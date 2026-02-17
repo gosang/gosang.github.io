@@ -141,3 +141,10 @@ You’ve now implemented versioning in a Minimal API with ASP.NET Core 10.
 ✅ Clear contracts per version
 ✅ Supports long-term API stability
 ✅ Enables gradual migration
+
+## Disadvantages
+
+❌ More code & maintenance
+❌ More testing complexity
+❌ Documentation overhead
+❌ Risk of supporting old versions too long
