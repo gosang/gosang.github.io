@@ -133,3 +133,5 @@ app.Run();
 - GET /api/v2/products → new response
 
 You’ve now implemented versioning in a Minimal API with ASP.NET Core 10.
+
+## Advantages of API Versioning in Minimal APIs
