@@ -126,3 +126,10 @@ app.MapGet("/api/v{version:apiVersion}/products", (ApiVersion version) =>
 app.Run();
 
 ```
+
+5. Try It
+
+- GET /api/v1/products → old response
+- GET /api/v2/products → new response
+
+You’ve now implemented versioning in a Minimal API with ASP.NET Core 10.
