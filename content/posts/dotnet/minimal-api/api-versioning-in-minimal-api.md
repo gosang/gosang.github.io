@@ -148,3 +148,5 @@ You’ve now implemented versioning in a Minimal API with ASP.NET Core 10.
 ❌ More testing complexity
 ❌ Documentation overhead
 ❌ Risk of supporting old versions too long
+
+## When Should You Use API Versioning?
