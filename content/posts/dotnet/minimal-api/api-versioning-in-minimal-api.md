@@ -157,3 +157,10 @@ Use versioning when:
 ✔ You expect breaking changes
 ✔ You need long-term backward compatibility
 ✔ You support mobile apps or third-party integrations
+
+Avoid versioning when:
+
+✖ Your API is internal and tightly controlled
+✖ You can update all clients at once
+✖ The API is experimental or short-lived
+✖ You only make non-breaking additive changes
