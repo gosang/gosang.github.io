@@ -150,3 +150,10 @@ You’ve now implemented versioning in a Minimal API with ASP.NET Core 10.
 ❌ Risk of supporting old versions too long
 
 ## When Should You Use API Versioning?
+
+Use versioning when:
+
+✔ Your API is public or used by external clients
+✔ You expect breaking changes
+✔ You need long-term backward compatibility
+✔ You support mobile apps or third-party integrations
