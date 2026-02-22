@@ -164,3 +164,12 @@ Avoid versioning when:
 ✖ You can update all clients at once
 ✖ The API is experimental or short-lived
 ✖ You only make non-breaking additive changes
+
+## Issues, Considerations & Best Practices
+
+1. Avoid Breaking Changes When Possible
+
+Prefer additive changes:
+
+- Add fields instead of changing/removing them
+- Don’t change semantics of existing fields
